@@ -10,4 +10,6 @@
 
 @interface SWTableViewCell : UITableViewCell
 
+- (void)setup;
+
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 底部选项栏
+ */
 @interface SWTabBarController : UITabBarController
 
 @end

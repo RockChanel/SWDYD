@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */; };
+		252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */; };
+		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
+		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
+		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
+		E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */; };
+		E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */; };
+		E8CA6983215CA53800B7BB75 /* mfp.cer in Resources */ = {isa = PBXBuildFile; fileRef = E8CA6982215CA53800B7BB75 /* mfp.cer */; };
+		E8CA6987215CBF8B00B7BB75 /* SWDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */; };
+		E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */; };
+		E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */; };
+		E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */; };
+		E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */; };
+		E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */; };
+		E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A7215CCA2700B7BB75 /* SWModel.m */; };
+		E8CA69AC215CCACC00B7BB75 /* SWFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */; };
+		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
+		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
+		E8CA69BD215CDB0B00B7BB75 /* SWFollowUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */; };
+		E8CA69C0215CDB1A00B7BB75 /* SWFollowAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */; };
 		E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */; };
 		E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */; };
 		E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */; };
@@ -16,10 +36,8 @@
 		E8E3ACF6215B8C8D0066F4D0 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACEB215B8C8C0066F4D0 /* SWNavigationController.m */; };
 		E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */; };
 		E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACEF215B8C8C0066F4D0 /* SWViewController.m */; };
-		E8E3ACF9215B8C8D0066F4D0 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACF2215B8C8C0066F4D0 /* SWModel.m */; };
 		E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACF5215B8C8D0066F4D0 /* SWTableViewCell.m */; };
 		E8E3ACFE215B8C9D0066F4D0 /* UIColor+ThemeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACFD215B8C9D0066F4D0 /* UIColor+ThemeColor.m */; };
-		E8E3AD04215B8CA70066F4D0 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3AD03215B8CA70066F4D0 /* SWHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +58,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.debug.xcconfig"; sourceTree = "<group>"; };
+		5347DD2025907B752079DDDB /* Pods-SWDYD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.release.xcconfig"; sourceTree = "<group>"; };
+		5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFE410D730D332220AD4556 /* Pods-SWDYDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.release.xcconfig"; sourceTree = "<group>"; };
+		89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYDUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6D7942FE395A202CB844E0 /* Pods-SWDYDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDUITests/Pods-SWDYDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1C3405E239AF6599D6E567 /* Pods-SWDYDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDUITests/Pods-SWDYDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
+		E8CA6965215C765600B7BB75 /* SWConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConst.h; sourceTree = "<group>"; };
+		E8CA6966215C765600B7BB75 /* SWConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWConst.m; sourceTree = "<group>"; };
+		E8CA6968215C7D3600B7BB75 /* SWTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTableViewController.h; sourceTree = "<group>"; };
+		E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTableViewController.m; sourceTree = "<group>"; };
+		E8CA6978215C8AF800B7BB75 /* SWNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNetworkManager.h; sourceTree = "<group>"; };
+		E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNetworkManager.m; sourceTree = "<group>"; };
+		E8CA697E215CA17700B7BB75 /* SWNetWorkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNetWorkApi.h; sourceTree = "<group>"; };
+		E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNetWorkApi.m; sourceTree = "<group>"; };
+		E8CA6982215CA53800B7BB75 /* mfp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfp.cer; sourceTree = "<group>"; };
+		E8CA6985215CBF8B00B7BB75 /* SWDeviceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWDeviceTool.h; sourceTree = "<group>"; };
+		E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWDeviceTool.m; sourceTree = "<group>"; };
+		E8CA6989215CC46800B7BB75 /* SWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWLoginViewController.h; sourceTree = "<group>"; };
+		E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
+		E8CA698D215CC4B100B7BB75 /* AppDelegate+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Login.h"; sourceTree = "<group>"; };
+		E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Login.m"; sourceTree = "<group>"; };
+		E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRecommandViewController.h; sourceTree = "<group>"; };
+		E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRecommandViewController.m; sourceTree = "<group>"; };
+		E8CA699A215CC66700B7BB75 /* SWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVideoViewController.h; sourceTree = "<group>"; };
+		E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVideoViewController.m; sourceTree = "<group>"; };
+		E8CA69A3215CC6E600B7BB75 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
+		E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
+		E8CA69A6215CCA2700B7BB75 /* SWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
+		E8CA69A7215CCA2700B7BB75 /* SWModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
+		E8CA69AA215CCACC00B7BB75 /* SWFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWFollowViewController.h; sourceTree = "<group>"; };
+		E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWFollowViewController.m; sourceTree = "<group>"; };
+		E8CA69B1215CCC1600B7BB75 /* SWFollowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowModel.h; sourceTree = "<group>"; };
+		E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowModel.m; sourceTree = "<group>"; };
+		E8CA69B8215CDAE700B7BB75 /* SWCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
+		E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
+		E8CA69BB215CDB0B00B7BB75 /* SWFollowUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowUserCell.h; sourceTree = "<group>"; };
+		E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowUserCell.m; sourceTree = "<group>"; };
+		E8CA69BE215CDB1A00B7BB75 /* SWFollowAreaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowAreaCell.h; sourceTree = "<group>"; };
+		E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowAreaCell.m; sourceTree = "<group>"; };
 		E8E3ACB3215B8C750066F4D0 /* SWDYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWDYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,14 +120,10 @@
 		E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTabBarController.m; sourceTree = "<group>"; };
 		E8E3ACEE215B8C8C0066F4D0 /* SWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWViewController.h; sourceTree = "<group>"; };
 		E8E3ACEF215B8C8C0066F4D0 /* SWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWViewController.m; sourceTree = "<group>"; };
-		E8E3ACF1215B8C8C0066F4D0 /* SWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
-		E8E3ACF2215B8C8C0066F4D0 /* SWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
 		E8E3ACF4215B8C8D0066F4D0 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
 		E8E3ACF5215B8C8D0066F4D0 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
 		E8E3ACFC215B8C9D0066F4D0 /* UIColor+ThemeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ThemeColor.h"; sourceTree = "<group>"; };
 		E8E3ACFD215B8C9D0066F4D0 /* UIColor+ThemeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ThemeColor.m"; sourceTree = "<group>"; };
-		E8E3AD02215B8CA70066F4D0 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
-		E8E3AD03215B8CA70066F4D0 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
 		E8E3AD05215B8D770066F4D0 /* SWDYDPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWDYDPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +148,163 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C26982AA99A5C0827BEDEAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */,
+				5347DD2025907B752079DDDB /* Pods-SWDYD.release.xcconfig */,
+				BD1C3405E239AF6599D6E567 /* Pods-SWDYDTests.debug.xcconfig */,
+				7FFE410D730D332220AD4556 /* Pods-SWDYDTests.release.xcconfig */,
+				8E6D7942FE395A202CB844E0 /* Pods-SWDYDUITests.debug.xcconfig */,
+				E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B5F367C3C68A53230735C8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */,
+				5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */,
+				89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8CA6963215C761400B7BB75 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6964215C762F00B7BB75 /* SWMacro.h */,
+				E8CA6965215C765600B7BB75 /* SWConst.h */,
+				E8CA6966215C765600B7BB75 /* SWConst.m */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		E8CA6977215C88EB00B7BB75 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6978215C8AF800B7BB75 /* SWNetworkManager.h */,
+				E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */,
+				E8CA697E215CA17700B7BB75 /* SWNetWorkApi.h */,
+				E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E8CA6981215CA53000B7BB75 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6982215CA53800B7BB75 /* mfp.cer */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E8CA6984215CBF7B00B7BB75 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6985215CBF8B00B7BB75 /* SWDeviceTool.h */,
+				E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E8CA6988215CC38600B7BB75 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6989215CC46800B7BB75 /* SWLoginViewController.h */,
+				E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E8CA698C215CC49000B7BB75 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */,
+				E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */,
+				E8CA698D215CC4B100B7BB75 /* AppDelegate+Login.h */,
+				E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E8CA6990215CC64E00B7BB75 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA69A3215CC6E600B7BB75 /* SWHomeViewController.h */,
+				E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E8CA6991215CC65A00B7BB75 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA69B4215CD73500B7BB75 /* View */,
+				E8CA69AD215CCAD500B7BB75 /* Model */,
+				E8CA69A9215CCACC00B7BB75 /* Controller */,
+			);
+			name = Follow;
+			path = Controller/Follow;
+			sourceTree = "<group>";
+		};
+		E8CA6995215CC66100B7BB75 /* Recommand */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */,
+				E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */,
+			);
+			name = Recommand;
+			path = Controller/Recommand;
+			sourceTree = "<group>";
+		};
+		E8CA6999215CC66700B7BB75 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA699A215CC66700B7BB75 /* SWVideoViewController.h */,
+				E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */,
+			);
+			name = Video;
+			path = Controller/Video;
+			sourceTree = "<group>";
+		};
+		E8CA69A9215CCACC00B7BB75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA69AA215CCACC00B7BB75 /* SWFollowViewController.h */,
+				E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8CA69AD215CCAD500B7BB75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA69B1215CCC1600B7BB75 /* SWFollowModel.h */,
+				E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8CA69B4215CD73500B7BB75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA69BB215CDB0B00B7BB75 /* SWFollowUserCell.h */,
+				E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */,
+				E8CA69BE215CDB1A00B7BB75 /* SWFollowAreaCell.h */,
+				E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E8E3ACAA215B8C750066F4D0 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +312,8 @@
 				E8E3ACCE215B8C770066F4D0 /* SWDYDTests */,
 				E8E3ACD9215B8C770066F4D0 /* SWDYDUITests */,
 				E8E3ACB4215B8C750066F4D0 /* Products */,
+				0C26982AA99A5C0827BEDEAB /* Pods */,
+				6B5F367C3C68A53230735C8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,8 +330,11 @@
 		E8E3ACB5215B8C750066F4D0 /* SWDYD */ = {
 			isa = PBXGroup;
 			children = (
-				E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */,
-				E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */,
+				E8CA698C215CC49000B7BB75 /* AppDelegate */,
+				E8CA6984215CBF7B00B7BB75 /* Tool */,
+				E8CA6981215CA53000B7BB75 /* Resource */,
+				E8CA6977215C88EB00B7BB75 /* Network */,
+				E8CA6963215C761400B7BB75 /* Macro */,
 				E8E3ACFB215B8C9D0066F4D0 /* Category */,
 				E8E3ACE8215B8C8C0066F4D0 /* Base */,
 				E8E3ACFF215B8CA70066F4D0 /* Sections */,
@@ -169,6 +384,8 @@
 				E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */,
 				E8E3ACEE215B8C8C0066F4D0 /* SWViewController.h */,
 				E8E3ACEF215B8C8C0066F4D0 /* SWViewController.m */,
+				E8CA6968215C7D3600B7BB75 /* SWTableViewController.h */,
+				E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,8 +393,8 @@
 		E8E3ACF0215B8C8C0066F4D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E8E3ACF1215B8C8C0066F4D0 /* SWModel.h */,
-				E8E3ACF2215B8C8C0066F4D0 /* SWModel.m */,
+				E8CA69A6215CCA2700B7BB75 /* SWModel.h */,
+				E8CA69A7215CCA2700B7BB75 /* SWModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +404,8 @@
 			children = (
 				E8E3ACF4215B8C8D0066F4D0 /* SWTableViewCell.h */,
 				E8E3ACF5215B8C8D0066F4D0 /* SWTableViewCell.m */,
+				E8CA69B8215CDAE700B7BB75 /* SWCollectionViewCell.h */,
+				E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				E8E3AD00215B8CA70066F4D0 /* Home */,
+				E8CA6988215CC38600B7BB75 /* Login */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -211,18 +431,12 @@
 		E8E3AD00215B8CA70066F4D0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E8E3AD01215B8CA70066F4D0 /* Controller */,
+				E8CA6999215CC66700B7BB75 /* Video */,
+				E8CA6995215CC66100B7BB75 /* Recommand */,
+				E8CA6991215CC65A00B7BB75 /* Follow */,
+				E8CA6990215CC64E00B7BB75 /* Main */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		E8E3AD01215B8CA70066F4D0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				E8E3AD02215B8CA70066F4D0 /* SWHomeViewController.h */,
-				E8E3AD03215B8CA70066F4D0 /* SWHomeViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +446,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8E3ACDF215B8C770066F4D0 /* Build configuration list for PBXNativeTarget "SWDYD" */;
 			buildPhases = (
+				EB56B12109710E2F7880F9B3 /* [CP] Check Pods Manifest.lock */,
 				E8E3ACAF215B8C750066F4D0 /* Sources */,
 				E8E3ACB0215B8C750066F4D0 /* Frameworks */,
 				E8E3ACB1215B8C750066F4D0 /* Resources */,
@@ -249,6 +464,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8E3ACE2215B8C770066F4D0 /* Build configuration list for PBXNativeTarget "SWDYDTests" */;
 			buildPhases = (
+				7655AC4544936AB005982790 /* [CP] Check Pods Manifest.lock */,
 				E8E3ACC7215B8C770066F4D0 /* Sources */,
 				E8E3ACC8215B8C770066F4D0 /* Frameworks */,
 				E8E3ACC9215B8C770066F4D0 /* Resources */,
@@ -267,6 +483,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8E3ACE5215B8C770066F4D0 /* Build configuration list for PBXNativeTarget "SWDYDUITests" */;
 			buildPhases = (
+				BF7CE752050738B672A2CF77 /* [CP] Check Pods Manifest.lock */,
 				E8E3ACD2215B8C770066F4D0 /* Sources */,
 				E8E3ACD3215B8C770066F4D0 /* Frameworks */,
 				E8E3ACD4215B8C770066F4D0 /* Resources */,
@@ -328,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CA6983215CA53800B7BB75 /* mfp.cer in Resources */,
 				E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */,
 				E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */,
 			);
@@ -349,20 +567,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7655AC4544936AB005982790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWDYDTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF7CE752050738B672A2CF77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWDYDUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB56B12109710E2F7880F9B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWDYD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8E3ACAF215B8C750066F4D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
+				E8CA69AC215CCACC00B7BB75 /* SWFollowViewController.m in Sources */,
+				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */,
+				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
+				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
+				E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */,
+				E8CA6987215CBF8B00B7BB75 /* SWDeviceTool.m in Sources */,
 				E8E3ACFE215B8C9D0066F4D0 /* UIColor+ThemeColor.m in Sources */,
-				E8E3ACF9215B8C8D0066F4D0 /* SWModel.m in Sources */,
+				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
+				E8CA69C0215CDB1A00B7BB75 /* SWFollowAreaCell.m in Sources */,
+				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
+				E8CA69BD215CDB0B00B7BB75 /* SWFollowUserCell.m in Sources */,
+				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
 				E8E3ACF6215B8C8D0066F4D0 /* SWNavigationController.m in Sources */,
+				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
+				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,
+				E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */,
 				E8E3ACC6215B8C770066F4D0 /* main.m in Sources */,
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
-				E8E3AD04215B8CA70066F4D0 /* SWHomeViewController.m in Sources */,
+				E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */,
+				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +810,7 @@
 		};
 		E8E3ACE0215B8C770066F4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +830,7 @@
 		};
 		E8E3ACE1215B8C770066F4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5347DD2025907B752079DDDB /* Pods-SWDYD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,6 +850,7 @@
 		};
 		E8E3ACE3215B8C770066F4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD1C3405E239AF6599D6E567 /* Pods-SWDYDTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +870,7 @@
 		};
 		E8E3ACE4215B8C770066F4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFE410D730D332220AD4556 /* Pods-SWDYDTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -597,6 +890,7 @@
 		};
 		E8E3ACE6215B8C770066F4D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E6D7942FE395A202CB844E0 /* Pods-SWDYDUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28XRZ273MD;
@@ -615,6 +909,7 @@
 		};
 		E8E3ACE7215B8C770066F4D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28XRZ273MD;

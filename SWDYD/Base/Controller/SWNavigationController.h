@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 导航栏基类
+ */
 @interface SWNavigationController : UINavigationController
 
 @end

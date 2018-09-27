@@ -1,22 +1,22 @@
 //
-//  SWHomeViewController.m
+//  SWVideoViewController.m
 //  SWDYD
 //
-//  Created by zijin on 2018/9/26.
+//  Created by zijin on 2018/9/27.
 //  Copyright © 2018年 selwyn. All rights reserved.
 //
 
-#import "SWHomeViewController.h"
+#import "SWVideoViewController.h"
 
-@interface SWHomeViewController ()
+@interface SWVideoViewController ()
 
 @end
 
-@implementation SWHomeViewController
+@implementation SWVideoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,4 +22,16 @@
     return [UIColor sw_red:251 green:86 blue:149];
 }
 
++ (UIColor *)sw_darkGray {
+    return [UIColor sw_red:153 green:153 blue:153];
+}
+
++ (UIColor *)sw_black {
+    return [UIColor sw_red:51 green:51 blue:51];
+}
+
++ (UIColor *)sw_tableBg {
+    return [UIColor sw_red:240 green:240 blue:248];
+}
+
 @end
