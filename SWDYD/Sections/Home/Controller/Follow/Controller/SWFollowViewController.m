@@ -19,10 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor sw_tableBg];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerClass:[SWFollowListCell class] forCellReuseIdentifier:SWCellIdentifier];
-    
     [self loadData];
 }
 
@@ -41,19 +37,6 @@
     } failure:^(NSError * _Nonnull error) {
         
     }];
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SWFollowListCell *cell = [tableView dequeueReusableCellWithIdentifier:SWCellIdentifier forIndexPath:indexPath];
-    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

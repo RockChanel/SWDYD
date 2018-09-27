@@ -55,7 +55,7 @@
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     if (0 == index) {
-        return [[SWFollowViewController alloc]initWithStyle:UITableViewStyleGrouped];
+        return [[SWFollowViewController alloc]init];
     }
     else if (1 == index) {
         return [[SWRecommandViewController alloc]initWithStyle:UITableViewStylePlain];
