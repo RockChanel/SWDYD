@@ -48,13 +48,13 @@
     return self;
 }
 
-- (void)requestWithMethod:(SWHttpMethod)method api:(NSString *)api parameters:(id)parameters success:(void (^)(SWModel* _Nullable json))success failure:(void (^)(NSError * _Nonnull error))failure {
+- (void)requestWithMethod:(SWHttpMethod)method api:(NSString *)api parameters:(id)parameters success:(void (^)(SWJsonModel* _Nullable json))success failure:(void (^)(NSError * _Nonnull error))failure {
     switch (method) {
         case SWHttpMethodGet:
         {
             [self.sessionManager GET:api parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                SWModel *jsonModel = [SWModel yy_modelWithJSON:json];
+                SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
                 if (success) {
                     success(jsonModel);
                 }

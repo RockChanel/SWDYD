@@ -10,4 +10,6 @@
 
 @interface SWCollectionViewCell : UICollectionViewCell
 
+- (void)setup;
+
 @end

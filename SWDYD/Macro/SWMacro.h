@@ -12,6 +12,13 @@
 #ifndef SWMacro_h
 #define SWMacro_h
 
+// 弱引用
+#define SWWeakSelf __weak typeof(self) weakSelf = self;
+
+/** 字体大小 */
+#define SWFont(s) [UIFont systemFontOfSize:s]
+#define SWBoldFont(s)  [UIFont boldSystemFontOfSize:s]
+
 /** 屏幕宽度 */
 #define SWScreenWidth [UIScreen mainScreen].bounds.size.width
 /** 屏幕高度 */
@@ -20,5 +27,8 @@
 #define SWNavigationBarHeight self.navigationController.navigationBar.frame.size.height
 /** 状态栏高度 */
 #define SWStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
+
+#define SWDefaultUserAvatar [UIImage imageNamed:@"placeHolder_userAvatar"]
 
 #endif /* SWMacro_h */

@@ -8,14 +8,6 @@
 
 #import "SWModel.h"
 
-@implementation SWModel
-
-@end
-
-@implementation SWObjectModel
-
-@end
-
-@implementation SWListModel
+@implementation SWJsonModel
 
 @end

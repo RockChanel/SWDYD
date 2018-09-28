@@ -9,6 +9,7 @@
 #import "SWTabBarController.h"
 #import "SWNavigationController.h"
 #import "SWHomeViewController.h"
+#import "SWMeViewController.h"
 
 @interface SWTabBarController ()
 
@@ -20,11 +21,18 @@
     [super viewDidLoad];
     
     self.tabBar.tintColor = [UIColor sw_red];
+    [self.tabBar setShadowImage:[UIImage new]];
+    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"Default_Skin_TabbarBackgroundImage_X_0x49_"]];
     
     SWHomeViewController *homeVC = [[SWHomeViewController alloc]init];
     SWNavigationController *homeNav = [[SWNavigationController alloc]initWithRootViewController:homeVC];
     
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    SWMeViewController *meVC = [[SWMeViewController alloc]initWithCollectionViewLayout:flowLayout];
+    SWNavigationController *meNav = [[SWNavigationController alloc]initWithRootViewController:meVC];
+    
     [self addChildVC:homeNav title:@"首页" image:@"home_tabbar_35x35_" selectedImage:@"home_tabbar_red_35x35_"];
+    [self addChildVC:meNav title:@"我" image:@"me_tabbar_35x35_" selectedImage:@"me_tabbar_red_35x35_"];
 }
 
 - (void)addChildVC:(UIViewController *)childVC title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {

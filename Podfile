@@ -11,6 +11,7 @@ target 'SWDYD' do
   pod 'YYModel', '~> 1.0'
   pod 'WMPageController', '2.4.0' 
   pod 'AFNetworking', '~> 3.0'
+  pod 'MJRefresh'
 
   target 'SWDYDTests' do
     inherit! :search_paths

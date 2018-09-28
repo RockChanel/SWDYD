@@ -11,5 +11,4 @@
 
 #import <Foundation/Foundation.h>
 
-/** 通用 cellid */
-static NSString *SWCellIdentifier = @"SWCellIdentifier";
+static NSInteger const RecommandMaxCount = 3;

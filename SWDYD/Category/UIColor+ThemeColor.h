@@ -16,8 +16,10 @@
 
 /** 主题红色 */
 + (UIColor *)sw_red;
-/** 主题灰色 */
+/** 主题深灰色 */
 + (UIColor *)sw_darkGray;
+/** 主题灰色 */
++ (UIColor *)sw_gray;
 /** 主题黑色 */
 + (UIColor *)sw_black;
 + (UIColor *)sw_tableBg;

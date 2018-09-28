@@ -27,7 +27,7 @@
         self.showOnNavigationBar = YES;
         self.menuViewLayoutMode = WMMenuViewLayoutModeCenter;
         self.titleColorSelected = [UIColor sw_black];
-        self.titleColorNormal = [UIColor sw_darkGray];
+        self.titleColorNormal = [UIColor sw_gray];
         self.progressViewIsNaughty = YES;
         self.progressWidth = 20;
         self.progressHeight = 3;
@@ -42,7 +42,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.topics = @[@"关注", @"推荐", @"视频"];
+    
+    UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"home_search_icon_30x30_"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style: UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
+    self.navigationItem.rightBarButtonItem = settingItem;
+    
     [self reloadData];
+}
+
+- (void)searchAction {
+    
 }
 
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
@@ -55,7 +63,8 @@
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     if (0 == index) {
-        return [[SWFollowViewController alloc]init];
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+        return [[SWFollowViewController alloc]initWithCollectionViewLayout:flowLayout];
     }
     else if (1 == index) {
         return [[SWRecommandViewController alloc]initWithStyle:UITableViewStylePlain];
@@ -64,8 +73,12 @@
 }
 
 - (CGRect)pageController:(WMPageController *)pageController preferredFrameForMenuView:(WMMenuView *)menuView {
-    CGFloat leftMargin = 50;
-    return CGRectMake(leftMargin, 0, self.view.frame.size.width - 2*leftMargin, SWNavigationBarHeight);
+    CGFloat margin = 80;
+    return CGRectMake(0, 0, self.view.mj_w - 2*margin, SWNavigationBarHeight);
+}
+
+- (CGRect)pageController:(WMPageController *)pageController preferredFrameForContentView:(WMScrollView *)contentView {
+    return CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning {

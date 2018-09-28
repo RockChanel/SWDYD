@@ -15,18 +15,24 @@
 		E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */; };
 		E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */; };
 		E8CA6983215CA53800B7BB75 /* mfp.cer in Resources */ = {isa = PBXBuildFile; fileRef = E8CA6982215CA53800B7BB75 /* mfp.cer */; };
-		E8CA6987215CBF8B00B7BB75 /* SWDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */; };
 		E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */; };
 		E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */; };
 		E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */; };
 		E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */; };
 		E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */; };
 		E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A7215CCA2700B7BB75 /* SWModel.m */; };
-		E8CA69AC215CCACC00B7BB75 /* SWFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */; };
 		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
 		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
-		E8CA69BD215CDB0B00B7BB75 /* SWFollowUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */; };
-		E8CA69C0215CDB1A00B7BB75 /* SWFollowAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */; };
+		E8CDDC65215DB4AD00C41A28 /* SWClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC64215DB4AD00C41A28 /* SWClientManager.m */; };
+		E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */; };
+		E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC6A215DB78600C41A28 /* SWFollowViewController.m */; };
+		E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC73215DC57A00C41A28 /* SWFollowHeaderView.m */; };
+		E8CDDC77215DCD6C00C41A28 /* SWFollowFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC76215DCD6C00C41A28 /* SWFollowFooterView.m */; };
+		E8CDDC7A215DD7D700C41A28 /* SWFollowUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC79215DD7D700C41A28 /* SWFollowUserCell.m */; };
+		E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC7C215DD7EC00C41A28 /* SWFollowAreaCell.m */; };
+		E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC7F215DF6BD00C41A28 /* SWDYDTool.m */; };
+		E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC8E215E096700C41A28 /* SWMeViewController.m */; };
+		E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */; };
 		E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */; };
 		E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */; };
 		E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */; };
@@ -77,8 +83,6 @@
 		E8CA697E215CA17700B7BB75 /* SWNetWorkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNetWorkApi.h; sourceTree = "<group>"; };
 		E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNetWorkApi.m; sourceTree = "<group>"; };
 		E8CA6982215CA53800B7BB75 /* mfp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfp.cer; sourceTree = "<group>"; };
-		E8CA6985215CBF8B00B7BB75 /* SWDeviceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWDeviceTool.h; sourceTree = "<group>"; };
-		E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWDeviceTool.m; sourceTree = "<group>"; };
 		E8CA6989215CC46800B7BB75 /* SWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWLoginViewController.h; sourceTree = "<group>"; };
 		E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
 		E8CA698D215CC4B100B7BB75 /* AppDelegate+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Login.h"; sourceTree = "<group>"; };
@@ -91,16 +95,30 @@
 		E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
 		E8CA69A6215CCA2700B7BB75 /* SWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
 		E8CA69A7215CCA2700B7BB75 /* SWModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
-		E8CA69AA215CCACC00B7BB75 /* SWFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWFollowViewController.h; sourceTree = "<group>"; };
-		E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWFollowViewController.m; sourceTree = "<group>"; };
 		E8CA69B1215CCC1600B7BB75 /* SWFollowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowModel.h; sourceTree = "<group>"; };
 		E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowModel.m; sourceTree = "<group>"; };
 		E8CA69B8215CDAE700B7BB75 /* SWCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
 		E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
-		E8CA69BB215CDB0B00B7BB75 /* SWFollowUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowUserCell.h; sourceTree = "<group>"; };
-		E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowUserCell.m; sourceTree = "<group>"; };
-		E8CA69BE215CDB1A00B7BB75 /* SWFollowAreaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowAreaCell.h; sourceTree = "<group>"; };
-		E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowAreaCell.m; sourceTree = "<group>"; };
+		E8CDDC63215DB4AD00C41A28 /* SWClientManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWClientManager.h; sourceTree = "<group>"; };
+		E8CDDC64215DB4AD00C41A28 /* SWClientManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWClientManager.m; sourceTree = "<group>"; };
+		E8CDDC66215DB69900C41A28 /* SWCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController.h; sourceTree = "<group>"; };
+		E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController.m; sourceTree = "<group>"; };
+		E8CDDC69215DB78600C41A28 /* SWFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowViewController.h; sourceTree = "<group>"; };
+		E8CDDC6A215DB78600C41A28 /* SWFollowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowViewController.m; sourceTree = "<group>"; };
+		E8CDDC72215DC57A00C41A28 /* SWFollowHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowHeaderView.h; sourceTree = "<group>"; };
+		E8CDDC73215DC57A00C41A28 /* SWFollowHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowHeaderView.m; sourceTree = "<group>"; };
+		E8CDDC75215DCD6C00C41A28 /* SWFollowFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowFooterView.h; sourceTree = "<group>"; };
+		E8CDDC76215DCD6C00C41A28 /* SWFollowFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowFooterView.m; sourceTree = "<group>"; };
+		E8CDDC78215DD7D700C41A28 /* SWFollowUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowUserCell.h; sourceTree = "<group>"; };
+		E8CDDC79215DD7D700C41A28 /* SWFollowUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowUserCell.m; sourceTree = "<group>"; };
+		E8CDDC7B215DD7EC00C41A28 /* SWFollowAreaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowAreaCell.h; sourceTree = "<group>"; };
+		E8CDDC7C215DD7EC00C41A28 /* SWFollowAreaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowAreaCell.m; sourceTree = "<group>"; };
+		E8CDDC7E215DF6BD00C41A28 /* SWDYDTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWDYDTool.h; sourceTree = "<group>"; };
+		E8CDDC7F215DF6BD00C41A28 /* SWDYDTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWDYDTool.m; sourceTree = "<group>"; };
+		E8CDDC8D215E096700C41A28 /* SWMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMeViewController.h; sourceTree = "<group>"; };
+		E8CDDC8E215E096700C41A28 /* SWMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMeViewController.m; sourceTree = "<group>"; };
+		E8CDDC92215E28B100C41A28 /* SWSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSettingViewController.h; sourceTree = "<group>"; };
+		E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingViewController.m; sourceTree = "<group>"; };
 		E8E3ACB3215B8C750066F4D0 /* SWDYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWDYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,8 +228,10 @@
 		E8CA6984215CBF7B00B7BB75 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA6985215CBF8B00B7BB75 /* SWDeviceTool.h */,
-				E8CA6986215CBF8B00B7BB75 /* SWDeviceTool.m */,
+				E8CDDC63215DB4AD00C41A28 /* SWClientManager.h */,
+				E8CDDC64215DB4AD00C41A28 /* SWClientManager.m */,
+				E8CDDC7E215DF6BD00C41A28 /* SWDYDTool.h */,
+				E8CDDC7F215DF6BD00C41A28 /* SWDYDTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -279,8 +299,8 @@
 		E8CA69A9215CCACC00B7BB75 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA69AA215CCACC00B7BB75 /* SWFollowViewController.h */,
-				E8CA69AB215CCACC00B7BB75 /* SWFollowViewController.m */,
+				E8CDDC69215DB78600C41A28 /* SWFollowViewController.h */,
+				E8CDDC6A215DB78600C41A28 /* SWFollowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,12 +317,59 @@
 		E8CA69B4215CD73500B7BB75 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA69BB215CDB0B00B7BB75 /* SWFollowUserCell.h */,
-				E8CA69BC215CDB0B00B7BB75 /* SWFollowUserCell.m */,
-				E8CA69BE215CDB1A00B7BB75 /* SWFollowAreaCell.h */,
-				E8CA69BF215CDB1A00B7BB75 /* SWFollowAreaCell.m */,
+				E8CDDC72215DC57A00C41A28 /* SWFollowHeaderView.h */,
+				E8CDDC73215DC57A00C41A28 /* SWFollowHeaderView.m */,
+				E8CDDC75215DCD6C00C41A28 /* SWFollowFooterView.h */,
+				E8CDDC76215DCD6C00C41A28 /* SWFollowFooterView.m */,
+				E8CDDC78215DD7D700C41A28 /* SWFollowUserCell.h */,
+				E8CDDC79215DD7D700C41A28 /* SWFollowUserCell.m */,
+				E8CDDC7B215DD7EC00C41A28 /* SWFollowAreaCell.h */,
+				E8CDDC7C215DD7EC00C41A28 /* SWFollowAreaCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E8CDDC8A215E092A00C41A28 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				E8CDDC90215E288700C41A28 /* Setting */,
+				E8CDDC8B215E093500C41A28 /* Main */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		E8CDDC8B215E093500C41A28 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E8CDDC8C215E094300C41A28 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E8CDDC8C215E094300C41A28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8CDDC8D215E096700C41A28 /* SWMeViewController.h */,
+				E8CDDC8E215E096700C41A28 /* SWMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8CDDC90215E288700C41A28 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E8CDDC91215E289300C41A28 /* Controller */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		E8CDDC91215E289300C41A28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8CDDC92215E28B100C41A28 /* SWSettingViewController.h */,
+				E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E8E3ACAA215B8C750066F4D0 = {
@@ -386,6 +453,8 @@
 				E8E3ACEF215B8C8C0066F4D0 /* SWViewController.m */,
 				E8CA6968215C7D3600B7BB75 /* SWTableViewController.h */,
 				E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */,
+				E8CDDC66215DB69900C41A28 /* SWCollectionViewController.h */,
+				E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +491,7 @@
 		E8E3ACFF215B8CA70066F4D0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				E8CDDC8A215E092A00C41A28 /* Me */,
 				E8E3AD00215B8CA70066F4D0 /* Home */,
 				E8CA6988215CC38600B7BB75 /* Login */,
 			);
@@ -450,6 +520,7 @@
 				E8E3ACAF215B8C750066F4D0 /* Sources */,
 				E8E3ACB0215B8C750066F4D0 /* Frameworks */,
 				E8E3ACB1215B8C750066F4D0 /* Resources */,
+				12437CC4285873393CB82D41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -568,6 +639,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12437CC4285873393CB82D41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7655AC4544936AB005982790 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,19 +719,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
-				E8CA69AC215CCACC00B7BB75 /* SWFollowViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */,
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
+				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
+				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
+				E8CDDC77215DCD6C00C41A28 /* SWFollowFooterView.m in Sources */,
 				E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */,
-				E8CA6987215CBF8B00B7BB75 /* SWDeviceTool.m in Sources */,
+				E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */,
+				E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */,
+				E8CDDC65215DB4AD00C41A28 /* SWClientManager.m in Sources */,
 				E8E3ACFE215B8C9D0066F4D0 /* UIColor+ThemeColor.m in Sources */,
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
-				E8CA69C0215CDB1A00B7BB75 /* SWFollowAreaCell.m in Sources */,
+				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
-				E8CA69BD215CDB0B00B7BB75 /* SWFollowUserCell.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
+				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
 				E8E3ACF6215B8C8D0066F4D0 /* SWNavigationController.m in Sources */,
 				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
@@ -652,6 +745,8 @@
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
 				E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */,
 				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
+				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,
+				E8CDDC7A215DD7D700C41A28 /* SWFollowUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

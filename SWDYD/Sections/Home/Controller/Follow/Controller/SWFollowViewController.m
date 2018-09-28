@@ -2,26 +2,43 @@
 //  SWFollowViewController.m
 //  SWDYD
 //
-//  Created by zijin on 2018/9/27.
+//  Created by zijin on 2018/9/28.
 //  Copyright © 2018年 selwyn. All rights reserved.
 //
 
 #import "SWFollowViewController.h"
+#import "SWFollowUserCell.h"
+#import "SWFollowAreaCell.h"
 #import "SWFollowModel.h"
+#import "SWFollowHeaderView.h"
+#import "SWFollowFooterView.h"
 
-@interface SWFollowViewController ()
+@interface SWFollowViewController ()<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSArray<SWFollowUser *> *userList;
 @property (nonatomic, strong) NSArray<SWFollowArea *> *areaList;
 @end
 
 @implementation SWFollowViewController
 
+
+static NSString * const userCellId = @"userCellId";
+static NSString * const areaCellId = @"areaCellId";
+static NSString * const headerId = @"headerId";
+static NSString * const footerId = @"footerId";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.collectionView.alwaysBounceVertical = YES;
+    [self.collectionView registerClass:[SWFollowUserCell class] forCellWithReuseIdentifier:userCellId];
+    [self.collectionView registerClass:[SWFollowAreaCell class] forCellWithReuseIdentifier:areaCellId];
+    [self.collectionView registerClass:[SWFollowHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
+    [self.collectionView registerClass:[SWFollowFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
     
     [self loadData];
 }
 
+#pragma mark -- 加载数据
 - (void)loadData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = @"ios";
@@ -32,11 +49,92 @@
     params[@"queryType"] = @"myConcern";
     params[@"versionName"] = @"20180921";
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWFollow_List parameters:params success:^(SWModel * _Nullable json) {
-
+    [self.collectionView.mj_header endRefreshing];
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWFollow_List parameters:params success:^(SWJsonModel * _Nullable json) {
+        SWFollowModel *model = [SWFollowModel yy_modelWithJSON:json.data];
+        self.userList = model.recommendPageUserList;
+        self.areaList = model.recommendSubAreaList;
+        [self.collectionView reloadData];
     } failure:^(NSError * _Nonnull error) {
         
     }];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (0 == section) {
+        return _userList.count > RecommandMaxCount ? RecommandMaxCount:_userList.count;
+    }
+    return _areaList.count > RecommandMaxCount ? RecommandMaxCount:_areaList.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (0 == indexPath.section) {
+        SWFollowUserCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:userCellId forIndexPath:indexPath];
+        cell.user = _userList[indexPath.item];
+        return cell;
+    }
+    SWFollowAreaCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:areaCellId forIndexPath:indexPath];
+    cell.area = _areaList[indexPath.item];
+    return cell;
+}
+
+- (NSArray<SWFollowUser *> *)userList {
+    if (!_userList) {
+        _userList = [NSArray array];
+    }
+    return _userList;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        SWFollowHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerId forIndexPath:indexPath];
+        header.iconName = 0 == indexPath.section ? @"interestFriend_22x22_":@"interestArea_22x22_";
+        header.title = [NSString stringWithFormat:@"你可能感兴趣的%@", 0 == indexPath.section ? @"弹友":@"专区"];
+        return header;
+    }
+    else if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
+        SWWeakSelf
+        SWFollowFooterView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerId forIndexPath:indexPath];
+        footer.isUser = 0 == indexPath.section;
+        footer.refreshCompletion = ^(NSArray * _Nullable models) {
+            if (0 == indexPath.section) {
+                weakSelf.userList = models;
+            }
+            else {
+                weakSelf.areaList = models;
+            }
+            [weakSelf.collectionView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section]];
+        };
+        return footer;
+    }
+    return nil;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return 0 == indexPath.section ? CGSizeMake(90, 150):CGSizeMake(110, 180);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(15, 10, 15, 10);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(self.view.mj_w, 47);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    return CGSizeMake(self.view.mj_w, 40);
+}
+
+- (NSArray<SWFollowArea *> *)areaList {
+    if (!_areaList) {
+        _areaList = [NSArray array];
+    }
+    return _areaList;
 }
 
 - (void)didReceiveMemoryWarning {

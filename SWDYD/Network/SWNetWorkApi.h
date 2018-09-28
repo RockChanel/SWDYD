@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 /** BaseURL */
-static NSString *const SWBaseURL = @"https://api.diyidan.net";
+static NSString * const SWBaseURL = @"https://api.diyidan.net";
 
 #pragma mark -- 首页
 //TODO: 关注
 /** 关注列表 */
-static NSString *const SWFollow_List = @"/v0.2/user/timeline";
+static NSString * const SWFollow_List = @"/v0.2/user/timeline";
+/** 关注推荐 */
+static NSString * const SWFollow_Recommend = @"/v0.2/main/recommend";

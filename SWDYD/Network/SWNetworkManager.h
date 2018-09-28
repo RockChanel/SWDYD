@@ -17,12 +17,12 @@ typedef NS_ENUM(NSInteger, SWHttpMethod) {
     SWHttpMethodDelete,
 };
 
-@class SWModel;
+@class SWJsonModel;
 @interface SWNetworkManager : NSObject
 
 + (nonnull instancetype)shareManager;
 
-- (void)requestWithMethod:(SWHttpMethod)method api:(nonnull NSString *)api parameters:(nullable id)parameters success:(nullable void(^) (SWModel* _Nullable json))success failure:(nullable void(^) (NSError * _Nonnull error))failure;
+- (void)requestWithMethod:(SWHttpMethod)method api:(nonnull NSString *)api parameters:(nullable id)parameters success:(nullable void(^) (SWJsonModel* _Nullable json))success failure:(nullable void(^) (NSError * _Nonnull error))failure;
 
 
 @end

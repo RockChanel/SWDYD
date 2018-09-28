@@ -22,8 +22,12 @@
     return [UIColor sw_red:251 green:86 blue:149];
 }
 
-+ (UIColor *)sw_darkGray {
++ (UIColor *)sw_gray {
     return [UIColor sw_red:153 green:153 blue:153];
+}
+
++ (UIColor *)sw_darkGray {
+    return [UIColor sw_red:102 green:102 blue:102];
 }
 
 + (UIColor *)sw_black {
