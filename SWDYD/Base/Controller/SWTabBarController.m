@@ -20,9 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBar.tintColor = [UIColor sw_red];
-    [self.tabBar setShadowImage:[UIImage new]];
-    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"Default_Skin_TabbarBackgroundImage_X_0x49_"]];
+    [[UITabBar appearance] setTintColor:[UIColor sw_red]];
+    [[UITabBar appearance] setShadowImage:[UIImage new]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:SWTabBackground]];
     
     SWHomeViewController *homeVC = [[SWHomeViewController alloc]init];
     SWNavigationController *homeNav = [[SWNavigationController alloc]initWithRootViewController:homeVC];

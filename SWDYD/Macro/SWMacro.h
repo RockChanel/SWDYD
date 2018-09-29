@@ -28,7 +28,4 @@
 /** 状态栏高度 */
 #define SWStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 
-
-#define SWDefaultUserAvatar [UIImage imageNamed:@"placeHolder_userAvatar"]
-
 #endif /* SWMacro_h */

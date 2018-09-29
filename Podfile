@@ -12,6 +12,7 @@ target 'SWDYD' do
   pod 'WMPageController', '2.4.0' 
   pod 'AFNetworking', '~> 3.0'
   pod 'MJRefresh'
+  pod "RTRootNavigationController"  
 
   target 'SWDYDTests' do
     inherit! :search_paths

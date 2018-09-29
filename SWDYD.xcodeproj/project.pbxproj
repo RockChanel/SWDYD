@@ -10,6 +10,11 @@
 		0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */; };
 		252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */; };
 		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
+		E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AC215F0E84002A6A67 /* SWNavigationController.m */; };
+		E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */; };
+		E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86B3215F287A002A6A67 /* SWMeCell.m */; };
+		E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86B7215F2AB5002A6A67 /* SWMeModel.m */; };
+		E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86BA215F6E75002A6A67 /* SWMyMedalViewController.m */; };
 		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
 		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
 		E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */; };
@@ -39,7 +44,6 @@
 		E8E3ACC6215B8C770066F4D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACC5215B8C770066F4D0 /* main.m */; };
 		E8E3ACD0215B8C770066F4D0 /* SWDYDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACCF215B8C770066F4D0 /* SWDYDTests.m */; };
 		E8E3ACDB215B8C770066F4D0 /* SWDYDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACDA215B8C770066F4D0 /* SWDYDUITests.m */; };
-		E8E3ACF6215B8C8D0066F4D0 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACEB215B8C8C0066F4D0 /* SWNavigationController.m */; };
 		E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */; };
 		E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACEF215B8C8C0066F4D0 /* SWViewController.m */; };
 		E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACF5215B8C8D0066F4D0 /* SWTableViewCell.m */; };
@@ -73,6 +77,16 @@
 		A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1C3405E239AF6599D6E567 /* Pods-SWDYDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDUITests/Pods-SWDYDUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E85A86AB215F0E84002A6A67 /* SWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
+		E85A86AC215F0E84002A6A67 /* SWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
+		E85A86AE215F1D04002A6A67 /* UIViewController+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Ext.h"; sourceTree = "<group>"; };
+		E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Ext.m"; sourceTree = "<group>"; };
+		E85A86B2215F287A002A6A67 /* SWMeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMeCell.h; sourceTree = "<group>"; };
+		E85A86B3215F287A002A6A67 /* SWMeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMeCell.m; sourceTree = "<group>"; };
+		E85A86B6215F2AB5002A6A67 /* SWMeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMeModel.h; sourceTree = "<group>"; };
+		E85A86B7215F2AB5002A6A67 /* SWMeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMeModel.m; sourceTree = "<group>"; };
+		E85A86B9215F6E75002A6A67 /* SWMyMedalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMyMedalViewController.h; sourceTree = "<group>"; };
+		E85A86BA215F6E75002A6A67 /* SWMyMedalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMyMedalViewController.m; sourceTree = "<group>"; };
 		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
 		E8CA6965215C765600B7BB75 /* SWConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConst.h; sourceTree = "<group>"; };
 		E8CA6966215C765600B7BB75 /* SWConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWConst.m; sourceTree = "<group>"; };
@@ -132,8 +146,6 @@
 		E8E3ACD6215B8C770066F4D0 /* SWDYDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWDYDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACDA215B8C770066F4D0 /* SWDYDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWDYDUITests.m; sourceTree = "<group>"; };
 		E8E3ACDC215B8C770066F4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8E3ACEA215B8C8C0066F4D0 /* SWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
-		E8E3ACEB215B8C8C0066F4D0 /* SWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
 		E8E3ACEC215B8C8C0066F4D0 /* SWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTabBarController.h; sourceTree = "<group>"; };
 		E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTabBarController.m; sourceTree = "<group>"; };
 		E8E3ACEE215B8C8C0066F4D0 /* SWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWViewController.h; sourceTree = "<group>"; };
@@ -194,6 +206,24 @@
 				89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E85A86B1215F285C002A6A67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E85A86B2215F287A002A6A67 /* SWMeCell.h */,
+				E85A86B3215F287A002A6A67 /* SWMeCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E85A86B5215F2AA8002A6A67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E85A86B6215F2AB5002A6A67 /* SWMeModel.h */,
+				E85A86B7215F2AB5002A6A67 /* SWMeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E8CA6963215C761400B7BB75 /* Macro */ = {
@@ -341,6 +371,8 @@
 		E8CDDC8B215E093500C41A28 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E85A86B5215F2AA8002A6A67 /* Model */,
+				E85A86B1215F285C002A6A67 /* View */,
 				E8CDDC8C215E094300C41A28 /* Controller */,
 			);
 			path = Main;
@@ -351,6 +383,8 @@
 			children = (
 				E8CDDC8D215E096700C41A28 /* SWMeViewController.h */,
 				E8CDDC8E215E096700C41A28 /* SWMeViewController.m */,
+				E85A86B9215F6E75002A6A67 /* SWMyMedalViewController.h */,
+				E85A86BA215F6E75002A6A67 /* SWMyMedalViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,12 +433,12 @@
 			children = (
 				E8CA698C215CC49000B7BB75 /* AppDelegate */,
 				E8CA6984215CBF7B00B7BB75 /* Tool */,
-				E8CA6981215CA53000B7BB75 /* Resource */,
 				E8CA6977215C88EB00B7BB75 /* Network */,
 				E8CA6963215C761400B7BB75 /* Macro */,
 				E8E3ACFB215B8C9D0066F4D0 /* Category */,
 				E8E3ACE8215B8C8C0066F4D0 /* Base */,
 				E8E3ACFF215B8CA70066F4D0 /* Sections */,
+				E8CA6981215CA53000B7BB75 /* Resource */,
 				E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */,
 				E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */,
 				E8E3ACC4215B8C770066F4D0 /* Info.plist */,
@@ -445,8 +479,6 @@
 		E8E3ACE9215B8C8C0066F4D0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E8E3ACEA215B8C8C0066F4D0 /* SWNavigationController.h */,
-				E8E3ACEB215B8C8C0066F4D0 /* SWNavigationController.m */,
 				E8E3ACEC215B8C8C0066F4D0 /* SWTabBarController.h */,
 				E8E3ACED215B8C8C0066F4D0 /* SWTabBarController.m */,
 				E8E3ACEE215B8C8C0066F4D0 /* SWViewController.h */,
@@ -455,6 +487,8 @@
 				E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */,
 				E8CDDC66215DB69900C41A28 /* SWCollectionViewController.h */,
 				E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */,
+				E85A86AB215F0E84002A6A67 /* SWNavigationController.h */,
+				E85A86AC215F0E84002A6A67 /* SWNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -484,6 +518,8 @@
 			children = (
 				E8E3ACFC215B8C9D0066F4D0 /* UIColor+ThemeColor.h */,
 				E8E3ACFD215B8C9D0066F4D0 /* UIColor+ThemeColor.m */,
+				E85A86AE215F1D04002A6A67 /* UIViewController+Ext.h */,
+				E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -720,13 +756,16 @@
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
+				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
 				E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */,
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
+				E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */,
 				E8CDDC77215DCD6C00C41A28 /* SWFollowFooterView.m in Sources */,
 				E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */,
+				E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */,
 				E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */,
 				E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */,
 				E8CDDC65215DB4AD00C41A28 /* SWClientManager.m in Sources */,
@@ -735,9 +774,10 @@
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
+				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
-				E8E3ACF6215B8C8D0066F4D0 /* SWNavigationController.m in Sources */,
+				E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */,
 				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
 				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,
 				E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */,

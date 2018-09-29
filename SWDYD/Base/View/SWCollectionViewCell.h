@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SWCollectionViewCell : UICollectionViewCell
-
+/** 设置布局 */
 - (void)setup;
-
 @end

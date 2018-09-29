@@ -18,12 +18,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (@available(iOS 11.0, *)) {
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.alwaysBounceVertical = YES;
 }
 
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader {
@@ -38,15 +34,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)loadData {
     
-}
-
-#pragma mark <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
 }
 
 - (void)didReceiveMemoryWarning {

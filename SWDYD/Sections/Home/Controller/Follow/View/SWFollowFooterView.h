@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+static NSInteger const RecommandMaxCount = 3;
 @interface SWFollowFooterView : UICollectionReusableView
 /** 校验弹友或专区 yes:弹友 no:专区 */
 @property (nonatomic, assign) BOOL isUser;

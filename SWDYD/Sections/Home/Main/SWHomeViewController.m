@@ -67,7 +67,7 @@
         return [[SWFollowViewController alloc]initWithCollectionViewLayout:flowLayout];
     }
     else if (1 == index) {
-        return [[SWRecommandViewController alloc]initWithStyle:UITableViewStylePlain];
+        return [[SWRecommandViewController alloc]initWithStyle:UITableViewStyleGrouped];
     }
     return [[SWVideoViewController alloc]init];
 }

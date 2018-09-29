@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SWTableViewCell : UITableViewCell
-
+/** 设置布局 */
 - (void)setup;
-
 @end

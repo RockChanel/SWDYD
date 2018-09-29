@@ -20,7 +20,9 @@
 
 @implementation SWFollowViewController
 
-
+static CGFloat const UserItemWidth = 90.0;
+static CGFloat const AreaItemWidth = 110.0;
+static CGFloat const EdgeMargin = 10.0;
 static NSString * const userCellId = @"userCellId";
 static NSString * const areaCellId = @"areaCellId";
 static NSString * const headerId = @"headerId";
@@ -28,8 +30,7 @@ static NSString * const footerId = @"footerId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.collectionView.alwaysBounceVertical = YES;
+
     [self.collectionView registerClass:[SWFollowUserCell class] forCellWithReuseIdentifier:userCellId];
     [self.collectionView registerClass:[SWFollowAreaCell class] forCellWithReuseIdentifier:areaCellId];
     [self.collectionView registerClass:[SWFollowHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
@@ -115,11 +116,11 @@ static NSString * const footerId = @"footerId";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return 0 == indexPath.section ? CGSizeMake(90, 150):CGSizeMake(110, 180);
+    return 0 == indexPath.section ? CGSizeMake(UserItemWidth, 150):CGSizeMake(AreaItemWidth, 180);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(15, 10, 15, 10);
+    return UIEdgeInsetsMake(15, EdgeMargin, 15, EdgeMargin);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -128,6 +129,11 @@ static NSString * const footerId = @"footerId";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     return CGSizeMake(self.view.mj_w, 40);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    CGFloat itemWidth = 0 == section ? UserItemWidth:AreaItemWidth;
+    return (self.view.mj_w - RecommandMaxCount*itemWidth - 2*EdgeMargin)/(RecommandMaxCount-1);
 }
 
 - (NSArray<SWFollowArea *> *)areaList {
