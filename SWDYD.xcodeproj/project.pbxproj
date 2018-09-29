@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */; };
 		252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */; };
+		2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */; };
 		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
 		E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AC215F0E84002A6A67 /* SWNavigationController.m */; };
 		E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */; };
@@ -69,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.debug.xcconfig"; sourceTree = "<group>"; };
+		2E63CA14215FC1D2005BDF92 /* SWMedalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMedalHeaderView.h; sourceTree = "<group>"; };
+		2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMedalHeaderView.m; sourceTree = "<group>"; };
 		5347DD2025907B752079DDDB /* Pods-SWDYD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.release.xcconfig"; sourceTree = "<group>"; };
 		5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFE410D730D332220AD4556 /* Pods-SWDYDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 			children = (
 				E85A86B2215F287A002A6A67 /* SWMeCell.h */,
 				E85A86B3215F287A002A6A67 /* SWMeCell.m */,
+				2E63CA14215FC1D2005BDF92 /* SWMedalHeaderView.h */,
+				2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -759,6 +764,7 @@
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
 				E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */,
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
+				2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */,
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
