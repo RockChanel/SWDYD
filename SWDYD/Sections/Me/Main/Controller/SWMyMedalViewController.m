@@ -20,6 +20,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView addObserver:self forKeyPath:SWKeyPath_ContentOffset options:NSKeyValueObservingOptionNew context:nil];
 }
