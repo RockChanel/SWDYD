@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SWMedalHeaderView : UICollectionReusableView
+@interface SWMedalHeaderView : UIView
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *avatar;
-@property (nonatomic, copy) NSString *medal;
-@property (nonatomic, copy) NSInteger medalCount;
+@property (nonatomic, assign) NSInteger medalCount;
 @end

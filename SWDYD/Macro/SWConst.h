@@ -29,3 +29,5 @@ static NSString * const SWBackItem_White = @"nav_back_white_30x30_";
 #pragma mark -- KeyPath & Notification
 /** 偏移量 */
 static NSString * const SWKeyPath_ContentOffset = @"contentOffset";
+/** 登录状态变更通知 */
+static NSString * const SWNotification_LoginStateChange = @"loginStateChange";

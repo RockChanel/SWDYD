@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SWTabBarController.h"
+#import "AppDelegate+Login.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +20,12 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    SWTabBarController *tabBarVC = [[SWTabBarController alloc]init];
-    self.window.rootViewController = tabBarVC;
+    SWUserManager *manager = [SWUserManager shareManager];
+    manager.userId = @"6294784543708256446";
+    manager.avatar = @"https://image.diyidan.net/user/2018/9/29/YQWSBKQXJMESLQDS.jpg";
+    manager.nickName = @"dd12715434";
+    
+    [self sw_application:application didFinishLaunchingWithOptions:launchOptions];
     
     [self.window makeKeyAndVisible];
     return YES;

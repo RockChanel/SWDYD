@@ -32,10 +32,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
-- (void)loadData {
-    
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

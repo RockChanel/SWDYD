@@ -1,24 +1,28 @@
 //
-//  SWClientManager.m
+//  SWUserManager.m
 //  SWDYD
 //
-//  Created by zijin on 2018/9/28.
+//  Created by zijin on 2018/9/30.
 //  Copyright © 2018年 selwyn. All rights reserved.
 //
 
-#import "SWClientManager.h"
+#import "SWUserManager.h"
 
-@implementation SWClientManager
+@implementation SWUserModel
+
+@end
+
+@implementation SWUserManager
 
 + (instancetype)shareManager {
-    static SWClientManager *_clientManager = nil;
+    static SWUserManager *_userManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (!_clientManager) {
-            _clientManager = [[SWClientManager alloc] init];
+        if (!_userManager) {
+            _userManager = [[SWUserManager alloc] init];
         }
     });
-    return _clientManager;
+    return _userManager;
 }
 
 - (instancetype)init {

@@ -13,8 +13,6 @@
 @property (nonatomic, strong) UIImageView *headImage;
 /** 昵称 */
 @property (nonatomic, strong) UILabel *nickNameLab;
-/** 佩戴勋章 */
-@property (nonatomic, strong) UIImageView *medalIcon;
 /** 获得勋章 */
 @property (nonatomic, strong) UILabel *medalLab;
 @end
@@ -26,17 +24,12 @@
 }
 
 - (void)setMedalCount:(NSInteger)medalCount {
-
+    self.medalLab.text = [NSString stringWithFormat:@"已获得%ld枚勋章", (long)medalCount];
 }
 
 - (void)setAvatar:(NSString *)avatar {
     _avatar = avatar;
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
-}
-
-- (void)setMedal:(NSString *)medal {
-    _medal = medal;
-    [self.medalIcon sd_setImageWithURL:[NSURL URLWithString:medal]];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -56,7 +49,20 @@
     }];
     
     [self.headImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.top.equalTo(@70);
+        make.width.height.equalTo(@76);
+        make.centerX.equalTo(@0);
+    }];
+    self.headImage.layer.cornerRadius = 38;
+    
+    [self.nickNameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.headImage.mas_bottom).offset(50);
+        make.centerX.equalTo(@0);
+    }];
+    
+    [self.medalLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.nickNameLab.mas_bottom).offset(12);
+        make.centerX.equalTo(@0);
     }];
 }
 
@@ -70,18 +76,10 @@
     return _headImage;
 }
 
-- (UIImageView *)medalIcon {
-    if (!_medalIcon) {
-        _medalIcon = [[UIImageView alloc]init];
-        [self addSubview:_medalIcon];
-    }
-    return _medalIcon;
-}
-
 - (UILabel *)nickNameLab {
     if (!_nickNameLab) {
         _nickNameLab = [[UILabel alloc]init];
-        _nickNameLab.font = [UIFont systemFontOfSize:12];
+        _nickNameLab.font = SWFont(12);
         _nickNameLab.textColor = [UIColor whiteColor];
         _nickNameLab.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_nickNameLab];
@@ -92,7 +90,7 @@
 - (UILabel *)medalLab {
     if (!_medalLab) {
         _medalLab = [[UILabel alloc]init];
-        _medalLab.font = [UIFont systemFontOfSize:15];
+        _medalLab.font = SWFont(15);
         _medalLab.textColor = [UIColor whiteColor];
         _medalLab.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_medalLab];

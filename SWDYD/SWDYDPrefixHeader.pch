@@ -16,11 +16,15 @@
 #import "SWModel.h"
 #import "SWConst.h"
 #import "SWDYDTool.h"
+#import "SWClient.h"
 
 #import <YYModel.h>
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <RTRootNavigationController.h>
+#import <Realm.h>
+
+#import "SWUserManager.h"
 
 #endif /* SWDYDPrefixHeader_pch */

@@ -11,5 +11,4 @@
 @interface SWCollectionViewController : UICollectionViewController
 @property (nonatomic, assign) BOOL showRefreshHeader;
 @property (nonatomic, assign) BOOL showRefreshFooter;
-- (void)loadData;
 @end

@@ -7,9 +7,30 @@
 //
 
 #import "AppDelegate+Login.h"
+#import "SWLoginViewController.h"
+#import "SWNavigationController.h"
+#import "SWTabBarController.h"
 
 @implementation AppDelegate (Login)
 
+- (void)sw_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //注册登录状态监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStateChange:) name:SWNotification_LoginStateChange object:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:[SWClient shareClient].isAutoLogin]];
+}
 
+- (void)loginStateChange:(NSNotification *)notification {
+    BOOL autoLogin = [notification.object boolValue];
+    if (autoLogin) {
+        SWTabBarController *tabBarVC = [[SWTabBarController alloc]init];
+        self.window.rootViewController = tabBarVC;
+    }
+    else {
+        SWLoginViewController *loginVC = [[SWLoginViewController alloc]init];
+        SWNavigationController *loginNav = [[SWNavigationController alloc]initWithRootViewController:loginVC];
+        self.window.rootViewController = loginNav;
+    }
+}
 
 @end

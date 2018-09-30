@@ -10,4 +10,6 @@
 
 @interface AppDelegate (Login)
 
+- (void)sw_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+
 @end

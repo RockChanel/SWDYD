@@ -17,3 +17,8 @@ static NSString * const SWBaseURL = @"https://api.diyidan.net";
 static NSString * const SWFollow_List = @"/v0.2/user/timeline";
 /** 关注推荐 */
 static NSString * const SWFollow_Recommend = @"/v0.2/main/recommend";
+
+
+#pragma mark -- 我
+/** 我的勋章 */
+static NSString * const SWMe_MedalList = @"v0.3/user/medal/medal_list";
