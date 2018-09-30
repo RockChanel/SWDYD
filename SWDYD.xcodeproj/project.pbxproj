@@ -20,13 +20,16 @@
 		E87022B72160A2370001D55C /* SWMedalSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022B62160A2370001D55C /* SWMedalSectionHeader.m */; };
 		E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022B92160A8B50001D55C /* SWMedalCell.m */; };
 		E87022BD2160B61C0001D55C /* SWClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022BC2160B61C0001D55C /* SWClient.m */; };
+		E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022BF2160CD930001D55C /* SWMeHeaderView.m */; };
+		E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022CE2160D3750001D55C /* SWLoginViewController.m */; };
+		E87022D42160D3B10001D55C /* SWInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D32160D3B10001D55C /* SWInputModel.m */; };
+		E87022D72160D3CF0001D55C /* SWLoginMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D62160D3CF0001D55C /* SWLoginMainView.m */; };
 		E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8781BC9216058F300C73B2D /* SWUserManager.m */; };
 		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
 		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
 		E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */; };
 		E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */; };
 		E8CA6983215CA53800B7BB75 /* mfp.cer in Resources */ = {isa = PBXBuildFile; fileRef = E8CA6982215CA53800B7BB75 /* mfp.cer */; };
-		E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */; };
 		E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */; };
 		E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */; };
 		E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */; };
@@ -102,6 +105,14 @@
 		E87022B92160A8B50001D55C /* SWMedalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMedalCell.m; sourceTree = "<group>"; };
 		E87022BB2160B61C0001D55C /* SWClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWClient.h; sourceTree = "<group>"; };
 		E87022BC2160B61C0001D55C /* SWClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWClient.m; sourceTree = "<group>"; };
+		E87022BE2160CD930001D55C /* SWMeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMeHeaderView.h; sourceTree = "<group>"; };
+		E87022BF2160CD930001D55C /* SWMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMeHeaderView.m; sourceTree = "<group>"; };
+		E87022CD2160D3750001D55C /* SWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLoginViewController.h; sourceTree = "<group>"; };
+		E87022CE2160D3750001D55C /* SWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
+		E87022D22160D3B10001D55C /* SWInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWInputModel.h; sourceTree = "<group>"; };
+		E87022D32160D3B10001D55C /* SWInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWInputModel.m; sourceTree = "<group>"; };
+		E87022D52160D3CF0001D55C /* SWLoginMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWLoginMainView.h; sourceTree = "<group>"; };
+		E87022D62160D3CF0001D55C /* SWLoginMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWLoginMainView.m; sourceTree = "<group>"; };
 		E8781BC8216058F300C73B2D /* SWUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUserManager.h; sourceTree = "<group>"; };
 		E8781BC9216058F300C73B2D /* SWUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUserManager.m; sourceTree = "<group>"; };
 		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
@@ -114,8 +125,6 @@
 		E8CA697E215CA17700B7BB75 /* SWNetWorkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNetWorkApi.h; sourceTree = "<group>"; };
 		E8CA697F215CA17700B7BB75 /* SWNetWorkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNetWorkApi.m; sourceTree = "<group>"; };
 		E8CA6982215CA53800B7BB75 /* mfp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = mfp.cer; sourceTree = "<group>"; };
-		E8CA6989215CC46800B7BB75 /* SWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWLoginViewController.h; sourceTree = "<group>"; };
-		E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
 		E8CA698D215CC4B100B7BB75 /* AppDelegate+Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Login.h"; sourceTree = "<group>"; };
 		E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Login.m"; sourceTree = "<group>"; };
 		E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRecommandViewController.h; sourceTree = "<group>"; };
@@ -228,6 +237,8 @@
 			children = (
 				E85A86B2215F287A002A6A67 /* SWMeCell.h */,
 				E85A86B3215F287A002A6A67 /* SWMeCell.m */,
+				E87022BE2160CD930001D55C /* SWMeHeaderView.h */,
+				E87022BF2160CD930001D55C /* SWMeHeaderView.m */,
 				E87022B82160A8B50001D55C /* SWMedalCell.h */,
 				E87022B92160A8B50001D55C /* SWMedalCell.m */,
 				2E63CA14215FC1D2005BDF92 /* SWMedalHeaderView.h */,
@@ -247,6 +258,33 @@
 				E87022B321609BF90001D55C /* SWMedalModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E87022C52160D3440001D55C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E87022D12160D3910001D55C /* View */,
+				E87022C62160D3440001D55C /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E87022C62160D3440001D55C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E87022CD2160D3750001D55C /* SWLoginViewController.h */,
+				E87022CE2160D3750001D55C /* SWLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E87022D12160D3910001D55C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E87022D52160D3CF0001D55C /* SWLoginMainView.h */,
+				E87022D62160D3CF0001D55C /* SWLoginMainView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E8CA6963215C761400B7BB75 /* Macro */ = {
@@ -294,8 +332,7 @@
 		E8CA6988215CC38600B7BB75 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA6989215CC46800B7BB75 /* SWLoginViewController.h */,
-				E8CA698A215CC46800B7BB75 /* SWLoginViewController.m */,
+				E87022C52160D3440001D55C /* Main */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -523,6 +560,8 @@
 			children = (
 				E8CA69A6215CCA2700B7BB75 /* SWModel.h */,
 				E8CA69A7215CCA2700B7BB75 /* SWModel.m */,
+				E87022D22160D3B10001D55C /* SWInputModel.h */,
+				E87022D32160D3B10001D55C /* SWInputModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -780,6 +819,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
+				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
 				E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
@@ -787,6 +827,7 @@
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
 				2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */,
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
+				E87022D72160D3CF0001D55C /* SWLoginMainView.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
 				E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */,
@@ -803,8 +844,10 @@
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
+				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
+				E87022D42160D3B10001D55C /* SWInputModel.m in Sources */,
 				E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */,
 				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
 				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,
@@ -812,7 +855,6 @@
 				E8E3ACC6215B8C770066F4D0 /* main.m in Sources */,
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
 				E87022BD2160B61C0001D55C /* SWClient.m in Sources */,
-				E8CA698B215CC46800B7BB75 /* SWLoginViewController.m in Sources */,
 				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
 				E87022B72160A2370001D55C /* SWMedalSectionHeader.m in Sources */,
 				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,

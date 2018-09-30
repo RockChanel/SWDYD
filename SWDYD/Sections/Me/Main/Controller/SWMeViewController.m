@@ -12,6 +12,7 @@
 #import "SWMeModel.h"
 #import "SWMyMedalViewController.h"
 #import "UIViewController+Ext.h"
+#import "SWMeHeaderView.h"
 
 @interface SWMeViewController ()<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSArray<SWMeModel *> *datas;
@@ -130,30 +131,20 @@ static NSString * const reuseIdentifier = @"Cell";
     self.headerEffect.alpha = 0.3;
     [header addSubview:_headerEffect];
     
-    UIImageView *cover = [[UIImageView alloc]init];
-    cover.image = [UIImage imageNamed:@"me_header_cover_375x35_"];
-    [header addSubview:cover];
-    [cover mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(header.mas_bottom).offset(-75);
-        make.left.right.equalTo(@0);
-        make.height.equalTo(@35);
-    }];
-    
-    UIView *container = [[UIView alloc]init];
-    container.backgroundColor = [UIColor whiteColor];
-    [header addSubview:container];
-    [container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(@0);
-        make.bottom.equalTo(header.mas_bottom).offset(-10);
-        make.top.equalTo(cover.mas_bottom).offset(-1);
-    }];
-    
     UIView *separator = [[UIView alloc]init];
     separator.backgroundColor = [UIColor sw_tableBg];
     [header addSubview:separator];
     [separator mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(@0);
-        make.top.equalTo(container.mas_bottom);
+        make.height.equalTo(@10);
+    }];
+    
+    SWMeHeaderView *container = [[SWMeHeaderView alloc]init];
+    [header addSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(separator.mas_top);
+        make.left.right.equalTo(@0);
+        make.height.equalTo(@140);
     }];
     
     return header;
