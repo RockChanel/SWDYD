@@ -24,7 +24,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.isAutoLogin = NO;
+        self.isAutoLogin = YES;
     }
     return self;
 }

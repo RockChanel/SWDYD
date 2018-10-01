@@ -43,8 +43,8 @@
     [super viewDidLoad];
     self.topics = @[@"关注", @"推荐", @"视频"];
     
-    UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"home_search_icon_30x30_"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style: UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
-    self.navigationItem.rightBarButtonItem = settingItem;
+    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"home_search_icon_30x30_"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style: UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
+    self.navigationItem.rightBarButtonItem = searchItem;
     
     [self reloadData];
 }

@@ -10,6 +10,14 @@
 		0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */; };
 		252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */; };
 		2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */; };
+		2E9BE79B216220D700839B0E /* SWCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE79A216220D700839B0E /* SWCommunityViewController.m */; };
+		2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE79D2162210100839B0E /* SWHomeViewController.m */; };
+		2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7A52162227500839B0E /* SWHotZoneViewController.m */; };
+		2E9BE7A92162229300839B0E /* SWMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7A82162229300839B0E /* SWMineViewController.m */; };
+		2E9BE7AC216250C300839B0E /* SWHotSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7AB216250C300839B0E /* SWHotSubViewController.m */; };
+		2E9BE7B12162519E00839B0E /* SWHotCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7B02162519E00839B0E /* SWHotCategoryCell.m */; };
+		2E9BE7B42162534600839B0E /* SWHotZoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7B32162534600839B0E /* SWHotZoneModel.m */; };
+		2E9BE7B72162669800839B0E /* SWHotCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE7B62162669800839B0E /* SWHotCategoryHeaderView.m */; };
 		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
 		E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AC215F0E84002A6A67 /* SWNavigationController.m */; };
 		E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */; };
@@ -33,7 +41,6 @@
 		E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */; };
 		E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */; };
 		E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */; };
-		E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */; };
 		E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A7215CCA2700B7BB75 /* SWModel.m */; };
 		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
 		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
@@ -79,6 +86,22 @@
 		27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.debug.xcconfig"; sourceTree = "<group>"; };
 		2E63CA14215FC1D2005BDF92 /* SWMedalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMedalHeaderView.h; sourceTree = "<group>"; };
 		2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMedalHeaderView.m; sourceTree = "<group>"; };
+		2E9BE799216220D700839B0E /* SWCommunityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCommunityViewController.h; sourceTree = "<group>"; };
+		2E9BE79A216220D700839B0E /* SWCommunityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCommunityViewController.m; sourceTree = "<group>"; };
+		2E9BE79D2162210100839B0E /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
+		2E9BE79E2162210100839B0E /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
+		2E9BE7A42162227500839B0E /* SWHotZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHotZoneViewController.h; sourceTree = "<group>"; };
+		2E9BE7A52162227500839B0E /* SWHotZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHotZoneViewController.m; sourceTree = "<group>"; };
+		2E9BE7A72162229300839B0E /* SWMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMineViewController.h; sourceTree = "<group>"; };
+		2E9BE7A82162229300839B0E /* SWMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMineViewController.m; sourceTree = "<group>"; };
+		2E9BE7AA216250C300839B0E /* SWHotSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHotSubViewController.h; sourceTree = "<group>"; };
+		2E9BE7AB216250C300839B0E /* SWHotSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHotSubViewController.m; sourceTree = "<group>"; };
+		2E9BE7AF2162519E00839B0E /* SWHotCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHotCategoryCell.h; sourceTree = "<group>"; };
+		2E9BE7B02162519E00839B0E /* SWHotCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHotCategoryCell.m; sourceTree = "<group>"; };
+		2E9BE7B22162534600839B0E /* SWHotZoneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHotZoneModel.h; sourceTree = "<group>"; };
+		2E9BE7B32162534600839B0E /* SWHotZoneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHotZoneModel.m; sourceTree = "<group>"; };
+		2E9BE7B52162669800839B0E /* SWHotCategoryHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHotCategoryHeaderView.h; sourceTree = "<group>"; };
+		2E9BE7B62162669800839B0E /* SWHotCategoryHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHotCategoryHeaderView.m; sourceTree = "<group>"; };
 		5347DD2025907B752079DDDB /* Pods-SWDYD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.release.xcconfig"; sourceTree = "<group>"; };
 		5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFE410D730D332220AD4556 /* Pods-SWDYDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,8 +154,6 @@
 		E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRecommandViewController.m; sourceTree = "<group>"; };
 		E8CA699A215CC66700B7BB75 /* SWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVideoViewController.h; sourceTree = "<group>"; };
 		E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVideoViewController.m; sourceTree = "<group>"; };
-		E8CA69A3215CC6E600B7BB75 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
-		E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
 		E8CA69A6215CCA2700B7BB75 /* SWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
 		E8CA69A7215CCA2700B7BB75 /* SWModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
 		E8CA69B1215CCC1600B7BB75 /* SWFollowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowModel.h; sourceTree = "<group>"; };
@@ -220,6 +241,116 @@
 				E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E9BE79421621FE900839B0E /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7A22162221400839B0E /* HotZone */,
+				2E9BE7A02162221400839B0E /* Mine */,
+				2E9BE7952162208600839B0E /* Main */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2E9BE7952162208600839B0E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE796216220A600839B0E /* Controller */,
+				2E9BE797216220A600839B0E /* Model */,
+				2E9BE798216220A600839B0E /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2E9BE796216220A600839B0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE799216220D700839B0E /* SWCommunityViewController.h */,
+				2E9BE79A216220D700839B0E /* SWCommunityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E9BE797216220A600839B0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E9BE798216220A600839B0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E9BE79C2162210100839B0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE79E2162210100839B0E /* SWHomeViewController.h */,
+				2E9BE79D2162210100839B0E /* SWHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E9BE7A02162221400839B0E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7A12162221400839B0E /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		2E9BE7A12162221400839B0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7A72162229300839B0E /* SWMineViewController.h */,
+				2E9BE7A82162229300839B0E /* SWMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E9BE7A22162221400839B0E /* HotZone */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7AD2162515F00839B0E /* Model */,
+				2E9BE7AE2162515F00839B0E /* View */,
+				2E9BE7A32162221400839B0E /* Controller */,
+			);
+			path = HotZone;
+			sourceTree = "<group>";
+		};
+		2E9BE7A32162221400839B0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7A42162227500839B0E /* SWHotZoneViewController.h */,
+				2E9BE7A52162227500839B0E /* SWHotZoneViewController.m */,
+				2E9BE7AA216250C300839B0E /* SWHotSubViewController.h */,
+				2E9BE7AB216250C300839B0E /* SWHotSubViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E9BE7AD2162515F00839B0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7B22162534600839B0E /* SWHotZoneModel.h */,
+				2E9BE7B32162534600839B0E /* SWHotZoneModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E9BE7AE2162515F00839B0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E9BE7AF2162519E00839B0E /* SWHotCategoryCell.h */,
+				2E9BE7B02162519E00839B0E /* SWHotCategoryCell.m */,
+				2E9BE7B52162669800839B0E /* SWHotCategoryHeaderView.h */,
+				2E9BE7B62162669800839B0E /* SWHotCategoryHeaderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6B5F367C3C68A53230735C8C /* Frameworks */ = {
@@ -351,8 +482,7 @@
 		E8CA6990215CC64E00B7BB75 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA69A3215CC6E600B7BB75 /* SWHomeViewController.h */,
-				E8CA69A4215CC6E600B7BB75 /* SWHomeViewController.m */,
+				2E9BE79C2162210100839B0E /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -593,6 +723,7 @@
 			children = (
 				E8CDDC8A215E092A00C41A28 /* Me */,
 				E8E3AD00215B8CA70066F4D0 /* Home */,
+				2E9BE79421621FE900839B0E /* Community */,
 				E8CA6988215CC38600B7BB75 /* Login */,
 			);
 			path = Sections;
@@ -821,8 +952,12 @@
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
 				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
 				E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */,
+				2E9BE7AC216250C300839B0E /* SWHotSubViewController.m in Sources */,
+				2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
+				2E9BE7B42162534600839B0E /* SWHotZoneModel.m in Sources */,
+				2E9BE7B12162519E00839B0E /* SWHotCategoryCell.m in Sources */,
 				E8E3ACFA215B8C8D0066F4D0 /* SWTableViewCell.m in Sources */,
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
 				2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */,
@@ -836,11 +971,13 @@
 				E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */,
 				E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */,
 				E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */,
+				2E9BE7A92162229300839B0E /* SWMineViewController.m in Sources */,
 				E87022B421609BF90001D55C /* SWMedalModel.m in Sources */,
 				E8E3ACFE215B8C9D0066F4D0 /* UIColor+ThemeColor.m in Sources */,
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
 				E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */,
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
+				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
@@ -851,10 +988,11 @@
 				E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */,
 				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
 				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,
-				E8CA69A5215CC6E600B7BB75 /* SWHomeViewController.m in Sources */,
+				2E9BE79B216220D700839B0E /* SWCommunityViewController.m in Sources */,
 				E8E3ACC6215B8C770066F4D0 /* main.m in Sources */,
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
 				E87022BD2160B61C0001D55C /* SWClient.m in Sources */,
+				2E9BE7B72162669800839B0E /* SWHotCategoryHeaderView.m in Sources */,
 				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
 				E87022B72160A2370001D55C /* SWMedalSectionHeader.m in Sources */,
 				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,

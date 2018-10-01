@@ -13,7 +13,8 @@
 
 /** 用户缺省头像 */
 static NSString * const SWUserAvatar  = @"placeHolder_userAvatar";
-
+/** 加载缺省图片 */
+static NSString * const SWLoadImage  = @"ic_picture_load";
 
 #pragma mark -- 布局
 /** 导航栏背景 */

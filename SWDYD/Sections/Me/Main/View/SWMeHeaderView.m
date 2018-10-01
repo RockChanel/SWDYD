@@ -10,6 +10,7 @@
 
 @interface SWMeHeaderView()
 @property (nonatomic, strong) UIImageView *headImage;
+@property (nonatomic, strong) UILabel *nickNameLab;
 @end
 @implementation SWMeHeaderView
 
@@ -26,9 +27,9 @@
     cover.image = [UIImage imageNamed:@"me_header_cover_375x35_"];
     [self addSubview:cover];
     [cover mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.mas_bottom).offset(-55);
+        make.bottom.equalTo(self.mas_bottom).offset(-50);
         make.left.right.equalTo(@0);
-        make.height.equalTo(@35);
+        make.height.equalTo(@40);
     }];
     
     UIView *container = [[UIView alloc]init];
@@ -36,7 +37,7 @@
     [self addSubview:container];
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(@0);
-        make.height.equalTo(@56);
+        make.height.equalTo(@51);
     }];
     
     [self.headImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -47,11 +48,17 @@
     self.headImage.layer.cornerRadius = 40;
     self.headImage.layer.borderColor = [UIColor whiteColor].CGColor;
     self.headImage.layer.borderWidth = 2.0f;
+    
+    [self.nickNameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.headImage.mas_right).offset(15);
+        make.bottom.equalTo(cover.mas_top);
+    }];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:[SWUserManager shareManager].avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    self.nickNameLab.text = [SWUserManager shareManager].nickName;
 }
 
 - (UIImageView *)headImage {
@@ -64,5 +71,14 @@
     return _headImage;
 }
 
+- (UILabel *)nickNameLab {
+    if (!_nickNameLab) {
+        _nickNameLab = [[UILabel alloc]init];
+        _nickNameLab.font = SWBoldFont(18);
+        _nickNameLab.textColor = [UIColor whiteColor];
+        [self addSubview:_nickNameLab];
+    }
+    return _nickNameLab;
+}
 
 @end

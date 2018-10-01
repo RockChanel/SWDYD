@@ -19,7 +19,7 @@
 
 - (void)setMedal:(SWMedal *)medal {
     _medal = medal;
-    [self.icon sd_setImageWithURL:[NSURL URLWithString:medal.medalImage]];
+    [self.icon sd_setImageWithURL:[NSURL URLWithString:medal.medalImage] placeholderImage:[UIImage imageNamed:SWLoadImage]];
     self.titleLab.text = medal.medalName;
 }
 

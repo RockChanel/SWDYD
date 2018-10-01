@@ -13,7 +13,6 @@ target 'SWDYD' do
   pod 'AFNetworking', '~> 3.0'
   pod 'MJRefresh'
   pod "RTRootNavigationController"  
-  pod 'Realm'
 
   target 'SWDYDTests' do
     inherit! :search_paths

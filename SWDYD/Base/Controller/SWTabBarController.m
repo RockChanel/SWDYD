@@ -10,6 +10,7 @@
 #import "SWNavigationController.h"
 #import "SWHomeViewController.h"
 #import "SWMeViewController.h"
+#import "SWCommunityViewController.h"
 
 @interface SWTabBarController ()
 
@@ -27,11 +28,15 @@
     SWHomeViewController *homeVC = [[SWHomeViewController alloc]init];
     SWNavigationController *homeNav = [[SWNavigationController alloc]initWithRootViewController:homeVC];
     
+    SWCommunityViewController *communityVC = [[SWCommunityViewController alloc]init];
+    SWNavigationController *communityNav = [[SWNavigationController alloc]initWithRootViewController:communityVC];
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     SWMeViewController *meVC = [[SWMeViewController alloc]initWithCollectionViewLayout:flowLayout];
     SWNavigationController *meNav = [[SWNavigationController alloc]initWithRootViewController:meVC];
     
     [self addChildVC:homeNav title:@"首页" image:@"home_tabbar_35x35_" selectedImage:@"home_tabbar_red_35x35_"];
+    [self addChildVC:communityNav title:@"版区" image:@"community_tabbar_35x35_" selectedImage:@"community_tabbar_red_35x35_"];
     [self addChildVC:meNav title:@"我" image:@"me_tabbar_35x35_" selectedImage:@"me_tabbar_red_35x35_"];
 }
 

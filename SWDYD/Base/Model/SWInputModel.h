@@ -10,6 +10,12 @@
 
 @interface SWInputModel : NSObject
 
-
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *detail;
+@property (nonatomic, copy) NSString *subitDetail;
+@property (nonatomic, copy) NSString *tip;
+@property (nonatomic, copy) NSString *placeholder;
+@property (nonatomic, assign) NSInteger maxLength;
+@property (nonatomic, assign) NSInteger minLength;
 
 @end
