@@ -27,5 +27,8 @@
 #define SWNavigationBarHeight self.navigationController.navigationBar.frame.size.height
 /** 状态栏高度 */
 #define SWStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+/** 导航栏高度 + 状态栏高度 */
+#define SWTopNavBarHeight (SWStatusBarHeight+SWNavigationBarHeight)
+
 
 #endif /* SWMacro_h */

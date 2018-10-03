@@ -10,6 +10,7 @@
 #import "SWHotCategoryCell.h"
 #import "SWHotZoneModel.h"
 #import "SWHotCategoryHeaderView.h"
+#import "SWZoneHomeViewController.h"
 
 @interface SWHotSubViewController ()<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) SWHotZoneModel *hotZone;
@@ -29,10 +30,12 @@ static NSString * const headerId = @"headerId";
     
     [self.collectionView registerClass:[SWHotCategoryCell class] forCellWithReuseIdentifier:cellId];
     [self.collectionView registerClass:[SWHotCategoryHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
-    [self loadData];
+    
+    self.showRefreshHeader = YES;
+    [self autoHeaderRefresh:NO];
 }
 
-- (void)loadData {
+- (void)headerRefresh {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = @"ios";
     params[@"index"] = @"0";
@@ -44,9 +47,9 @@ static NSString * const headerId = @"headerId";
     
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWCommunity_HotZone parameters:params success:^(SWJsonModel * _Nullable json) {
         self.hotZone = [SWHotZoneModel yy_modelWithJSON:json.data];
-        [self.collectionView reloadData];
+        [self endRefreshHeader:YES reload:YES];
     } failure:^(NSError * _Nonnull error) {
-        
+        [self endRefreshHeader:YES reload:NO];
     }];
 }
 
@@ -62,6 +65,12 @@ static NSString * const headerId = @"headerId";
     SWHotCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     cell.info = _hotZone.categoryInfoList[indexPath.section].list[indexPath.row];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    SWZoneHomeViewController *zoneHomeVC = [[SWZoneHomeViewController alloc]init];
+    zoneHomeVC.title = _hotZone.categoryInfoList[indexPath.section].list[indexPath.row].areaName;
+    [self.navigationController pushViewController:zoneHomeVC animated:YES];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {

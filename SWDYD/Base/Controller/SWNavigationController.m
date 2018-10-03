@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:SWNavBackground] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:SWBoldFont(16), NSForegroundColorAttributeName:[UIColor sw_black]}];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {

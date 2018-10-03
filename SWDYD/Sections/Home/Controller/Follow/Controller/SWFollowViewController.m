@@ -36,11 +36,12 @@ static NSString * const footerId = @"footerId";
     [self.collectionView registerClass:[SWFollowHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
     [self.collectionView registerClass:[SWFollowFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
     
-    [self loadData];
+    self.showRefreshHeader = YES;
+    [self autoHeaderRefresh:NO];
 }
 
 #pragma mark -- 加载数据
-- (void)loadData {
+- (void)headerRefresh {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = @"ios";
     params[@"index"] = @"0";
@@ -55,9 +56,9 @@ static NSString * const footerId = @"footerId";
         SWFollowModel *model = [SWFollowModel yy_modelWithJSON:json.data];
         self.userList = model.recommendPageUserList;
         self.areaList = model.recommendSubAreaList;
-        [self.collectionView reloadData];
+        [self endRefreshHeader:YES reload:YES];
     } failure:^(NSError * _Nonnull error) {
-        
+        [self endRefreshHeader:YES reload:NO];
     }];
 }
 

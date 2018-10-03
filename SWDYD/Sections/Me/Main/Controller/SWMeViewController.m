@@ -98,6 +98,11 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *tempVC = nil;
     switch (indexPath.item) {
+        case 0:
+        {
+            //tempVC = [[SWMyHomeViewController alloc]init];
+        }
+            break;
         case 1:
         {
             UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
