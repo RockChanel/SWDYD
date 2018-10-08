@@ -36,11 +36,11 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"account"] = phone;
     params[@"password"] = password;
-    params[@"appChannel"] = @"ios";
-    params[@"isUpgrade"] = @"true";
-    params[@"versionName"] = @"20180921";
+    params[@"appChannel"] = SWAppChannel;
+    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"versionName"] = SWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodPost api:SWLogin parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodPost api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
         NSArray *userList = json.data[@"userList"];
         if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
             SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];

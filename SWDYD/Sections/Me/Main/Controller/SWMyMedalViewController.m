@@ -57,12 +57,12 @@ static NSString * const headerId = @"headerId";
 
 - (void)loadData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = @"ios";
+    params[@"appChannel"] = SWAppChannel;
     params[@"userId"] = [SWUserManager shareManager].user.userId;
-    params[@"isUpgrade"] = @"true";
-    params[@"versionName"] = @"20180921";
+    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"versionName"] = SWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWMe_MedalList parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_MyMedalList parameters:params success:^(SWJsonModel * _Nullable json) {
         self.list = [SWMedalList getShowMedalsWithList:[SWMedalList yy_modelWithJSON:json.data]];
         self.medalHeader.avatar = self.list.userInfo.avatar;
         self.medalHeader.medalCount = self.list.medalCount;

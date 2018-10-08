@@ -37,15 +37,15 @@ static NSString * const headerId = @"headerId";
 
 - (void)headerRefresh {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = @"ios";
+    params[@"appChannel"] = SWAppChannel;
     params[@"index"] = @"0";
-    params[@"isUpgrade"] = @"true";
+    params[@"isUpgrade"] = SWIsUpgrade;
     params[@"page"] = [NSNumber numberWithInt:1];
     params[@"perPage"] = [NSNumber numberWithInt:20];
     params[@"selectedFirstLevelCategory"] = _category;
-    params[@"versionName"] = @"20180921";
+    params[@"versionName"] = SWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWCommunity_HotZone parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_CommunityHotZone parameters:params success:^(SWJsonModel * _Nullable json) {
         self.hotZone = [SWHotZoneModel yy_modelWithJSON:json.data];
         [self endRefreshHeader:YES reload:YES];
     } failure:^(NSError * _Nonnull error) {
