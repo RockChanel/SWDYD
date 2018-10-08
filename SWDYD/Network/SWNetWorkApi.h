@@ -10,6 +10,8 @@
 
 /** BaseURL */
 static NSString * const SWBaseURL = @"https://api.diyidan.net";
+/** BaseImageURL */
+static NSString * const SWImageBaseURL = @"https://image.diyidan.net";
 
 #pragma mark -- 首页
 /** 关注列表 */
@@ -24,3 +26,6 @@ static NSString *const SWCommunity_HotZone = @"v0.2/area";
 #pragma mark -- 我
 /** 我的勋章 */
 static NSString * const SWMe_MedalList = @"v0.3/user/medal/medal_list";
+
+#pragma mark -- 登录
+static NSString * const SWLogin = @"v0.2/users/login";

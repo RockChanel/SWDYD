@@ -10,6 +10,7 @@
 
 @interface SWJsonModel : NSObject
 @property (nonatomic, strong) id data;
-@property (nonatomic, strong) NSNumber *code;
+@property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *apiVersion;
+@property (nonatomic, copy) NSString *message;
 @end

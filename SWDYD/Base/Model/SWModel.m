@@ -10,4 +10,10 @@
 
 @implementation SWJsonModel
 
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+    NSNumber *statusCode = dic[@"code"];
+    if ([statusCode isKindOfClass:[NSNumber class]]) _code = [statusCode integerValue];
+    return YES;
+}
+
 @end

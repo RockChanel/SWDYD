@@ -8,11 +8,11 @@
 
 #import "SWUserManager.h"
 
-@implementation SWUserModel
-
-@end
-
 @implementation SWUserManager
+@synthesize user = _user;
+
+/** 用户本地信息 key */
+static NSString * const SWLocalUserKey = @"SWLocalUserKey";
 
 + (instancetype)shareManager {
     static SWUserManager *_userManager = nil;
@@ -31,6 +31,33 @@
         
     }
     return self;
+}
+
+/** 保存用户信息 */
+- (void)sw_saveUser:(SWUserModel *)user {
+    NSData *encodeData = [NSKeyedArchiver archivedDataWithRootObject:user];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:encodeData forKey:SWLocalUserKey];
+    [userDefaults synchronize];
+}
+
+/** 读取用户信息 */
+- (SWUserModel *)sw_getUser {
+    NSData *encodeObject = [[NSUserDefaults standardUserDefaults] objectForKey:SWLocalUserKey];
+    SWUserModel *tempUser = [NSKeyedUnarchiver unarchiveObjectWithData:encodeObject];
+    return tempUser;
+}
+
+#pragma mark -- getter & setter
+/** 保存用户信息 */
+- (void)setUser:(SWUserModel *)user {
+    user.avatar = [NSString stringWithFormat:@"%@%@", SWImageBaseURL, user.avatar];
+    _user = user;
+    [self sw_saveUser:_user];
+}
+/** 读取用户信息 */
+- (SWUserModel *)user {
+    return [self sw_getUser];
 }
 
 @end

@@ -13,6 +13,7 @@ target 'SWDYD' do
   pod 'AFNetworking', '~> 3.0'
   pod 'MJRefresh'
   pod "RTRootNavigationController"  
+  pod 'SVProgressHUD', '~> 2.2.5'
 
   target 'SWDYDTests' do
     inherit! :search_paths

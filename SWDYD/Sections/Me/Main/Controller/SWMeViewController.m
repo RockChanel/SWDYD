@@ -16,7 +16,9 @@
 
 @interface SWMeViewController ()<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSArray<SWMeModel *> *datas;
+/** 头部图片 */
 @property (nonatomic, strong) UIImageView *headerImage;
+/** 头部毛玻璃效果 */
 @property (nonatomic, strong) UIVisualEffectView *headerEffect;
 @end
 

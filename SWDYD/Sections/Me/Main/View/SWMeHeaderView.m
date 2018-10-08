@@ -57,8 +57,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[SWUserManager shareManager].avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
-    self.nickNameLab.text = [SWUserManager shareManager].nickName;
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[SWUserManager shareManager].user.avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    self.nickNameLab.text = [SWUserManager shareManager].user.nickName;
 }
 
 - (UIImageView *)headImage {

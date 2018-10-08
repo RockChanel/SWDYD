@@ -20,8 +20,10 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:[SWClient shareClient].isAutoLogin]];
 }
 
+#pragma mark -- 登录状态变更
 - (void)loginStateChange:(NSNotification *)notification {
     BOOL autoLogin = [notification.object boolValue];
+    
     if (autoLogin) {
         SWTabBarController *tabBarVC = [[SWTabBarController alloc]init];
         self.window.rootViewController = tabBarVC;

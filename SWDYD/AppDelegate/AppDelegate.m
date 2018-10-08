@@ -20,11 +20,6 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    SWUserManager *manager = [SWUserManager shareManager];
-    manager.userId = @"6294784543708256446";
-    manager.avatar = @"https://image.diyidan.net/user/2018/9/29/YQWSBKQXJMESLQDS.jpg";
-    manager.nickName = @"dd12715434";
-    
     [self sw_application:application didFinishLaunchingWithOptions:launchOptions];
     
     [self.window makeKeyAndVisible];

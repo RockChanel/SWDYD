@@ -31,11 +31,12 @@
         self.sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:SWBaseURL]];
         self.sessionManager.requestSerializer.timeoutInterval = 30.0f;
         self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        self.sessionManager.requestSerializer= [AFJSONRequestSerializer serializer];
+        self.sessionManager.requestSerializer= [AFHTTPRequestSerializer serializer];
         
         [self.sessionManager.requestSerializer setValue:@"1511ae9c947386af25b2d6" forHTTPHeaderField:@"deviceid"];
         [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1537948161|10:session_id|24:YTkwNDA3NzZlNTk0NDRhNw==|05e2385157c309343a474ea21a535753b224f44729969904a113a13a12ebb51f\"; token_id=\"2|1:0|10:1537948170|8:token_id|44:MmRyNTcwZ2I4d2ppbzludGttYXBsNnozMWNxdXNldjQ=|5cbbb1ae78561616ea22f9a8cc5c07a21a958fd7f28244c7b36dd2d169a43005\"" forHTTPHeaderField:@"cookie"];
         
+        // 证书配置
         NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"mfp" ofType:@"cer"];
         NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
         NSSet *cerSet = [NSSet setWithObjects:cerData, nil];
@@ -68,11 +69,28 @@
             break;
         case SWHttpMethodPost:
         {
+            [SWProgressHUD show];
             [self.sessionManager POST:api parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SWProgressHUD dismiss];
+                });
+                id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
+                if (jsonModel.code == 200) {
+                    
+                }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SWProgressHUD sw_showText:jsonModel.message];
+                    });
+                }
                 if (success) {
-                    success(responseObject);
+                    success(jsonModel);
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SWProgressHUD dismiss];
+                });
                 NSLog(@"SWError == %@", error);
                 if (failure) {
                     failure(error);

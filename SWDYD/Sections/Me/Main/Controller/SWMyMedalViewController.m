@@ -58,7 +58,7 @@ static NSString * const headerId = @"headerId";
 - (void)loadData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = @"ios";
-    params[@"userId"] = [SWUserManager shareManager].userId;
+    params[@"userId"] = [SWUserManager shareManager].user.userId;
     params[@"isUpgrade"] = @"true";
     params[@"versionName"] = @"20180921";
     

@@ -1,14 +1,14 @@
 //
-//  UIColor+ThemeColor.m
+//  UIColor+Ext.m
 //  SWDYD
 //
-//  Created by zijin on 2018/9/26.
+//  Created by zijin on 2018/10/8.
 //  Copyright © 2018年 selwyn. All rights reserved.
 //
 
-#import "UIColor+ThemeColor.h"
+#import "UIColor+Ext.h"
 
-@implementation UIColor (ThemeColor)
+@implementation UIColor (Ext)
 
 + (UIColor *)sw_red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
     return [UIColor sw_red:red green:green blue:blue alpha:1.0];
