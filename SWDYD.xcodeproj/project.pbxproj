@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0D3195DEC02A40A20F0FACAB /* libPods-SWDYD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */; };
 		252AF65D52A024C590DA6523 /* libPods-SWDYDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */; };
-		2E5658C62163C32700DFC910 /* WMPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5658C42163C32700DFC910 /* WMPanGestureRecognizer.m */; };
 		2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */; };
 		2E9BE79B216220D700839B0E /* SWCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE79A216220D700839B0E /* SWCommunityViewController.m */; };
 		2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9BE79D2162210100839B0E /* SWHomeViewController.m */; };
@@ -40,7 +39,6 @@
 		E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022BF2160CD930001D55C /* SWMeHeaderView.m */; };
 		E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022CE2160D3750001D55C /* SWLoginViewController.m */; };
 		E87022D42160D3B10001D55C /* SWInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D32160D3B10001D55C /* SWInputModel.m */; };
-		E87022D72160D3CF0001D55C /* SWLoginMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D62160D3CF0001D55C /* SWLoginMainView.m */; };
 		E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8781BC9216058F300C73B2D /* SWUserManager.m */; };
 		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
 		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
@@ -62,6 +60,8 @@
 		E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC7F215DF6BD00C41A28 /* SWDYDTool.m */; };
 		E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC8E215E096700C41A28 /* SWMeViewController.m */; };
 		E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */; };
+		E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */; };
+		E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */; };
 		E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */; };
 		E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */; };
 		E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */; };
@@ -92,8 +92,6 @@
 
 /* Begin PBXFileReference section */
 		27984CD53EE2411B7C33873D /* Pods-SWDYD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD.debug.xcconfig"; sourceTree = "<group>"; };
-		2E5658C42163C32700DFC910 /* WMPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPanGestureRecognizer.m; sourceTree = "<group>"; };
-		2E5658C52163C32700DFC910 /* WMPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPanGestureRecognizer.h; sourceTree = "<group>"; };
 		2E63CA14215FC1D2005BDF92 /* SWMedalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMedalHeaderView.h; sourceTree = "<group>"; };
 		2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMedalHeaderView.m; sourceTree = "<group>"; };
 		2E9BE799216220D700839B0E /* SWCommunityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCommunityViewController.h; sourceTree = "<group>"; };
@@ -160,8 +158,6 @@
 		E87022CE2160D3750001D55C /* SWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
 		E87022D22160D3B10001D55C /* SWInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWInputModel.h; sourceTree = "<group>"; };
 		E87022D32160D3B10001D55C /* SWInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWInputModel.m; sourceTree = "<group>"; };
-		E87022D52160D3CF0001D55C /* SWLoginMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWLoginMainView.h; sourceTree = "<group>"; };
-		E87022D62160D3CF0001D55C /* SWLoginMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWLoginMainView.m; sourceTree = "<group>"; };
 		E8781BC8216058F300C73B2D /* SWUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUserManager.h; sourceTree = "<group>"; };
 		E8781BC9216058F300C73B2D /* SWUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUserManager.m; sourceTree = "<group>"; };
 		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
@@ -204,6 +200,10 @@
 		E8CDDC8E215E096700C41A28 /* SWMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMeViewController.m; sourceTree = "<group>"; };
 		E8CDDC92215E28B100C41A28 /* SWSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSettingViewController.h; sourceTree = "<group>"; };
 		E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingViewController.m; sourceTree = "<group>"; };
+		E8D190D3216C39AE00CB6A04 /* SWSettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSettingModel.h; sourceTree = "<group>"; };
+		E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingModel.m; sourceTree = "<group>"; };
+		E8D190D7216C416B00CB6A04 /* SWSettingListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSettingListCell.h; sourceTree = "<group>"; };
+		E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingListCell.m; sourceTree = "<group>"; };
 		E8E3ACB3215B8C750066F4D0 /* SWDYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWDYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,7 +270,6 @@
 		2E5658BB21635AF600DFC910 /* AreaHome */ = {
 			isa = PBXGroup;
 			children = (
-				2E5658C82163C49800DFC910 /* Model */,
 				2E5658C72163C49800DFC910 /* View */,
 				2E5658BC21635B0900DFC910 /* Controller */,
 			);
@@ -286,15 +285,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		2E5658C32163C32700DFC910 /* Gesture */ = {
-			isa = PBXGroup;
-			children = (
-				2E5658C52163C32700DFC910 /* WMPanGestureRecognizer.h */,
-				2E5658C42163C32700DFC910 /* WMPanGestureRecognizer.m */,
-			);
-			path = Gesture;
-			sourceTree = "<group>";
-		};
 		2E5658C72163C49800DFC910 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,13 +292,6 @@
 				2EDD392A2164900300F0BE8E /* SWZoneHomeHeaderView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2E5658C82163C49800DFC910 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2E9BE79421621FE900839B0E /* Community */ = {
@@ -326,8 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				2E9BE796216220A600839B0E /* Controller */,
-				2E9BE797216220A600839B0E /* Model */,
-				2E9BE798216220A600839B0E /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -339,20 +320,6 @@
 				2E9BE79A216220D700839B0E /* SWCommunityViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		2E9BE797216220A600839B0E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2E9BE798216220A600839B0E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2E9BE79C2162210100839B0E /* Controller */ = {
@@ -482,7 +449,6 @@
 		E87022C52160D3440001D55C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E87022D12160D3910001D55C /* View */,
 				E87022C62160D3440001D55C /* Controller */,
 			);
 			path = Main;
@@ -495,15 +461,6 @@
 				E87022CE2160D3750001D55C /* SWLoginViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E87022D12160D3910001D55C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E87022D52160D3CF0001D55C /* SWLoginMainView.h */,
-				E87022D62160D3CF0001D55C /* SWLoginMainView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E8CA6963215C761400B7BB75 /* Macro */ = {
@@ -544,7 +501,6 @@
 				E8CDDC7F215DF6BD00C41A28 /* SWDYDTool.m */,
 				E8781BC8216058F300C73B2D /* SWUserManager.h */,
 				E8781BC9216058F300C73B2D /* SWUserManager.m */,
-				2E5658C32163C32700DFC910 /* Gesture */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -673,6 +629,8 @@
 		E8CDDC90215E288700C41A28 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				E8D190D6216C414A00CB6A04 /* View */,
+				E8D190D2216C399400CB6A04 /* Model */,
 				E8CDDC91215E289300C41A28 /* Controller */,
 			);
 			path = Setting;
@@ -685,6 +643,24 @@
 				E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8D190D2216C399400CB6A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8D190D3216C39AE00CB6A04 /* SWSettingModel.h */,
+				E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8D190D6216C414A00CB6A04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8D190D7216C416B00CB6A04 /* SWSettingListCell.h */,
+				E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E8E3ACAA215B8C750066F4D0 = {
@@ -1049,6 +1025,7 @@
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
 				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
+				E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */,
 				E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */,
 				2E9BE7AC216250C300839B0E /* SWHotSubViewController.m in Sources */,
 				2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */,
@@ -1061,7 +1038,6 @@
 				E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */,
 				2E63CA16215FC1D2005BDF92 /* SWMedalHeaderView.m in Sources */,
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
-				E87022D72160D3CF0001D55C /* SWLoginMainView.m in Sources */,
 				2EDD392521648E9600F0BE8E /* WMStickyPageController.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
@@ -1076,7 +1052,6 @@
 				2E9BE7A92162229300839B0E /* SWMineViewController.m in Sources */,
 				E87022B421609BF90001D55C /* SWMedalModel.m in Sources */,
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
-				2E5658C62163C32700DFC910 /* WMPanGestureRecognizer.m in Sources */,
 				E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */,
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
 				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
@@ -1102,6 +1077,7 @@
 				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
 				E87022B72160A2370001D55C /* SWMedalSectionHeader.m in Sources */,
 				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,
+				E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */,
 				E8CDDC7A215DD7D700C41A28 /* SWFollowUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

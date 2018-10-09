@@ -22,4 +22,9 @@
  */
 - (void)sw_loginWithPhone:(NSString *)phone password:(NSString *)password;
 
+/**
+ 退出登录
+ */
+- (void)sw_logout;
+
 @end

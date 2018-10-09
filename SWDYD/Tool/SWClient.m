@@ -51,6 +51,19 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     } failure:nil];
 }
 
+- (void)sw_logout {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"xiaomiId"] = @"";
+
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodDelete api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == 200) {
+            [[SWUserManager shareManager] setUser:nil];
+            self.isAutoLogin = NO;
+            [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:NO]];
+        }
+    } failure:nil];
+}
+
 #pragma mark -- getter & setter
 /** 存储自动登录状态 */
 - (void)setIsAutoLogin:(BOOL)isAutoLogin {

@@ -56,7 +56,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)settingAction {
-    SWSettingViewController *settingVC = [[SWSettingViewController alloc]initWithStyle:UITableViewStylePlain];
+    SWSettingViewController *settingVC = [[SWSettingViewController alloc]initWithStyle:UITableViewStyleGrouped];
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 

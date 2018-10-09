@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor sw_tableBg];
 }
 
 - (void)didReceiveMemoryWarning {

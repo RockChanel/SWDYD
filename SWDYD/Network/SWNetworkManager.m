@@ -98,6 +98,37 @@
             }];
         }
             break;
+        case SWHttpMethodDelete:
+        {
+            [SWProgressHUD show];
+            [self.sessionManager DELETE:api parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SWProgressHUD dismiss];
+                });
+                id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
+                if (jsonModel.code == 200) {
+                    
+                }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SWProgressHUD sw_showText:jsonModel.message];
+                    });
+                }
+                if (success) {
+                    success(jsonModel);
+                }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [SWProgressHUD dismiss];
+                });
+                NSLog(@"SWError == %@", error);
+                if (failure) {
+                    failure(error);
+                }
+            }];
+        }
+            break;
         default:
             break;
     }
