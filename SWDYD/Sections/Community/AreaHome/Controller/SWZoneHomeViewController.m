@@ -8,8 +8,8 @@
 
 #import "SWZoneHomeViewController.h"
 #import "SWZoneHomeHeaderView.h"
-#import "SWHotSubViewController.h"
 #import "SWZoneHomeModel.h"
+#import "SWMineViewController.h"
 
 @interface SWZoneHomeViewController ()
 @property (nonatomic, strong) NSArray *topics;
@@ -50,13 +50,15 @@ static CGFloat const SWMenuViewHeight = 44.0;
     
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_HotZoneHead parameters:params success:^(SWJsonModel * _Nullable json) {
         SWZoneHomeHeaderModel *headerModel = [SWZoneHomeHeaderModel yy_modelWithJSON:json.data];
+        self.title = headerModel.subAreaName;
         self.headerView.model = headerModel;
+        self.topics = headerModel.subAreaPostCategories;
+        [self reloadData];
     } failure:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.topics = @[@"全部", @"头像", @"壁纸", @"热门", @"最新"];;
     self.headerHeight = SWNavigationBarHeight + SWStatusBarHeight + 186;
     self.menuViewHeight = SWMenuViewHeight;
     self.maximumHeaderViewHeight = _headerHeight;
@@ -70,12 +72,10 @@ static CGFloat const SWMenuViewHeight = 44.0;
     
     UIBarButtonItem *detailItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"subarea_detail_30x30_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(detailAction)];
     
-    self.navigationItem.rightBarButtonItems = @[searchItem, detailItem];
+    self.navigationItem.rightBarButtonItems = @[detailItem, searchItem];
     
     self.headerView = [[SWZoneHomeHeaderView alloc]initWithFrame:CGRectZero];
     [self.view addSubview:_headerView];
-    
-    [self reloadData];
     
     [self loadHeaderData];
 }
@@ -110,18 +110,17 @@ static CGFloat const SWMenuViewHeight = 44.0;
 
 #pragma mark - Datasource & Delegate
 - (NSInteger)numbersOfChildControllersInPageController:(WMPageController *)pageController {
-    return _topics.count;
+    return self.topics.count;
 }
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    SWHotSubViewController *subVC = [[SWHotSubViewController alloc]initWithCollectionViewLayout:flowLayout];
-    subVC.category = @"次元";
+    SWMineViewController *subVC = [[SWMineViewController alloc]initWithCollectionViewLayout:flowLayout];
     return subVC;
 }
 
 - (NSString *)pageController:(WMPageController *)pageController titleAtIndex:(NSInteger)index {
-    return _topics[index];
+    return self.topics[index];
 }
 
 /** 设置返回按钮 */
@@ -136,6 +135,13 @@ static CGFloat const SWMenuViewHeight = 44.0;
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+- (NSArray *)topics {
+    if (!_topics) {
+        _topics = [NSArray array];
+    }
+    return _topics;
 }
 
 - (void)didReceiveMemoryWarning {

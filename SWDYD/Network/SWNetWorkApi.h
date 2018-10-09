@@ -22,6 +22,8 @@ static NSString * const SWVersionName = @"20180921";
 static NSString * const SWAPI_FollowList = @"/v0.2/user/timeline";
 /** 关注推荐 */
 static NSString * const SWAPI_FollowRecommend = @"/v0.2/main/recommend";
+/** 推荐 banner */
+static NSString * const SWAPI_RecommandBanner = @"v0.2/promotion/index";
 
 #pragma mark -- 版区
 /** 热区 */

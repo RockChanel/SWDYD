@@ -63,6 +63,15 @@
 		E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */; };
 		E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */; };
 		E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */; };
+		E8D19110216CA37900CB6A04 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D19103216CA37900CB6A04 /* TAAbstractDotView.m */; };
+		E8D19111216CA37900CB6A04 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D19105216CA37900CB6A04 /* TAAnimatedDotView.m */; };
+		E8D19112216CA37900CB6A04 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D19107216CA37900CB6A04 /* TADotView.m */; };
+		E8D19113216CA37900CB6A04 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D19109216CA37900CB6A04 /* TAPageControl.m */; };
+		E8D19114216CA37900CB6A04 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1910B216CA37900CB6A04 /* SDCollectionViewCell.m */; };
+		E8D19115216CA37900CB6A04 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1910D216CA37900CB6A04 /* SDCycleScrollView.m */; };
+		E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1910F216CA37900CB6A04 /* UIView+SDExtension.m */; };
+		E8D1911F216CAAFD00CB6A04 /* SWRecommandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1911E216CAAFD00CB6A04 /* SWRecommandModel.m */; };
+		E8D19122216CAB5100CB6A04 /* SWRecommandBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D19121216CAB5100CB6A04 /* SWRecommandBannerView.m */; };
 		E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */; };
 		E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */; };
 		E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */; };
@@ -207,6 +216,24 @@
 		E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingListCell.m; sourceTree = "<group>"; };
 		E8D190DB216C8A4900CB6A04 /* SWZoneHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWZoneHomeModel.h; sourceTree = "<group>"; };
 		E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWZoneHomeModel.m; sourceTree = "<group>"; };
+		E8D19102216CA37900CB6A04 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		E8D19103216CA37900CB6A04 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		E8D19104216CA37900CB6A04 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		E8D19105216CA37900CB6A04 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		E8D19106216CA37900CB6A04 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		E8D19107216CA37900CB6A04 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		E8D19108216CA37900CB6A04 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		E8D19109216CA37900CB6A04 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		E8D1910A216CA37900CB6A04 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		E8D1910B216CA37900CB6A04 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		E8D1910C216CA37900CB6A04 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		E8D1910D216CA37900CB6A04 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		E8D1910E216CA37900CB6A04 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		E8D1910F216CA37900CB6A04 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		E8D1911D216CAAFD00CB6A04 /* SWRecommandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRecommandModel.h; sourceTree = "<group>"; };
+		E8D1911E216CAAFD00CB6A04 /* SWRecommandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRecommandModel.m; sourceTree = "<group>"; };
+		E8D19120216CAB5100CB6A04 /* SWRecommandBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRecommandBannerView.h; sourceTree = "<group>"; };
+		E8D19121216CAB5100CB6A04 /* SWRecommandBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRecommandBannerView.m; sourceTree = "<group>"; };
 		E8E3ACB3215B8C750066F4D0 /* SWDYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWDYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -396,6 +423,7 @@
 		2EDD391E21648E7D00F0BE8E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E8D19100216CA37900CB6A04 /* SDCycleScrollView */,
 				2EDD391F21648E9600F0BE8E /* WMStickyPageController */,
 			);
 			path = Vendor;
@@ -550,8 +578,9 @@
 		E8CA6995215CC66100B7BB75 /* Recommand */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */,
-				E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */,
+				E8D1911C216CAAE400CB6A04 /* Model */,
+				E8D19118216CA52E00CB6A04 /* View */,
+				E8D19117216CA3AD00CB6A04 /* Controller */,
 			);
 			name = Recommand;
 			path = Controller/Recommand;
@@ -672,6 +701,62 @@
 			children = (
 				E8D190DB216C8A4900CB6A04 /* SWZoneHomeModel.h */,
 				E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8D19100216CA37900CB6A04 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E8D19101216CA37900CB6A04 /* PageControl */,
+				E8D1910A216CA37900CB6A04 /* SDCollectionViewCell.h */,
+				E8D1910B216CA37900CB6A04 /* SDCollectionViewCell.m */,
+				E8D1910C216CA37900CB6A04 /* SDCycleScrollView.h */,
+				E8D1910D216CA37900CB6A04 /* SDCycleScrollView.m */,
+				E8D1910E216CA37900CB6A04 /* UIView+SDExtension.h */,
+				E8D1910F216CA37900CB6A04 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		E8D19101216CA37900CB6A04 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				E8D19102216CA37900CB6A04 /* TAAbstractDotView.h */,
+				E8D19103216CA37900CB6A04 /* TAAbstractDotView.m */,
+				E8D19104216CA37900CB6A04 /* TAAnimatedDotView.h */,
+				E8D19105216CA37900CB6A04 /* TAAnimatedDotView.m */,
+				E8D19106216CA37900CB6A04 /* TADotView.h */,
+				E8D19107216CA37900CB6A04 /* TADotView.m */,
+				E8D19108216CA37900CB6A04 /* TAPageControl.h */,
+				E8D19109216CA37900CB6A04 /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		E8D19117216CA3AD00CB6A04 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */,
+				E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8D19118216CA52E00CB6A04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8D19120216CAB5100CB6A04 /* SWRecommandBannerView.h */,
+				E8D19121216CAB5100CB6A04 /* SWRecommandBannerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8D1911C216CAAE400CB6A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8D1911D216CAAFD00CB6A04 /* SWRecommandModel.h */,
+				E8D1911E216CAAFD00CB6A04 /* SWRecommandModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1039,11 +1124,13 @@
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
 				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
 				E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */,
+				E8D19122216CAB5100CB6A04 /* SWRecommandBannerView.m in Sources */,
 				E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */,
 				2E9BE7AC216250C300839B0E /* SWHotSubViewController.m in Sources */,
 				2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
+				E8D1911F216CAAFD00CB6A04 /* SWRecommandModel.m in Sources */,
 				2EDD392B2164900300F0BE8E /* SWZoneHomeHeaderView.m in Sources */,
 				2E9BE7B42162534600839B0E /* SWHotZoneModel.m in Sources */,
 				2E9BE7B12162519E00839B0E /* SWHotCategoryCell.m in Sources */,
@@ -1057,6 +1144,8 @@
 				E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */,
 				2EDD392421648E9600F0BE8E /* WMMagicScrollView.m in Sources */,
 				E8CDDC77215DCD6C00C41A28 /* SWFollowFooterView.m in Sources */,
+				E8D19111216CA37900CB6A04 /* TAAnimatedDotView.m in Sources */,
+				E8D19115216CA37900CB6A04 /* SDCycleScrollView.m in Sources */,
 				E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */,
 				E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */,
 				E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */,
@@ -1064,6 +1153,7 @@
 				E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */,
 				2E9BE7A92162229300839B0E /* SWMineViewController.m in Sources */,
 				E87022B421609BF90001D55C /* SWMedalModel.m in Sources */,
+				E8D19114216CA37900CB6A04 /* SDCollectionViewCell.m in Sources */,
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
 				E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */,
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
@@ -1072,8 +1162,10 @@
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
+				E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */,
 				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,
 				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
+				E8D19113216CA37900CB6A04 /* TAPageControl.m in Sources */,
 				E84650C7216B270B00B7BB72 /* SWProgressHUD.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
@@ -1084,7 +1176,9 @@
 				2E9BE79B216220D700839B0E /* SWCommunityViewController.m in Sources */,
 				E8E3ACC6215B8C770066F4D0 /* main.m in Sources */,
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
+				E8D19112216CA37900CB6A04 /* TADotView.m in Sources */,
 				E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */,
+				E8D19110216CA37900CB6A04 /* TAAbstractDotView.m in Sources */,
 				E87022BD2160B61C0001D55C /* SWClient.m in Sources */,
 				E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */,
 				2E9BE7B72162669800839B0E /* SWHotCategoryHeaderView.m in Sources */,
