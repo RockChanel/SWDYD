@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SWZoneHomeHeaderModel;
 @interface SWZoneHomeHeaderView : UIView
-@property (nonatomic, assign) CGFloat offsetY;
+@property (nonatomic, strong) SWZoneHomeHeaderModel *model;
 @end

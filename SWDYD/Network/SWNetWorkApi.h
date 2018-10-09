@@ -25,9 +25,13 @@ static NSString * const SWAPI_FollowRecommend = @"/v0.2/main/recommend";
 
 #pragma mark -- 版区
 /** 热区 */
-static NSString *const SWAPI_CommunityHotZone = @"v0.2/area";
+static NSString * const SWAPI_CommunityHotZone = @"v0.2/area";
+static NSString * const SWAPI_HotZoneHead = @"v0.2/area/head";
 
 #pragma mark -- 我
+/** 主页 */
+static NSString * const SWAPI_PersonalActivities = @"v0.2/personals/activities2";
+
 /** 我的勋章 */
 static NSString * const SWAPI_MyMedalList = @"v0.3/user/medal/medal_list";
 

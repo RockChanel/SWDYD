@@ -7,6 +7,7 @@
 //
 
 #import "SWZoneHomeHeaderView.h"
+#import "SWZoneHomeModel.h"
 
 @interface SWZoneHomeHeaderView()
 @property (nonatomic, strong) UIImageView *bgImage;
@@ -23,14 +24,19 @@
     return self;
 }
 
+- (void)setModel:(SWZoneHomeHeaderModel *)model {
+    _model = model;
+    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaHeadImage] placeholderImage:[UIImage imageNamed:SWLoadeedImage]];
+    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaImage] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+}
+
 - (void)setup {
     [self.bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(@0);
     }];
     
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *bgEffect = [[UIVisualEffectView alloc] initWithEffect:blur];
-    bgEffect.alpha = 0.8;
+    UIView *bgEffect = [[UIView alloc]init];
+    bgEffect.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
     [self addSubview:bgEffect];
     [bgEffect mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(@0);
@@ -50,7 +56,7 @@
         _bgImage = [[UIImageView alloc]init];
         _bgImage.contentMode = UIViewContentModeScaleAspectFill;
         _bgImage.clipsToBounds = YES;
-        _bgImage.image = [UIImage imageNamed:@"me_fragment_bg"];
+        _bgImage.image = [UIImage imageNamed:@"head_bg_100x73_"];
         [self addSubview:_bgImage];
     }
     return _bgImage;

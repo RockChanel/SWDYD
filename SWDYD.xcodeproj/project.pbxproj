@@ -62,6 +62,7 @@
 		E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC93215E28B100C41A28 /* SWSettingViewController.m */; };
 		E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */; };
 		E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */; };
+		E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */; };
 		E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */; };
 		E8E3ACC0215B8C770066F4D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACBF215B8C770066F4D0 /* Assets.xcassets */; };
 		E8E3ACC3215B8C770066F4D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E3ACC1215B8C770066F4D0 /* LaunchScreen.storyboard */; };
@@ -204,6 +205,8 @@
 		E8D190D4216C39AE00CB6A04 /* SWSettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingModel.m; sourceTree = "<group>"; };
 		E8D190D7216C416B00CB6A04 /* SWSettingListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSettingListCell.h; sourceTree = "<group>"; };
 		E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSettingListCell.m; sourceTree = "<group>"; };
+		E8D190DB216C8A4900CB6A04 /* SWZoneHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWZoneHomeModel.h; sourceTree = "<group>"; };
+		E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWZoneHomeModel.m; sourceTree = "<group>"; };
 		E8E3ACB3215B8C750066F4D0 /* SWDYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWDYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E3ACB6215B8C750066F4D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E3ACB7215B8C750066F4D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		2E5658BB21635AF600DFC910 /* AreaHome */ = {
 			isa = PBXGroup;
 			children = (
+				E8D190DA216C8A2C00CB6A04 /* Model */,
 				2E5658C72163C49800DFC910 /* View */,
 				2E5658BC21635B0900DFC910 /* Controller */,
 			);
@@ -661,6 +665,15 @@
 				E8D190D8216C416B00CB6A04 /* SWSettingListCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E8D190DA216C8A2C00CB6A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8D190DB216C8A4900CB6A04 /* SWZoneHomeModel.h */,
+				E8D190DC216C8A4900CB6A04 /* SWZoneHomeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E8E3ACAA215B8C750066F4D0 = {
@@ -1059,6 +1072,7 @@
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
+				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,
 				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
 				E84650C7216B270B00B7BB72 /* SWProgressHUD.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,

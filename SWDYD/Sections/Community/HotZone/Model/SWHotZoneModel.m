@@ -10,10 +10,6 @@
 
 @implementation SWHotCategoryInfo
 
-+ (NSDictionary *)modelCustomPropertyMapper{
-    return @{@"areaName": @"subAreaName",
-             @"headImage": @"subAreaHeadImage"};
-}
 @end
 
 @implementation SWHotCategoryInfoList

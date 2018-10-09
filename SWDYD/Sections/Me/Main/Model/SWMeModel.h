@@ -15,3 +15,6 @@
 + (NSArray<SWMeModel *> *)sw_meHomeList;
 @end
 
+@interface SWMeUser : SWUserModel
+@property (nonatomic, assign) NSInteger userPostIsLikedCount;
+@end

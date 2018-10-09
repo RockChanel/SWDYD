@@ -7,6 +7,7 @@
 //
 
 #import "SWMeHeaderView.h"
+#import "SWMeModel.h"
 
 @interface SWMeHeaderView()
 @property (nonatomic, strong) UIImageView *headImage;
@@ -20,6 +21,23 @@
         [self setup];
     }
     return self;
+}
+
+- (void)setUser:(SWMeUser *)user {
+    _user = user;
+    
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", SWImageBaseURL, _user.avatar]] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    self.nickNameLab.text = _user.nickName;
+    
+    // 粉丝数
+    UILabel *followerCountLab = [self viewWithTag:100];
+    followerCountLab.text = [NSString stringWithFormat:@"粉丝 %ld", (long)_user.userFollowerCount];
+    // 关注数
+    UILabel *followingCountLab = [self viewWithTag:101];
+    followingCountLab.text = [NSString stringWithFormat:@"粉丝 %ld", (long)_user.userFollowingCount];
+    // 糖果数
+    UILabel *likeCountLab = [self viewWithTag:102];
+    likeCountLab.text = [NSString stringWithFormat:@"糖果 %ld", (long)_user.userPostIsLikedCount];
 }
 
 - (void)setup {
@@ -53,12 +71,21 @@
         make.left.equalTo(self.headImage.mas_right).offset(15);
         make.bottom.equalTo(cover.mas_top);
     }];
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[SWUserManager shareManager].user.avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
-    self.nickNameLab.text = [SWUserManager shareManager].user.nickName;
+    
+    NSMutableArray *masArray = [NSMutableArray array];
+    for (int i = 0; i < 3; i++) {
+        UILabel *tempLab = [[UILabel alloc]init];
+        tempLab.font = SWFont(14);
+        tempLab.textColor = [UIColor sw_black];
+        tempLab.textAlignment = NSTextAlignmentCenter;
+        tempLab.tag = 100 + i;
+        [container addSubview:tempLab];
+        [masArray addObject:tempLab];
+    }
+    [masArray mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:5 leadSpacing:5 tailSpacing:5];
+    [masArray mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(@0);
+    }];
 }
 
 - (UIImageView *)headImage {

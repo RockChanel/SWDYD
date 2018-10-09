@@ -9,16 +9,17 @@
 #import "SWZoneHomeViewController.h"
 #import "SWZoneHomeHeaderView.h"
 #import "SWHotSubViewController.h"
+#import "SWZoneHomeModel.h"
 
 @interface SWZoneHomeViewController ()
 @property (nonatomic, strong) NSArray *topics;
 @property (nonatomic, strong) SWZoneHomeHeaderView *headerView;
+@property (nonatomic, assign) CGFloat headerHeight;
 @end
 
 @implementation SWZoneHomeViewController
 
 static CGFloat const SWMenuViewHeight = 44.0;
-static CGFloat const SWHeaderViewHeight = 250.0;
 
 - (instancetype)init {
     self = [super init];
@@ -39,11 +40,26 @@ static CGFloat const SWHeaderViewHeight = 250.0;
     return self;
 }
 
+- (void)loadHeaderData {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appChannel"] = SWAppChannel;
+    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"versionName"] = SWVersionName;
+    params[@"subAreaPageFrom"] = @"section_hot";
+    params[@"subAreaId"] = _areaId;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_HotZoneHead parameters:params success:^(SWJsonModel * _Nullable json) {
+        SWZoneHomeHeaderModel *headerModel = [SWZoneHomeHeaderModel yy_modelWithJSON:json.data];
+        self.headerView.model = headerModel;
+    } failure:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.topics = @[@"全部", @"头像", @"壁纸", @"热门", @"最新"];;
+    self.headerHeight = SWNavigationBarHeight + SWStatusBarHeight + 186;
     self.menuViewHeight = SWMenuViewHeight;
-    self.maximumHeaderViewHeight = SWHeaderViewHeight;
+    self.maximumHeaderViewHeight = _headerHeight;
     self.minimumHeaderViewHeight = SWNavigationBarHeight + SWStatusBarHeight;
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:SWBoldFont(16), NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -60,6 +76,8 @@ static CGFloat const SWHeaderViewHeight = 250.0;
     [self.view addSubview:_headerView];
     
     [self reloadData];
+    
+    [self loadHeaderData];
 }
 
 - (void)detailAction {
@@ -72,7 +90,7 @@ static CGFloat const SWHeaderViewHeight = 250.0;
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    CGFloat headerViewHeight = SWHeaderViewHeight;
+    CGFloat headerViewHeight = _headerHeight;
     CGFloat headerViewX = 0;
     UIScrollView *scrollView = (UIScrollView *)self.view;
     if (scrollView.contentOffset.y < 0) {

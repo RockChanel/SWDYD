@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface SWHotCategoryInfo: NSObject
-@property (nonatomic, copy) NSString *areaName;
-@property (nonatomic, copy) NSString *headImage;
+@property (nonatomic, copy) NSString *subAreaName;
+@property (nonatomic, copy) NSString *subAreaHeadImage;
+@property (nonatomic, copy) NSString *subAreaImage;
+@property (nonatomic, copy) NSString *subAreaId;
 @end
 
 @interface SWHotCategoryInfoList: NSObject

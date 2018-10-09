@@ -69,7 +69,7 @@ static NSString * const headerId = @"headerId";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     SWZoneHomeViewController *zoneHomeVC = [[SWZoneHomeViewController alloc]init];
-    zoneHomeVC.title = _hotZone.categoryInfoList[indexPath.section].list[indexPath.row].areaName;
+    zoneHomeVC.areaId = _hotZone.categoryInfoList[indexPath.section].list[indexPath.row].subAreaId;
     [self.navigationController pushViewController:zoneHomeVC animated:YES];
 }
 

@@ -47,3 +47,30 @@ static inline SWMeModel *MeModel(NSString *title, NSString *icon) {
 }
 
 @end
+
+
+@implementation SWMeUser
+
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+    NSNumber *likeCount = dic[@"userPostIsLikedCount"];
+    if ([likeCount isKindOfClass:[NSNumber class]]) _userPostIsLikedCount = [likeCount integerValue];
+    return YES;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

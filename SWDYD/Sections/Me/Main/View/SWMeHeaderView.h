@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SWMeUser;
 @interface SWMeHeaderView : UIView
-
+@property (nonatomic, strong) SWMeUser *user;
 @end

@@ -25,7 +25,7 @@
         self.titleColorSelected = [UIColor whiteColor];
         self.titleColorNormal = [UIColor sw_gray];
         self.progressColor = [UIColor sw_red];
-        self.selectIndex = 1;
+        self.selectIndex = 0;
     }
     return self;
 }

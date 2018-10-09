@@ -9,5 +9,5 @@
 #import "WMStickyPageController.h"
 
 @interface SWZoneHomeViewController : WMStickyPageController
-
+@property (nonatomic, copy) NSString *areaId;
 @end

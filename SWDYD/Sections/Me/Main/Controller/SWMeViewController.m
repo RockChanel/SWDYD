@@ -19,7 +19,8 @@
 /** 头部图片 */
 @property (nonatomic, strong) UIImageView *headerImage;
 /** 头部毛玻璃效果 */
-@property (nonatomic, strong) UIVisualEffectView *headerEffect;
+@property (nonatomic, strong) UIView *headerEffect;
+@property (nonatomic, strong) SWMeHeaderView *headerContainer;
 @end
 
 @implementation SWMeViewController
@@ -35,6 +36,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self sw_setNavBarTransparent:YES];
+    [self loadUserProfile];
 }
 
 - (void)viewDidLoad {
@@ -53,6 +55,19 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[SWMeCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     [self.collectionView addSubview:[self headerView]];
+}
+
+- (void)loadUserProfile {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"userId"] = [SWUserManager shareManager].user.userId;
+    params[@"appChannel"] = SWAppChannel;
+    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"versionName"] = SWVersionName;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_PersonalActivities parameters:params success:^(SWJsonModel * _Nullable json) {
+        SWMeUser *user = [SWMeUser yy_modelWithJSON:json.data];
+        self.headerContainer.user = user;
+    } failure:nil];
 }
 
 - (void)settingAction {
@@ -132,10 +147,9 @@ static NSString * const reuseIdentifier = @"Cell";
     self.headerImage.contentMode = UIViewContentModeScaleAspectFill;
     [header addSubview:_headerImage];
     
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    self.headerEffect = [[UIVisualEffectView alloc] initWithEffect:blur];
+    self.headerEffect = [[UIView alloc]init];
+    self.headerEffect.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
     self.headerEffect.frame = _headerImage.frame;
-    self.headerEffect.alpha = 0.3;
     [header addSubview:_headerEffect];
     
     UIView *separator = [[UIView alloc]init];
@@ -146,9 +160,9 @@ static NSString * const reuseIdentifier = @"Cell";
         make.height.equalTo(@10);
     }];
     
-    SWMeHeaderView *container = [[SWMeHeaderView alloc]init];
-    [header addSubview:container];
-    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.headerContainer = [[SWMeHeaderView alloc]init];
+    [header addSubview:_headerContainer];
+    [self.headerContainer mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(separator.mas_top);
         make.left.right.equalTo(@0);
         make.height.equalTo(@140);

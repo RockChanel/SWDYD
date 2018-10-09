@@ -25,6 +25,8 @@
 @property (nonatomic, assign) NSInteger userExp;
 /** 粉丝数 */
 @property (nonatomic, assign) NSInteger userFollowerCount;
+/** 关注数 */
+@property (nonatomic, assign) NSInteger userFollowingCount;
 /** 用户等级 */
 @property (nonatomic, assign) NSInteger userLevel;
 /** 用户性别 */
