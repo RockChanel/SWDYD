@@ -12,12 +12,15 @@
 @interface SWSettingListCell()
 @property (nonatomic, strong) UILabel *titleLab;
 @property (nonatomic, strong) UILabel *detailLab;
+@property (nonatomic, strong) UIImageView *arrow;
 @end
 @implementation SWSettingListCell
 
 - (void)setModel:(SWSettingModel *)model {
     _model = model;
     self.titleLab.text = model.title;
+    self.detailLab.text = model.detail;
+    self.arrow.hidden = !model.showArrow;
 }
 
 - (void)setup {
@@ -28,6 +31,11 @@
     
     [self.detailLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.titleLab.mas_right).offset(10);
+        make.right.equalTo(@(-15));
+        make.centerY.equalTo(@0);
+    }];
+    
+    [self.arrow mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@(-15));
         make.centerY.equalTo(@0);
     }];
@@ -52,6 +60,15 @@
         [self.contentView addSubview:_detailLab];
     }
     return _detailLab;
+}
+
+- (UIImageView *)arrow {
+    if (!_arrow) {
+        _arrow = [[UIImageView alloc]init];
+        _arrow.image = [UIImage imageNamed:@"item_setting_right_arrow_7x13_"];
+        [self.contentView addSubview:_arrow];
+    }
+    return _arrow;
 }
 
 - (void)awakeFromNib {

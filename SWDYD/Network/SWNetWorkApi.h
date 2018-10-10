@@ -17,6 +17,9 @@ static NSString * const SWAppChannel = @"ios";
 static NSString * const SWIsUpgrade = @"true";
 static NSString * const SWVersionName = @"20180921";
 
+#pragma mark -- ResponseCode
+static NSInteger const SWResponseCode_Success = 200;
+
 #pragma mark -- 首页
 /** 关注列表 */
 static NSString * const SWAPI_FollowList = @"/v0.2/user/timeline";
@@ -39,3 +42,7 @@ static NSString * const SWAPI_MyMedalList = @"v0.3/user/medal/medal_list";
 
 #pragma mark -- 登录
 static NSString * const SWAPI_Login = @"v0.2/users/login";
+
+#pragma mark -- WebURL
+/** 免责声明 */
+static NSString * const SWURL_Disclaimer = @"https://app.diyidan.net/alert.html";

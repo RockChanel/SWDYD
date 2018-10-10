@@ -49,6 +49,7 @@ static inline SWSettingModel *SettingModel(NSString *title, NSString *detail, NS
     
     NSMutableArray<SWSettingModel *> *sectionList3 = [NSMutableArray array];
     SWSettingModel *version = SettingModel(@"版本号", nil, SWSettingVersionTag);
+    version.showArrow = NO;
     [sectionList3 addObject:version];
     SWSettingModel *convention = SettingModel(@"用户公约", nil, SWSettingConventionTag);
     [sectionList3 addObject:convention];

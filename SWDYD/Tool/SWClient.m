@@ -40,13 +40,15 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     params[@"isUpgrade"] = SWIsUpgrade;
     params[@"versionName"] = SWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodPost api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
-        NSArray *userList = json.data[@"userList"];
-        if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
-            SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];
-            [[SWUserManager shareManager] setUser:user];
-            [[SWClient shareClient] setIsAutoLogin:YES];
-            [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:YES]];
+    [[SWNetworkManager shareManager] requestWithMessage:@"正在登录" onView:nil method:SWHttpMethodPost api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == SWResponseCode_Success) {
+            NSArray *userList = json.data[@"userList"];
+            if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
+                SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];
+                [[SWUserManager shareManager] setUser:user];
+                [[SWClient shareClient] setIsAutoLogin:YES];
+                [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:YES]];
+            }
         }
     } failure:nil];
 }
@@ -55,8 +57,8 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"xiaomiId"] = @"";
 
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodDelete api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
-        if (json.code == 200) {
+    [[SWNetworkManager shareManager] requestWithMessage:@"" onView:nil method:SWHttpMethodDelete api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == SWResponseCode_Success) {
             [[SWUserManager shareManager] setUser:nil];
             self.isAutoLogin = NO;
             [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:NO]];
@@ -69,7 +71,7 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
 - (void)setIsAutoLogin:(BOOL)isAutoLogin {
     _isAutoLogin = isAutoLogin;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setBool:YES forKey:SWLocalIsAutoLoginKey];
+    [userDefaults setBool:_isAutoLogin forKey:SWLocalIsAutoLoginKey];
     [userDefaults synchronize];
 }
 /** 读取自动登录状态 */

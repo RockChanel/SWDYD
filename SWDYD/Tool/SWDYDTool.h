@@ -12,5 +12,6 @@
 
 /** 整数转换成万，保留一位小数 */
 + (NSString *)convertIntegerNumber:(NSInteger)num;
++ (UIWindow *)mainWindow;
 
 @end

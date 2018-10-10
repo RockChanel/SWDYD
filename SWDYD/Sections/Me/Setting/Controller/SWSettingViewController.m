@@ -9,6 +9,7 @@
 #import "SWSettingViewController.h"
 #import "SWSettingListCell.h"
 #import "SWSettingModel.h"
+#import "SWWebViewController.h"
 
 @interface SWSettingViewController ()
 @property (nonatomic, strong) NSArray *datas;
@@ -68,7 +69,20 @@ static NSString * const cellId = @"cellId";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSArray *sectionList = _datas[indexPath.section];
+    SWSettingModel *tempModel = sectionList[indexPath.row];
+    switch (tempModel.tag) {
+        case SWSettingDisclaimerTag:
+        {
+            SWWebViewController *webVC = [[SWWebViewController alloc]init];
+            webVC.url = SWURL_Disclaimer;
+            [self.navigationController pushViewController:webVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

@@ -50,6 +50,11 @@
 }
 
 - (void)requestWithMethod:(SWHttpMethod)method api:(NSString *)api parameters:(id)parameters success:(void (^)(SWJsonModel* _Nullable json))success failure:(void (^)(NSError * _Nonnull error))failure {
+    [self requestWithMessage:nil onView:nil method:method api:api parameters:parameters success:success failure:failure];
+}
+
+- (void)requestWithMessage:(NSString *)message onView:(UIView *)view  method:(SWHttpMethod)method api:(NSString *)api parameters:(id)parameters success:(void (^)(SWJsonModel* _Nullable json))success failure:(void (^)(NSError * _Nonnull error))failure  {
+    if (message) [SWProgressHUD sw_showLoading:message onView:view];
     switch (method) {
         case SWHttpMethodGet:
         {
@@ -69,28 +74,27 @@
             break;
         case SWHttpMethodPost:
         {
-            [SWProgressHUD show];
             [self.sessionManager POST:api parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [SWProgressHUD dismiss];
-                });
+                if (message) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SWProgressHUD sw_hideForView:view];
+                    });
+                }
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
-                if (jsonModel.code == 200) {
+                if (jsonModel.code == SWResponseCode_Success) {
                     
                 }
                 else {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [SWProgressHUD sw_showText:jsonModel.message];
+                        [SWProgressHUD sw_showTip:jsonModel.message];
                     });
                 }
                 if (success) {
                     success(jsonModel);
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [SWProgressHUD dismiss];
-                });
+               
                 NSLog(@"SWError == %@", error);
                 if (failure) {
                     failure(error);
@@ -100,28 +104,26 @@
             break;
         case SWHttpMethodDelete:
         {
-            [SWProgressHUD show];
             [self.sessionManager DELETE:api parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [SWProgressHUD dismiss];
-                });
+                if (message) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SWProgressHUD sw_hideForView:view];
+                    });
+                }
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
-                if (jsonModel.code == 200) {
+                if (jsonModel.code == SWResponseCode_Success) {
                     
                 }
                 else {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [SWProgressHUD sw_showText:jsonModel.message];
+                        [SWProgressHUD sw_showTip:jsonModel.message];
                     });
                 }
                 if (success) {
                     success(jsonModel);
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [SWProgressHUD dismiss];
-                });
                 NSLog(@"SWError == %@", error);
                 if (failure) {
                     failure(error);

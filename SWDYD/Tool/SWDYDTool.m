@@ -15,4 +15,12 @@
     return [NSString stringWithFormat:@"%.1f万", num/10000.0];
 }
 
++ (UIWindow *)mainWindow {
+    UIApplication *application = [UIApplication sharedApplication];
+    if ([application.delegate respondsToSelector:@selector(window)]) {
+        return [application.delegate window];
+    }
+    return application.keyWindow;
+}
+
 @end

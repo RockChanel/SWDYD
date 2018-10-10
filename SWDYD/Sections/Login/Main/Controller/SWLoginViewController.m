@@ -28,11 +28,11 @@
     [self.view endEditing:YES];
     
     if (![_phoneTF.text sw_validPhoneNum]) {
-        [SWProgressHUD sw_showText:@"手机号不对啦"];
+        [SWProgressHUD sw_showTip:@"手机号不对啦"];
         return;
     }
     if (_pswTF.text.length == 0) {
-        [SWProgressHUD sw_showText:@"密码还没填哦"];
+        [SWProgressHUD sw_showTip:@"密码还没填哦"];
         return;
     }
     

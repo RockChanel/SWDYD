@@ -23,7 +23,8 @@
 		2EDD392821648EB700F0BE8E /* SWZoneHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD392721648EB700F0BE8E /* SWZoneHomeViewController.m */; };
 		2EDD392B2164900300F0BE8E /* SWZoneHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD392A2164900300F0BE8E /* SWZoneHomeHeaderView.m */; };
 		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
-		E84650C7216B270B00B7BB72 /* SWProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C6216B270B00B7BB72 /* SWProgressHUD.m */; };
+		E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2685216D8F5A007CB8C4 /* SWWebViewController.m */; };
+		E81A2689216D943E007CB8C4 /* SWProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2688216D943E007CB8C4 /* SWProgressHUD.m */; };
 		E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */; };
 		E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */; };
 		E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CF216B394B00B7BB72 /* SWUserModel.m */; };
@@ -136,8 +137,10 @@
 		A04F2E404E734F3B043BCE47 /* libPods-SWDYD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWDYD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1C3405E239AF6599D6E567 /* Pods-SWDYDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDTests/Pods-SWDYDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E33DE055328FB65BD76B294C /* Pods-SWDYDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWDYDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWDYDUITests/Pods-SWDYDUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E84650C5216B270B00B7BB72 /* SWProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWProgressHUD.h; sourceTree = "<group>"; };
-		E84650C6216B270B00B7BB72 /* SWProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWProgressHUD.m; sourceTree = "<group>"; };
+		E81A2684216D8F59007CB8C4 /* SWWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWebViewController.h; sourceTree = "<group>"; };
+		E81A2685216D8F5A007CB8C4 /* SWWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWebViewController.m; sourceTree = "<group>"; };
+		E81A2687216D943E007CB8C4 /* SWProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWProgressHUD.h; sourceTree = "<group>"; };
+		E81A2688216D943E007CB8C4 /* SWProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWProgressHUD.m; sourceTree = "<group>"; };
 		E84650C8216B2ECF00B7BB72 /* NSString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
 		E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		E84650CB216B2EE100B7BB72 /* UIColor+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
@@ -845,6 +848,8 @@
 				E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */,
 				E85A86AB215F0E84002A6A67 /* SWNavigationController.h */,
 				E85A86AC215F0E84002A6A67 /* SWNavigationController.m */,
+				E81A2684216D8F59007CB8C4 /* SWWebViewController.h */,
+				E81A2685216D8F5A007CB8C4 /* SWWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -869,8 +874,8 @@
 				E8E3ACF5215B8C8D0066F4D0 /* SWTableViewCell.m */,
 				E8CA69B8215CDAE700B7BB75 /* SWCollectionViewCell.h */,
 				E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */,
-				E84650C5216B270B00B7BB72 /* SWProgressHUD.h */,
-				E84650C6216B270B00B7BB72 /* SWProgressHUD.m */,
+				E81A2687216D943E007CB8C4 /* SWProgressHUD.h */,
+				E81A2688216D943E007CB8C4 /* SWProgressHUD.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1048,12 +1053,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWDYD/Pods-SWDYD-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1122,6 +1125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
+				E81A2689216D943E007CB8C4 /* SWProgressHUD.m in Sources */,
 				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
 				E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */,
 				E8D19122216CAB5100CB6A04 /* SWRecommandBannerView.m in Sources */,
@@ -1160,13 +1164,13 @@
 				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
+				E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
 				E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */,
 				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,
 				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
 				E8D19113216CA37900CB6A04 /* TAPageControl.m in Sources */,
-				E84650C7216B270B00B7BB72 /* SWProgressHUD.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
 				E87022D42160D3B10001D55C /* SWInputModel.m in Sources */,
