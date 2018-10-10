@@ -9,6 +9,7 @@
 #import "SWRecommandViewController.h"
 #import "SWRecommandBannerView.h"
 #import "SWRecommandModel.h"
+#import "SWTimeLineCell.h"
 
 @interface SWRecommandViewController ()
 @property (nonatomic, strong) SWRecommandBannerView *banner;
@@ -16,13 +17,24 @@
 
 @implementation SWRecommandViewController
 
+static NSString *cellId = @"cellId";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableHeaderView = self.banner;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[SWTimeLineCell class] forCellReuseIdentifier:cellId];
+    
+    self.showRefreshHeader = YES;
+    [self autoHeaderRefresh:NO];
     
     [self loadBanner];
+}
+
+- (void)headerRefresh {
+    [self endRefreshHeader:YES reload:NO];
 }
 
 - (void)loadBanner {
@@ -47,16 +59,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    SWTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     return cell;
 }
 
 - (SWRecommandBannerView *)banner {
     if (!_banner) {
-        _banner = [[SWRecommandBannerView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, 235)];
+        _banner = [[SWRecommandBannerView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, 160)];
     }
     return _banner;
 }

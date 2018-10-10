@@ -35,7 +35,7 @@
 }
 
 + (UIColor *)sw_tableBg {
-    return [UIColor sw_red:240 green:240 blue:248];
+    return [UIColor sw_red:239 green:243 blue:248];
 }
 
 @end

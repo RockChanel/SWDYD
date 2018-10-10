@@ -25,6 +25,10 @@
 		B3199E8D340A0B53C4F35996 /* libPods-SWDYDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABEBF346D301CE209C5B27C /* libPods-SWDYDTests.a */; };
 		E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2685216D8F5A007CB8C4 /* SWWebViewController.m */; };
 		E81A2689216D943E007CB8C4 /* SWProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2688216D943E007CB8C4 /* SWProgressHUD.m */; };
+		E81A268C216DCEF7007CB8C4 /* SWTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A268B216DCEF7007CB8C4 /* SWTimeLineCell.m */; };
+		E81A2690216DD53C007CB8C4 /* SWTimeLineActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */; };
+		E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */; };
+		E81A2698216DE5C1007CB8C4 /* SWTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */; };
 		E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */; };
 		E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */; };
 		E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CF216B394B00B7BB72 /* SWUserModel.m */; };
@@ -141,6 +145,14 @@
 		E81A2685216D8F5A007CB8C4 /* SWWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWebViewController.m; sourceTree = "<group>"; };
 		E81A2687216D943E007CB8C4 /* SWProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWProgressHUD.h; sourceTree = "<group>"; };
 		E81A2688216D943E007CB8C4 /* SWProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWProgressHUD.m; sourceTree = "<group>"; };
+		E81A268A216DCEF7007CB8C4 /* SWTimeLineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineCell.h; sourceTree = "<group>"; };
+		E81A268B216DCEF7007CB8C4 /* SWTimeLineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineCell.m; sourceTree = "<group>"; };
+		E81A268E216DD53C007CB8C4 /* SWTimeLineActionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineActionView.h; sourceTree = "<group>"; };
+		E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineActionView.m; sourceTree = "<group>"; };
+		E81A2691216DD89D007CB8C4 /* SWTimeLineProfileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineProfileView.h; sourceTree = "<group>"; };
+		E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineProfileView.m; sourceTree = "<group>"; };
+		E81A2696216DE5C1007CB8C4 /* SWTimeLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineModel.h; sourceTree = "<group>"; };
+		E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineModel.m; sourceTree = "<group>"; };
 		E84650C8216B2ECF00B7BB72 /* NSString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
 		E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		E84650CB216B2EE100B7BB72 /* UIColor+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
@@ -451,6 +463,37 @@
 				89D90817019B28B7F4E59AAA /* libPods-SWDYDUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E81A268D216DD509007CB8C4 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				E81A2695216DDC8C007CB8C4 /* Model */,
+				E81A2694216DDC7C007CB8C4 /* View */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		E81A2694216DDC7C007CB8C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E81A268A216DCEF7007CB8C4 /* SWTimeLineCell.h */,
+				E81A268B216DCEF7007CB8C4 /* SWTimeLineCell.m */,
+				E81A268E216DD53C007CB8C4 /* SWTimeLineActionView.h */,
+				E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */,
+				E81A2691216DD89D007CB8C4 /* SWTimeLineProfileView.h */,
+				E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E81A2695216DDC8C007CB8C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E81A2696216DE5C1007CB8C4 /* SWTimeLineModel.h */,
+				E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E85A86B1215F285C002A6A67 /* View */ = {
@@ -831,6 +874,7 @@
 				E8E3ACE9215B8C8C0066F4D0 /* Controller */,
 				E8E3ACF0215B8C8C0066F4D0 /* Model */,
 				E8E3ACF3215B8C8D0066F4D0 /* View */,
+				E81A268D216DD509007CB8C4 /* TimeLine */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1161,6 +1205,7 @@
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
 				E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */,
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
+				E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */,
 				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
@@ -1168,6 +1213,7 @@
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
 				E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */,
+				E81A268C216DCEF7007CB8C4 /* SWTimeLineCell.m in Sources */,
 				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,
 				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
 				E8D19113216CA37900CB6A04 /* TAPageControl.m in Sources */,
@@ -1179,10 +1225,12 @@
 				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,
 				2E9BE79B216220D700839B0E /* SWCommunityViewController.m in Sources */,
 				E8E3ACC6215B8C770066F4D0 /* main.m in Sources */,
+				E81A2698216DE5C1007CB8C4 /* SWTimeLineModel.m in Sources */,
 				E8E3ACB8215B8C750066F4D0 /* AppDelegate.m in Sources */,
 				E8D19112216CA37900CB6A04 /* TADotView.m in Sources */,
 				E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */,
 				E8D19110216CA37900CB6A04 /* TAAbstractDotView.m in Sources */,
+				E81A2690216DD53C007CB8C4 /* SWTimeLineActionView.m in Sources */,
 				E87022BD2160B61C0001D55C /* SWClient.m in Sources */,
 				E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */,
 				2E9BE7B72162669800839B0E /* SWHotCategoryHeaderView.m in Sources */,

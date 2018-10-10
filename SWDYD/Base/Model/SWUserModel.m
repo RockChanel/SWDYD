@@ -11,33 +11,11 @@
 @implementation SWUserModel
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_avatar forKey:@"avatar"];
-    [aCoder encodeObject:_nickName forKey:@"nickName"];
-    [aCoder encodeObject:_userId forKey:@"userId"];
-    [aCoder encodeObject:_userAccount forKey:@"userAccount"];
-    [aCoder encodeObject:_userSchoolName forKey:@"userSchoolName"];
-    [aCoder encodeObject:_userPhone forKey:@"userPhone"];
-    [aCoder encodeInteger:_userExp forKey:@"userExp"];
-    [aCoder encodeInteger:_userFollowerCount forKey:@"userFollowerCount"];
-    [aCoder encodeInteger:_userLevel forKey:@"userLevel"];
-    [aCoder encodeObject:_gender forKey:@"gender"];
+    [self yy_modelEncodeWithCoder:aCoder];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    if (self) {
-        _avatar = [aDecoder decodeObjectForKey:@"avatar"];
-        _nickName = [aDecoder decodeObjectForKey:@"nickName"];
-        _userId = [aDecoder decodeObjectForKey:@"userId"];
-        _userAccount = [aDecoder decodeObjectForKey:@"userAccount"];
-        _userSchoolName = [aDecoder decodeObjectForKey:@"userSchoolName"];
-        _userPhone = [aDecoder decodeObjectForKey:@"userPhone"];
-        _userExp = [aDecoder decodeIntegerForKey:@"userExp"];
-        _userFollowerCount = [aDecoder decodeIntegerForKey:@"userFollowerCount"];
-        _userLevel = [aDecoder decodeIntegerForKey:@"userLevel"];
-        _gender = [aDecoder decodeObjectForKey:@"gender"];
-    }
-    return self;
+    return [self yy_modelInitWithCoder:aDecoder];
 }
 
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {

@@ -36,8 +36,7 @@
     self.backgroundColor = [UIColor whiteColor];
     
     [self.bannerScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(@0);
-        make.bottom.equalTo(@(-80));
+        make.left.right.top.bottom.equalTo(@0);
     }];
 }
 
