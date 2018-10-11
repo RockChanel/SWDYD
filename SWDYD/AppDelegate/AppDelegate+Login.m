@@ -15,9 +15,9 @@
 
 - (void)sw_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //注册登录状态监听
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStateChange:) name:SWNotification_LoginStateChange object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginStateChange:) name:kSWNotificationLoginStateChange object:nil];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:[SWClient shareClient].isAutoLogin]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kSWNotificationLoginStateChange object:[NSNumber numberWithBool:[SWClient shareClient].isAutoLogin]];
 }
 
 #pragma mark -- 登录状态变更

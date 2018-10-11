@@ -17,7 +17,7 @@
 
 - (void)setInfo:(SWHotCategoryInfo *)info {
     _info = info;
-    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:info.subAreaImage] placeholderImage:[UIImage imageNamed:SWLoadImage]];
+    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:info.subAreaImage] placeholderImage:[UIImage imageNamed:kSWLoadImage]];
     self.titleLab.text = info.subAreaName;
 }
 

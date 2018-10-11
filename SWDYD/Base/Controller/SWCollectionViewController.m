@@ -20,6 +20,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.alwaysBounceVertical = YES;
+    
+    _page = 1;
+    _perPage = 10;
+    _showRefreshHeader = NO;
+    _showRefreshFooter = NO;
 }
 
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader {

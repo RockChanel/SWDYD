@@ -26,8 +26,8 @@
 
 - (void)setModel:(SWZoneHomeHeaderModel *)model {
     _model = model;
-    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaHeadImage] placeholderImage:[UIImage imageNamed:SWLoadeedImage]];
-    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaImage] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaHeadImage] placeholderImage:[UIImage imageNamed:kSWLoadeedImage]];
+    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaImage] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
 }
 
 - (void)setup {

@@ -51,7 +51,7 @@ static NSString * const SWLocalUserKey = @"SWLocalUserKey";
 #pragma mark -- getter & setter
 /** 保存用户信息 */
 - (void)setUser:(SWUserModel *)user {
-    user.avatar = [NSString stringWithFormat:@"%@%@", SWImageBaseURL, user.avatar];
+    user.avatar = [NSString stringWithFormat:@"%@%@", kSWImageBaseURL, user.avatar];
     _user = user;
     [self sw_saveUser:_user];
 }

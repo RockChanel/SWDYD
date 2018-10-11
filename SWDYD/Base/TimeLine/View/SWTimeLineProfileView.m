@@ -10,7 +10,7 @@
 
 @interface SWTimeLineProfileView()
 @property (nonatomic, strong) UIImageView *avatarImage;
-@property (nonatomic, strong) UILabel *nameLab;
+@property (nonatomic, strong) UILabel *nickNameLab;
 @property (nonatomic, strong) UILabel *dateLab;
 @property (nonatomic, strong) UIButton *shareBtn;
 @end
@@ -32,6 +32,40 @@
     }];
     self.avatarImage.layer.cornerRadius = 20;
     self.avatarImage.backgroundColor = [UIColor sw_red];
+    
+    [self.nickNameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.avatarImage.mas_right).offset(10);
+        make.top.equalTo(@0);
+        make.height.equalTo(@22);
+    }];
+    self.nickNameLab.text = @"Selwyn";
+
+    [self.dateLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.nickNameLab.mas_bottom);
+        make.bottom.equalTo(@0);
+        make.left.equalTo(self.nickNameLab);
+    }];
+    self.dateLab.text = @"3小时前";
+    
+    [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(@(-10));
+        make.top.equalTo(@0);
+        make.width.height.equalTo(@20);
+    }];
+}
+
+- (void)shareAction {
+    
+}
+
+- (UIButton *)shareBtn {
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setImage:[UIImage imageNamed:@"homeRec_moreFunc_20x20_"] forState:UIControlStateNormal];
+        [_shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_shareBtn];
+    }
+    return _shareBtn;
 }
 
 - (UIImageView *)avatarImage {
@@ -44,14 +78,26 @@
     return _avatarImage;
 }
 
-- (UILabel *)nameLab {
-    if (!_nameLab) {
-        _nameLab = [[UILabel alloc]init];
-        _nameLab.font = SWFont(13);
-        _nameLab.textColor = [UIColor sw_darkGray];
-        _nameLab.text = @"0";
+- (UILabel *)nickNameLab {
+    if (!_nickNameLab) {
+        _nickNameLab = [[UILabel alloc]init];
+        _nickNameLab.font = SWFont(15);
+        _nickNameLab.textColor = [UIColor sw_black];
+        _nickNameLab.textAlignment = NSTextAlignmentLeft;
+        [self addSubview:_nickNameLab];
     }
-    return _nameLab;
+    return _nickNameLab;
+}
+
+- (UILabel *)dateLab {
+    if (!_dateLab) {
+        _dateLab = [[UILabel alloc]init];
+        _dateLab.font = SWFont(10);
+        _dateLab.textColor = [UIColor sw_gray];
+        _dateLab.textAlignment = NSTextAlignmentLeft;
+        [self addSubview:_dateLab];
+    }
+    return _dateLab;
 }
 
 

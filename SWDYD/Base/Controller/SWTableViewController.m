@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor sw_tableBg];
+    
+    _page = 1;
+    _perPage = 10;
+    _showRefreshHeader = NO;
+    _showRefreshFooter = NO;
 }
 
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader {

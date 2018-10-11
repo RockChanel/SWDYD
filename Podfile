@@ -14,7 +14,8 @@ target 'SWDYD' do
   pod 'MJRefresh'
   pod "RTRootNavigationController"  
   pod 'MBProgressHUD', '~> 1.1.0'
-
+  pod 'YYText'
+  
   target 'SWDYDTests' do
     inherit! :search_paths
     # Pods for testing

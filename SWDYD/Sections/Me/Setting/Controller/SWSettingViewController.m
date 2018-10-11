@@ -75,7 +75,7 @@ static NSString * const cellId = @"cellId";
         case SWSettingDisclaimerTag:
         {
             SWWebViewController *webVC = [[SWWebViewController alloc]init];
-            webVC.url = SWURL_Disclaimer;
+            webVC.url = kSWURLDisclaimer;
             [self.navigationController pushViewController:webVC animated:YES];
         }
             break;

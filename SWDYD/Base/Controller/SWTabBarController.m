@@ -23,7 +23,7 @@
     
     [[UITabBar appearance] setTintColor:[UIColor sw_red]];
     [[UITabBar appearance] setShadowImage:[UIImage new]];
-    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:SWTabBackground]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:kSWTabBackground]];
     
     SWHomeViewController *homeVC = [[SWHomeViewController alloc]init];
     SWNavigationController *homeNav = [[SWNavigationController alloc]initWithRootViewController:homeVC];

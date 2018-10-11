@@ -29,7 +29,7 @@
 
 - (void)setAvatar:(NSString *)avatar {
     _avatar = avatar;
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {

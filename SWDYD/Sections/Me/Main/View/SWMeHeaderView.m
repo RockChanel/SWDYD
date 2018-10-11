@@ -26,7 +26,7 @@
 - (void)setUser:(SWMeUser *)user {
     _user = user;
     
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", SWImageBaseURL, _user.avatar]] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kSWImageBaseURL, _user.avatar]] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
     self.nickNameLab.text = _user.nickName;
     
     // 粉丝数

@@ -12,7 +12,7 @@
 #pragma mark -- 设置返回按钮
 /** 设置返回按钮 */
 - (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action {
-    return [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:SWBackItem_Red]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    return [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:kSWBackItemRed]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
 }
 
 /** 返回按钮点击事件 */
@@ -27,7 +27,7 @@
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     }
     else {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:SWNavBackground] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:kSWNavBackground] forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:nil];
     }
 }

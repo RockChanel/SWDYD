@@ -42,13 +42,13 @@ static CGFloat const SWMenuViewHeight = 44.0;
 
 - (void)loadHeaderData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = SWAppChannel;
-    params[@"isUpgrade"] = SWIsUpgrade;
-    params[@"versionName"] = SWVersionName;
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
     params[@"subAreaPageFrom"] = @"section_hot";
     params[@"subAreaId"] = _areaId;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_HotZoneHead parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiHotZoneHead parameters:params success:^(SWJsonModel * _Nullable json) {
         SWZoneHomeHeaderModel *headerModel = [SWZoneHomeHeaderModel yy_modelWithJSON:json.data];
         self.title = headerModel.subAreaName;
         self.headerView.model = headerModel;
@@ -125,7 +125,7 @@ static CGFloat const SWMenuViewHeight = 44.0;
 
 /** 设置返回按钮 */
 - (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action {
-    return [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:SWBackItem_White]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    return [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:kSWBackItemWhite]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
 }
 
 /** 返回按钮点击事件 */

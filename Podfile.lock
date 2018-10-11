@@ -25,6 +25,7 @@ PODS:
   - SDWebImage/Core (4.4.1)
   - WMPageController (2.4.0)
   - YYModel (1.0.4)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0)
   - WMPageController (= 2.4.0)
   - YYModel (~> 1.0)
+  - YYText
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - SDWebImage
     - WMPageController
     - YYModel
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -56,7 +59,8 @@ SPEC CHECKSUMS:
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   WMPageController: e9af37a2c7f259582578b35f2b67530b061e3862
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 58005a3a2698eca81c37a79b8fbd1b2a508898a3
+PODFILE CHECKSUM: 0ea6440d053f600699b667e0251a03db31fb53b5
 
 COCOAPODS: 1.5.3

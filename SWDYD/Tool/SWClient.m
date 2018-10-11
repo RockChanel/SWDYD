@@ -36,18 +36,18 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"account"] = phone;
     params[@"password"] = password;
-    params[@"appChannel"] = SWAppChannel;
-    params[@"isUpgrade"] = SWIsUpgrade;
-    params[@"versionName"] = SWVersionName;
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMessage:@"正在登录" onView:nil method:SWHttpMethodPost api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
-        if (json.code == SWResponseCode_Success) {
+    [[SWNetworkManager shareManager] requestWithMessage:@"正在登录" onView:nil method:SWHttpMethodPost api:kSWApiLogin parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
             NSArray *userList = json.data[@"userList"];
             if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
                 SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];
                 [[SWUserManager shareManager] setUser:user];
                 [[SWClient shareClient] setIsAutoLogin:YES];
-                [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:YES]];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kSWNotificationLoginStateChange object:[NSNumber numberWithBool:YES]];
             }
         }
     } failure:nil];
@@ -57,11 +57,11 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"xiaomiId"] = @"";
 
-    [[SWNetworkManager shareManager] requestWithMessage:@"" onView:nil method:SWHttpMethodDelete api:SWAPI_Login parameters:params success:^(SWJsonModel * _Nullable json) {
-        if (json.code == SWResponseCode_Success) {
+    [[SWNetworkManager shareManager] requestWithMessage:@"" onView:nil method:SWHttpMethodDelete api:kSWApiLogin parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
             [[SWUserManager shareManager] setUser:nil];
             self.isAutoLogin = NO;
-            [[NSNotificationCenter defaultCenter] postNotificationName:SWNotification_LoginStateChange object:[NSNumber numberWithBool:NO]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kSWNotificationLoginStateChange object:[NSNumber numberWithBool:NO]];
         }
     } failure:nil];
 }

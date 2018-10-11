@@ -43,16 +43,16 @@ static NSString * const footerId = @"footerId";
 #pragma mark -- 加载数据
 - (void)headerRefresh {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = SWAppChannel;
+    params[@"appChannel"] = kSWAppChannel;
     params[@"index"] = @"0";
-    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"isUpgrade"] = kSWIsUpgrade;
     params[@"page"] = [NSNumber numberWithInt:1];
     params[@"perPage"] = [NSNumber numberWithInt:50];
     params[@"queryType"] = @"myConcern";
-    params[@"versionName"] = SWVersionName;
+    params[@"versionName"] = kSWVersionName;
     
     [self.collectionView.mj_header endRefreshing];
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_FollowList parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiFollowList parameters:params success:^(SWJsonModel * _Nullable json) {
         SWFollowModel *model = [SWFollowModel yy_modelWithJSON:json.data];
         self.userList = model.recommendPageUserList;
         self.areaList = model.recommendSubAreaList;

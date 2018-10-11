@@ -30,12 +30,12 @@
     [self startAnimation];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = SWAppChannel;
-    params[@"isUpgrade"] = SWIsUpgrade;
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
     params[@"count"] = [NSNumber numberWithInteger:RecommandMaxCount];
     params[@"callType"] = _isUser ? @"102":@"103";
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_FollowRecommend parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiFollowRecommend parameters:params success:^(SWJsonModel * _Nullable json) {
         SWFollowModel *model = [SWFollowModel yy_modelWithJSON:json.data];
         NSArray *tempArray = self.isUser ? model.recommendPageUserList:model.recommendSubAreaList;
         self.refreshCompletion(tempArray);

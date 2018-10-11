@@ -21,7 +21,7 @@
     _user = user;
     self.nameLab.text = user.nickName;
     self.tagLab.text = user.userRecommendStmt;
-    [self.headerIcon sd_setImageWithURL:[NSURL URLWithString:user.avatar] placeholderImage:[UIImage imageNamed:SWUserAvatar]];
+    [self.headerIcon sd_setImageWithURL:[NSURL URLWithString:user.avatar] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
 }
 
 - (void)followAction {

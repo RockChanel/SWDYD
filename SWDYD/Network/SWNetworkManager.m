@@ -28,13 +28,13 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:SWBaseURL]];
+        self.sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:kSWBaseURL]];
         self.sessionManager.requestSerializer.timeoutInterval = 30.0f;
         self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         self.sessionManager.requestSerializer= [AFHTTPRequestSerializer serializer];
         
         [self.sessionManager.requestSerializer setValue:@"1511ae9c947386af25b2d6" forHTTPHeaderField:@"deviceid"];
-        [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1539066441|10:session_id|24:NzJhOGYzOTNhN2U4NDU0Nw==|c9eef7e157cff6056017c10d7a3e7b06c1afa6afcba4a3a2b5769888ac7d001f\"; token_id=\"2|1:0|10:1539066441|8:token_id|44:djh6YjBvMzYyeWNnN3I5a2lxaHM0eGVsbXVuZnAxZGo=|89977ea0029f9c04e74cfc1825b4239708ad47b6ea0ae5b95df0837fe1d10864\"" forHTTPHeaderField:@"cookie"];
+        [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1539142966|10:session_id|24:ZDdlMjM1YzBiNzc5NDdjMA==|8e91f2f3dddc709935b5b9fa14deab9ca1887755dbad4b8a75743d488424e682\"; token_id=\"2|1:0|10:1539142966|8:token_id|44:aTF1bW9oNWo0OGFkdnhuOWZyazIwZ3N6YzdxbHc2cHQ=|8bc6de5f1f9592c74191aa8921108149732e17480638b9b8d12b4dd031def410\"" forHTTPHeaderField:@"cookie"];
         
         // 证书配置
         NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"mfp" ofType:@"cer"];
@@ -82,7 +82,7 @@
                 }
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
-                if (jsonModel.code == SWResponseCode_Success) {
+                if (jsonModel.code == kSWResponseCodeSuccess) {
                     
                 }
                 else {
@@ -112,7 +112,7 @@
                 }
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
-                if (jsonModel.code == SWResponseCode_Success) {
+                if (jsonModel.code == kSWResponseCodeSuccess) {
                     
                 }
                 else {

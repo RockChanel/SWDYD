@@ -60,11 +60,11 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)loadUserProfile {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"userId"] = [SWUserManager shareManager].user.userId;
-    params[@"appChannel"] = SWAppChannel;
-    params[@"isUpgrade"] = SWIsUpgrade;
-    params[@"versionName"] = SWVersionName;
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_PersonalActivities parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiPersonalActivities parameters:params success:^(SWJsonModel * _Nullable json) {
         SWMeUser *user = [SWMeUser yy_modelWithJSON:json.data];
         self.headerContainer.user = user;
     } failure:nil];

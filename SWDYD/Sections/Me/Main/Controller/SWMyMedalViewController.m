@@ -38,7 +38,7 @@ static NSString * const headerId = @"headerId";
     } else {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    self.backItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:SWBackItem_White] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    self.backItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:kSWBackItemWhite] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     self.navigationItem.leftBarButtonItem = _backItem;
     
     self.shareItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_bar_share_img_30x30_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStylePlain target:self action:@selector(shareAction)];
@@ -57,12 +57,12 @@ static NSString * const headerId = @"headerId";
 
 - (void)loadData {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"appChannel"] = SWAppChannel;
+    params[@"appChannel"] = kSWAppChannel;
     params[@"userId"] = [SWUserManager shareManager].user.userId;
-    params[@"isUpgrade"] = SWIsUpgrade;
-    params[@"versionName"] = SWVersionName;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
     
-    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:SWAPI_MyMedalList parameters:params success:^(SWJsonModel * _Nullable json) {
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiMyMedalList parameters:params success:^(SWJsonModel * _Nullable json) {
         self.list = [SWMedalList getShowMedalsWithList:[SWMedalList yy_modelWithJSON:json.data]];
         self.medalHeader.avatar = self.list.userInfo.avatar;
         self.medalHeader.medalCount = self.list.medalCount;
@@ -91,7 +91,7 @@ static NSString * const headerId = @"headerId";
     _isTransparent = isTransparent;
     [self sw_setNavBarTransparent:isTransparent];
     self.title = isTransparent ? @"":@"我的勋章墙";
-    [self.backItem setImage:[[UIImage imageNamed: isTransparent ? SWBackItem_White:SWBackItem_Red] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self.backItem setImage:[[UIImage imageNamed: isTransparent ? kSWBackItemWhite:kSWBackItemRed] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [self.shareItem setImage:[[UIImage imageNamed: isTransparent ? @"navi_bar_share_img_30x30_":@"share_red_30x30_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
