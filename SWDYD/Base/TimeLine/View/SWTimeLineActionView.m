@@ -8,6 +8,7 @@
 
 #import "SWTimeLineActionView.h"
 #import "SWTimeLineLayout.h"
+#import "SWTimeLineModel.h"
 
 @interface SWTimeLineActionView()
 
@@ -32,6 +33,13 @@
         [self setup];
     }
     return self;
+}
+
+- (void)setLayout:(SWTimeLineLayout *)layout {
+    _layout = layout;
+    self.collectLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postCollectCount];
+    self.commentLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postCommentCount];
+    self.likeLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postLikeCount];
 }
 
 - (void)setup {

@@ -31,6 +31,7 @@ static NSString *cellId = @"cellId";
     [self.tableView registerClass:[SWTimeLineCell class] forCellReuseIdentifier:cellId];
     
     self.showRefreshHeader = YES;
+    self.showRefreshFooter = YES;
     [self autoHeaderRefresh:NO];
     
     [self loadBanner];
@@ -56,6 +57,10 @@ static NSString *cellId = @"cellId";
     } failure:^(NSError * _Nonnull error) {
         [self endRefreshHeader:YES reload:NO];
     }];
+}
+
+- (void)footerRefresh {
+    [self endRefreshHeader:NO reload:NO];
 }
 
 - (void)loadBanner {

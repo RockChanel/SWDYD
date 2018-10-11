@@ -38,7 +38,9 @@ static CGFloat const kSWTimeLineTitleFontSize = 15;
 /** 文本字体 */
 static CGFloat const kSWTimeLineContentFontSize = 13;
 
+/** 标题颜色 */
 #define kSWTimeLineTitleColor [UIColor sw_black]
+/** 文本颜色 */
 #define kSWTimeLineContentColor [UIColor sw_darkGray]
 
 /// 风格

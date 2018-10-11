@@ -25,6 +25,7 @@
     self.titleLab.attributedText = _layout.attributedTitle;
     self.contentLab.attributedText = _layout.attributedContent;
     self.profileView.layout = _layout;
+    self.actionView.layout = _layout;
 }
 
 - (void)setup {
