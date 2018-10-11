@@ -8,7 +8,7 @@
 
 #import "SWTableViewCell.h"
 
-@class SWTimeLineItem;
+@class SWTimeLineLayout;
 @interface SWTimeLineCell : SWTableViewCell
-@property (nonatomic, strong) SWTimeLineItem *item;
+@property (nonatomic, strong) SWTimeLineLayout *layout;
 @end

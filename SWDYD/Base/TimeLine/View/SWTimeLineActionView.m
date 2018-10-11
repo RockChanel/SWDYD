@@ -7,6 +7,7 @@
 //
 
 #import "SWTimeLineActionView.h"
+#import "SWTimeLineLayout.h"
 
 @interface SWTimeLineActionView()
 
@@ -39,8 +40,8 @@
     [self addSubview:separator];
     [separator mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@0);
-        make.left.equalTo(@10);
-        make.right.equalTo(@(-10));
+        make.left.equalTo(@(kSWTimeLinePadding));
+        make.right.equalTo(@(-kSWTimeLinePadding));
         make.height.equalTo(@0.5);
     }];
     
@@ -75,10 +76,10 @@
     [collectBgView addSubview:self.collectLab];
     [self.collectIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.centerY.equalTo(@0);
-        make.width.height.equalTo(@20);
+        make.width.height.equalTo(@(kSWTimeLineActionImageWidth));
     }];
     [self.collectLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.collectIcon.mas_right).offset(8);
+        make.left.equalTo(self.collectIcon.mas_right).offset(kSWTimeLineActionImagePaddingRight);
         make.right.equalTo(@0);
         make.centerY.equalTo(@0);
     }];
@@ -95,10 +96,10 @@
     [commentBgView addSubview:self.commentLab];
     [self.commentIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.centerY.equalTo(@0);
-        make.width.height.equalTo(@20);
+        make.width.height.equalTo(@(kSWTimeLineActionImageWidth));
     }];
     [self.commentLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.commentIcon.mas_right).offset(8);
+        make.left.equalTo(self.commentIcon.mas_right).offset(kSWTimeLineActionImagePaddingRight);
         make.right.equalTo(@0);
         make.centerY.equalTo(@0);
     }];
@@ -116,10 +117,10 @@
     [likeBgView addSubview:self.likeLab];
     [self.likeIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.centerY.equalTo(@0);
-        make.width.height.equalTo(@20);
+        make.width.height.equalTo(@(kSWTimeLineActionImageWidth));
     }];
     [self.likeLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.likeIcon.mas_right).offset(8);
+        make.left.equalTo(self.likeIcon.mas_right).offset(kSWTimeLineActionImagePaddingRight);
         make.right.equalTo(@0);
         make.centerY.equalTo(@0);
     }];

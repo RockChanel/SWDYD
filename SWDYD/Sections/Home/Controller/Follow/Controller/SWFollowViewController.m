@@ -20,9 +20,9 @@
 
 @implementation SWFollowViewController
 
-static CGFloat const UserItemWidth = 90.0;
-static CGFloat const AreaItemWidth = 110.0;
-static CGFloat const EdgeMargin = 10.0;
+static CGFloat const userItemWidth = 90.0;
+static CGFloat const areaItemWidth = 110.0;
+static CGFloat const edgeMargin = 10.0;
 static NSString * const userCellId = @"userCellId";
 static NSString * const areaCellId = @"areaCellId";
 static NSString * const headerId = @"headerId";
@@ -117,11 +117,11 @@ static NSString * const footerId = @"footerId";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return 0 == indexPath.section ? CGSizeMake(UserItemWidth, 150):CGSizeMake(AreaItemWidth, 180);
+    return 0 == indexPath.section ? CGSizeMake(userItemWidth, 150):CGSizeMake(areaItemWidth, 180);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(15, EdgeMargin, 15, EdgeMargin);
+    return UIEdgeInsetsMake(15, edgeMargin, 15, edgeMargin);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -133,8 +133,8 @@ static NSString * const footerId = @"footerId";
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    CGFloat itemWidth = 0 == section ? UserItemWidth:AreaItemWidth;
-    return (self.view.mj_w - RecommandMaxCount*itemWidth - 2*EdgeMargin)/(RecommandMaxCount-1);
+    CGFloat itemWidth = 0 == section ? userItemWidth:areaItemWidth;
+    return (self.view.mj_w - RecommandMaxCount*itemWidth - 2*edgeMargin)/(RecommandMaxCount-1);
 }
 
 - (NSArray<SWFollowArea *> *)areaList {

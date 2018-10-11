@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SWTimeLineLayout;
 @interface SWTimeLineActionView : UIView
-
+@property (nonatomic, strong) SWTimeLineLayout *layout;
 @end

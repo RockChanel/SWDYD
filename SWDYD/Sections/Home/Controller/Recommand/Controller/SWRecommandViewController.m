@@ -11,9 +11,10 @@
 #import "SWRecommandModel.h"
 #import "SWTimeLineCell.h"
 #import "SWTimeLineModel.h"
+#import "SWTimeLineLayout.h"
 
 @interface SWRecommandViewController ()
-@property (nonatomic, strong) NSMutableArray *datas;
+@property (nonatomic, strong) NSMutableArray *layouts;
 @property (nonatomic, strong) SWRecommandBannerView *banner;
 @end
 
@@ -47,7 +48,10 @@ static NSString *cellId = @"cellId";
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiRecommandPostList parameters:params success:^(SWJsonModel * _Nullable json) {
         [self.datas removeAllObjects];
         SWTimeLineModel *list = [SWTimeLineModel yy_modelWithJSON:json.data];
-        [self.datas addObjectsFromArray:list.postList];
+        [list.postList enumerateObjectsUsingBlock:^(SWTimeLineItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            SWTimeLineLayout *layout = [[SWTimeLineLayout alloc]initWithItem:obj style:SWLayoutStyleTimeline];
+            [self.layouts addObject:layout];
+        }];
         [self endRefreshHeader:YES reload:YES];
     } failure:^(NSError * _Nonnull error) {
         [self endRefreshHeader:YES reload:NO];
@@ -68,12 +72,12 @@ static NSString *cellId = @"cellId";
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.datas.count;
+    return self.layouts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SWTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    cell.item = self.datas[indexPath.row];
+    cell.layout = self.layouts[indexPath.row];
     return cell;
 }
 
@@ -85,10 +89,10 @@ static NSString *cellId = @"cellId";
 }
 
 - (NSMutableArray *)datas {
-    if (!_datas) {
-        _datas = [NSMutableArray array];
+    if (!_layouts) {
+        _layouts = [NSMutableArray array];
     }
-    return _datas;
+    return _layouts;
 }
 
 - (void)didReceiveMemoryWarning {

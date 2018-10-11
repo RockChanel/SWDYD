@@ -184,6 +184,7 @@
 		E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022BF2160CD930001D55C /* SWMeHeaderView.m */; };
 		E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022CE2160D3750001D55C /* SWLoginViewController.m */; };
 		E87022D42160D3B10001D55C /* SWInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D32160D3B10001D55C /* SWInputModel.m */; };
+		E8724008216F2E2C00545291 /* SWTimeLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8724007216F2E2C00545291 /* SWTimeLineHelper.m */; };
 		E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8781BC9216058F300C73B2D /* SWUserManager.m */; };
 		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
 		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
@@ -465,6 +466,8 @@
 		E87022CE2160D3750001D55C /* SWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLoginViewController.m; sourceTree = "<group>"; };
 		E87022D22160D3B10001D55C /* SWInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWInputModel.h; sourceTree = "<group>"; };
 		E87022D32160D3B10001D55C /* SWInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWInputModel.m; sourceTree = "<group>"; };
+		E8724006216F2E2C00545291 /* SWTimeLineHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineHelper.h; sourceTree = "<group>"; };
+		E8724007216F2E2C00545291 /* SWTimeLineHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineHelper.m; sourceTree = "<group>"; };
 		E8781BC8216058F300C73B2D /* SWUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUserManager.h; sourceTree = "<group>"; };
 		E8781BC9216058F300C73B2D /* SWUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUserManager.m; sourceTree = "<group>"; };
 		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
@@ -778,6 +781,8 @@
 				E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */,
 				E83E55C2216EF7FF00FE80E6 /* SWTimeLineLayout.h */,
 				E83E55C3216EF7FF00FE80E6 /* SWTimeLineLayout.m */,
+				E8724006216F2E2C00545291 /* SWTimeLineHelper.h */,
+				E8724007216F2E2C00545291 /* SWTimeLineHelper.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1824,6 +1829,7 @@
 				2E9BE7B72162669800839B0E /* SWHotCategoryHeaderView.m in Sources */,
 				E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */,
 				E87022B72160A2370001D55C /* SWMedalSectionHeader.m in Sources */,
+				E8724008216F2E2C00545291 /* SWTimeLineHelper.m in Sources */,
 				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,
 				E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */,
 				E8CDDC7A215DD7D700C41A28 /* SWFollowUserCell.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "SWClient.h"
+#import "SWTimeLineModel.h"
 
 @implementation SWClient
 @synthesize isAutoLogin = _isAutoLogin;
@@ -27,7 +28,7 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
+        _emoticonGroup = [self sw_emoticonGroupFromPlist];
     }
     return self;
 }
@@ -77,6 +78,14 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
 /** 读取自动登录状态 */
 - (BOOL)isAutoLogin {
     return [[NSUserDefaults standardUserDefaults] boolForKey:SWLocalIsAutoLoginKey];
+}
+
+/** 读取表情 */
+- (SWEmoticonGroup *)sw_emoticonGroupFromPlist {
+    NSString *emoticonPath = [[NSBundle mainBundle] pathForResource:@"emotionDefault" ofType:@"plist"];
+    NSArray *emoticonList = [NSArray arrayWithContentsOfFile:emoticonPath];
+    SWEmoticonGroup *group = [SWEmoticonGroup yy_modelWithDictionary:@{@"emoticons":emoticonList}];
+    return group;
 }
 
 @end

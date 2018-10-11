@@ -7,6 +7,8 @@
 //
 
 #import "SWTimeLineProfileView.h"
+#import "SWTimeLineLayout.h"
+#import "SWTimeLineModel.h"
 
 @interface SWTimeLineProfileView()
 @property (nonatomic, strong) UIImageView *avatarImage;
@@ -24,21 +26,25 @@
     return self;
 }
 
+- (void)setLayout:(SWTimeLineLayout *)layout {
+    _layout = layout;
+    self.nickNameLab.text = _layout.item.postAuthorName;
+    [self.avatarImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kSWImageBaseURL, _layout.item.postAuthorAvatar]] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
+}
+
 - (void)setup {
     [self.avatarImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(@0);
-        make.left.equalTo(@10);
-        make.width.height.equalTo(@40);
+        make.left.equalTo(@(kSWTimeLinePadding));
+        make.width.height.equalTo(@(kSWTimeLineProfileHeight));
     }];
-    self.avatarImage.layer.cornerRadius = 20;
-    self.avatarImage.backgroundColor = [UIColor sw_red];
+    self.avatarImage.layer.cornerRadius = kSWTimeLineProfileHeight/2;
     
     [self.nickNameLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.avatarImage.mas_right).offset(10);
+        make.left.equalTo(self.avatarImage.mas_right).offset(kSWTimeLineNamePaddingLeft);
         make.top.equalTo(@0);
-        make.height.equalTo(@22);
+        make.height.equalTo(@(kSWTimeLineNameHeight));
     }];
-    self.nickNameLab.text = @"Selwyn";
 
     [self.dateLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.nickNameLab.mas_bottom);
@@ -48,9 +54,9 @@
     self.dateLab.text = @"3小时前";
     
     [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@(-10));
+        make.right.equalTo(@(-kSWTimeLinePadding));
         make.top.equalTo(@0);
-        make.width.height.equalTo(@20);
+        make.width.height.equalTo(@(kSWTimeLineShareWidth));
     }];
 }
 

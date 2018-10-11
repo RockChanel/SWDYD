@@ -18,10 +18,10 @@
 
 @implementation SWHotSubViewController
 
-static CGFloat const ItemWidth = 110.0;
-static CGFloat const ItemHeight = 110.0;
-static CGFloat const EdgeMargin = 10.0;
-static NSInteger const RowCount = 3;
+static CGFloat const itemWidth = 110.0;
+static CGFloat const itemHeight = 110.0;
+static CGFloat const edgeMargin = 10.0;
+static NSInteger const rowCount = 3;
 static NSString * const cellId = @"cellId";
 static NSString * const headerId = @"headerId";
 
@@ -83,7 +83,7 @@ static NSString * const headerId = @"headerId";
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, EdgeMargin, 0, EdgeMargin);
+    return UIEdgeInsetsMake(0, edgeMargin, 0, edgeMargin);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -91,11 +91,11 @@ static NSString * const headerId = @"headerId";
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return (self.view.mj_w - RowCount*ItemWidth - 2*EdgeMargin)/(RowCount - 1);
+    return (self.view.mj_w - rowCount*itemWidth - 2*edgeMargin)/(rowCount - 1);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(ItemWidth, ItemHeight);
+    return CGSizeMake(itemWidth, itemHeight);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -29,3 +29,13 @@
     return @{@"postList": [SWTimeLineItem class]};
 }
 @end
+
+@implementation SWEmoticon
+
+@end
+
+@implementation SWEmoticonGroup
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"emoticons": [SWEmoticon class]};
+}
+@end

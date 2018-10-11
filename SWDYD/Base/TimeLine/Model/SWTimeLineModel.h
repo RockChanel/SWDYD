@@ -25,8 +25,22 @@
 @property (nonatomic, copy) NSString *postAuthorName;
 /** 发布标题 */
 @property (nonatomic, copy) NSString *postTitle;
+@property (nonatomic, copy) NSString *postAuthorAvatar;
 @end
 
 @interface SWTimeLineModel : NSObject
 @property (nonatomic, strong) NSArray<SWTimeLineItem *> *postList;
+@end
+
+@interface SWEmoticon : NSObject
+@property (nonatomic, copy) NSString *chs;  ///< 例如 [吃惊]
+@property (nonatomic, copy) NSString *cht;  ///< 例如 [吃驚]
+@property (nonatomic, copy) NSString *gif;  ///< 例如 d_chijing.gif
+@property (nonatomic, copy) NSString *png;  ///< 例如 d_chijing.png
+@property (nonatomic, copy) NSString *type;
+@end
+
+
+@interface SWEmoticonGroup : NSObject
+@property (nonatomic, strong) NSArray<SWEmoticon *> *emoticons;
 @end

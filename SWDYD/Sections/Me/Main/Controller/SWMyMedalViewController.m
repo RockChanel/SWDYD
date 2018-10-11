@@ -23,11 +23,11 @@
 
 @implementation SWMyMedalViewController
 
-static CGFloat const ItemWidth = 100.0f;
-static CGFloat const ItemHeight = 140.0f;
-static CGFloat const EdgeMargin = 15.0f;
-static NSInteger const RowCount = 3;
-static CGFloat const HeaderImageHeight = 302.0f;
+static CGFloat const itemWidth = 100.0f;
+static CGFloat const itemHeight = 140.0f;
+static CGFloat const edgeMargin = 15.0f;
+static NSInteger const rowCount = 3;
+static CGFloat const headerImageHeight = 302.0f;
 static NSString * const medalCellId = @"medalCellId";
 static NSString * const headerId = @"headerId";
 
@@ -44,11 +44,11 @@ static NSString * const headerId = @"headerId";
     self.shareItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_bar_share_img_30x30_"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStylePlain target:self action:@selector(shareAction)];
     self.navigationItem.rightBarButtonItem = _shareItem;
     
-    self.collectionView.contentInset = UIEdgeInsetsMake(HeaderImageHeight, 0, 0, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(headerImageHeight, 0, 0, 0);
     [self.collectionView registerClass:[SWMedalSectionHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
     [self.collectionView registerClass:[SWMedalCell class] forCellWithReuseIdentifier:medalCellId];
     
-    self.medalHeader = [[SWMedalHeaderView alloc]initWithFrame:CGRectMake(0, -HeaderImageHeight, self.view.mj_w, HeaderImageHeight)];
+    self.medalHeader = [[SWMedalHeaderView alloc]initWithFrame:CGRectMake(0, -headerImageHeight, self.view.mj_w, headerImageHeight)];
     [self.collectionView addSubview:_medalHeader];
     
     self.isTransparent = YES;
@@ -120,11 +120,11 @@ static NSString * const headerId = @"headerId";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(ItemWidth, ItemHeight);
+    return CGSizeMake(itemWidth, itemHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, EdgeMargin, 0, EdgeMargin);
+    return UIEdgeInsetsMake(0, edgeMargin, 0, edgeMargin);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -132,7 +132,7 @@ static NSString * const headerId = @"headerId";
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return (self.view.mj_w - RowCount*ItemWidth - 2*EdgeMargin)/(RowCount - 1);
+    return (self.view.mj_w - rowCount*itemWidth - 2*edgeMargin)/(rowCount - 1);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

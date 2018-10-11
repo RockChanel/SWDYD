@@ -25,13 +25,13 @@
 
 @implementation SWMeViewController
 
-static CGFloat const ItemWidth = 60.0f;
-static CGFloat const ItemHeight = 85.0f;
-static CGFloat const EdgeMargin = 15.0f;
-static CGFloat const HeaderImageHeight = 260.0f;
-static CGFloat const HeaderHeight = 300.0f;
-static NSInteger const RowCount = 4;
-static NSString * const reuseIdentifier = @"Cell";
+static CGFloat const itemWidth = 60.0f;
+static CGFloat const itemHeight = 85.0f;
+static CGFloat const edgeMargin = 15.0f;
+static CGFloat const headerImageHeight = 260.0f;
+static CGFloat const headerHeight = 300.0f;
+static NSInteger const rowCount = 4;
+static NSString * const cellId = @"cellId";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -51,8 +51,8 @@ static NSString * const reuseIdentifier = @"Cell";
     UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"user_but_setting_normal_30x30_"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style: UIBarButtonItemStylePlain target:self action:@selector(settingAction)];
     self.navigationItem.rightBarButtonItem = settingItem;
     
-    self.collectionView.contentInset = UIEdgeInsetsMake(HeaderHeight, 0, 0, 0);
-    [self.collectionView registerClass:[SWMeCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.contentInset = UIEdgeInsetsMake(headerHeight, 0, 0, 0);
+    [self.collectionView registerClass:[SWMeCell class] forCellWithReuseIdentifier:cellId];
     
     [self.collectionView addSubview:[self headerView]];
 }
@@ -77,7 +77,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = self.collectionView.contentOffset.y;
-    if (offsetY < -HeaderImageHeight) {
+    if (offsetY < -headerImageHeight) {
         /* 计算差值 **/
         CGFloat interval = -CGRectGetHeight(self.headerImage.frame) - offsetY;
         /* imageView 的高度 增加 interval **/
@@ -99,17 +99,17 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SWMeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    SWMeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     cell.model = _datas[indexPath.item];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(ItemWidth, ItemHeight);
+    return CGSizeMake(itemWidth, itemHeight);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(EdgeMargin, EdgeMargin, EdgeMargin, EdgeMargin);
+    return UIEdgeInsetsMake(edgeMargin, edgeMargin, edgeMargin, edgeMargin);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,13 +135,13 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return (self.view.mj_w - RowCount*ItemWidth - 2*EdgeMargin)/(RowCount - 1);
+    return (self.view.mj_w - rowCount*itemWidth - 2*edgeMargin)/(rowCount - 1);
 }
 
 - (UIView *)headerView {
-    UIView *header = [[UIView alloc]initWithFrame:CGRectMake(0, -HeaderHeight, self.view.mj_w, HeaderHeight)];
+    UIView *header = [[UIView alloc]initWithFrame:CGRectMake(0, -headerHeight, self.view.mj_w, headerHeight)];
     
-    self.headerImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, HeaderImageHeight)];
+    self.headerImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, headerImageHeight)];
     self.headerImage.image = [UIImage imageNamed:@"me_fragment_bg"];
     self.headerImage.clipsToBounds = YES;
     self.headerImage.contentMode = UIViewContentModeScaleAspectFill;

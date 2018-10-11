@@ -10,6 +10,7 @@
 #import "SWTimeLineActionView.h"
 #import "SWTimeLineProfileView.h"
 #import "SWTimeLineModel.h"
+#import "SWTimeLineLayout.h"
 
 @interface SWTimeLineCell()
 @property (nonatomic, strong) YYLabel *titleLab;
@@ -19,8 +20,11 @@
 @end
 @implementation SWTimeLineCell
 
-- (void)setItem:(SWTimeLineItem *)item {
-    _item = item;
+- (void)setLayout:(SWTimeLineLayout *)layout {
+    _layout = layout;
+    self.titleLab.attributedText = _layout.attributedTitle;
+    self.contentLab.attributedText = _layout.attributedContent;
+    self.profileView.layout = _layout;
 }
 
 - (void)setup {
@@ -29,30 +33,30 @@
     [self.contentView addSubview:topSeparator];
     [topSeparator mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(@0);
-        make.height.equalTo(@7);
+        make.height.equalTo(@(kSWTimeLineTopMargin));
     }];
     
     [self.profileView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(topSeparator.mas_bottom).offset(12);
+        make.top.equalTo(topSeparator.mas_bottom).offset(kSWTimeLineProfilePaddingTop);
         make.left.right.equalTo(@0);
-        make.height.equalTo(@40);
+        make.height.equalTo(@(kSWTimeLineProfileHeight));
     }];
     
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.profileView.mas_bottom).offset(20);
-        make.left.equalTo(@10);
-        make.right.equalTo(@(-10));
+        make.top.equalTo(self.profileView.mas_bottom).offset(kSWTimeLineTitlePaddingTop);
+        make.left.equalTo(@(kSWTimeLinePadding));
+        make.right.equalTo(@(-kSWTimeLinePadding));
     }];
     
     [self.contentLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.titleLab);
-        make.top.equalTo(self.titleLab.mas_bottom).offset(10);
+        make.top.equalTo(self.titleLab.mas_bottom).offset(kSWTimeLineContentPaddingTop);
     }];
     
     [self.actionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentLab.mas_bottom);
         make.left.right.bottom.equalTo(@0);
-        make.height.equalTo(@40);
+        make.height.equalTo(@(kSWTimeLineActionHeight));
     }];
 }
 
