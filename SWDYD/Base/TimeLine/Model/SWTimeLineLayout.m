@@ -26,7 +26,7 @@
 - (void)layout {
     [self layoutTitle];
     [self layoutContent];
-    [self layoutMainContent];
+    [self layoutCard];
 }
 
 - (void)layoutTitle {
@@ -39,8 +39,43 @@
     _attributedContent = tempContent;
 }
 
-- (void)layoutMainContent {
+- (void)layoutCard {
+    _cardPicCount = 0;
     
+    if (_item.postVideo) {
+        _cardHeight = kSWTimeLineCardVideoHeight;
+        _cardType = SWLayoutCardTypeVideo;
+    }
+    else if (_item.postMusic) {
+        if ([_item.postMusic.musicType isEqualToString:@"voice"]) {
+            _cardHeight = kSWTimeLineCardMusicHeight;
+            _cardType = SWLayoutCardTypeMusic;
+        }
+        else {
+            _cardHeight = kSWTimeLineCardAudioHeight;
+            _cardType = SWLayoutCardTypeAudio;
+        }
+    }
+    else if (_item.postCoverImageList && _item.postCoverImageList.count > 0) {
+        _cardType = SWLayoutCardTypeImage;
+        NSArray *coverList = _item.postCoverImageList;
+        if (coverList.count == 1) {
+            _cardHeight = kSWTimeLineCardOneImageHeight;
+            _cardPicCount = 1;
+        }else if (coverList.count == 2) {
+            _cardHeight = kSWTimeLineCardTwoImageHeight;
+            _cardPicCount = 2;
+        }else {
+            _cardHeight = kSWTimeLineCardThreeImageHeight;
+            _cardPicCount = 3;
+        }
+        CGFloat picWidth = (kSWCellContentWidth - (_cardPicCount-1)*kSWTimeLineImageMargin)/_cardPicCount;
+        _cardPickSize = CGSizeMake(picWidth, _cardHeight);
+    }
+    else {
+        _cardHeight = 0;
+        _cardType = SWLayoutCardTypeNone;
+    }
 }
 
 - (NSMutableAttributedString *)text:(NSString *)text

@@ -18,10 +18,8 @@ static CGFloat const kSWTimeLineProfileHeight = 40;
 static CGFloat const kSWTimeLineNameHeight = 22;
 /** 昵称和头像间距 */
 static CGFloat const kSWTimeLineNamePaddingLeft = 10;
+/** 等级徽章宽度 */
 static CGFloat const kSWTimeLineLevelWidth = 16;
-
-static CGFloat const kSWTimeLineMedalPaddingLeft = 5;
-static CGFloat const kSWTimeLineMedalWidth = 20;
 /** 分享按钮宽高 */
 static CGFloat const kSWTimeLineShareWidth = 20;
 /** 个人资料和顶部留白间距 */
@@ -30,6 +28,24 @@ static CGFloat const kSWTimeLineProfilePaddingTop = 12;
 static CGFloat const kSWTimeLineTitlePaddingTop = 15;
 /** 文本和标题间距 */
 static CGFloat const kSWTimeLineContentPaddingTop = 10;
+/** 卡片和文本间距 */
+static CGFloat const kSWTimeLineCardPaddingTop = 12;
+/** 视频卡片高度 */
+static CGFloat const kSWTimeLineCardVideoHeight = 200;
+/** 音频卡片高度 */
+static CGFloat const kSWTimeLineCardAudioHeight = 70;
+/** 音月卡片高度 */
+static CGFloat const kSWTimeLineCardMusicHeight = 90;
+/** 一张图片卡片高度 */
+static CGFloat const kSWTimeLineCardOneImageHeight = 190;
+/** 两张图片卡片高度 */
+static CGFloat const kSWTimeLineCardTwoImageHeight = 175;
+/** 三张图片卡片高度 */
+static CGFloat const kSWTimeLineCardThreeImageHeight = 115;
+static CGFloat const kSWTimeLineImageMargin = 5;
+
+/** 工具栏和选项卡间距 */
+static CGFloat const kSWTimeLineActionPaddingTop = 7;
 /** 工具栏高度 */
 static CGFloat const kSWTimeLineActionHeight = 40;
 /** 工具栏图片宽高 */
@@ -46,6 +62,8 @@ static CGFloat const kSWTimeLineContentFontSize = 14;
 #define kSWTimeLineTitleColor [UIColor sw_black]
 /** 文本颜色 */
 #define kSWTimeLineContentColor [UIColor sw_darkGray]
+/// cell 内容宽度
+#define kSWCellContentWidth (SWScreenWidth - 2 * kSWTimeLinePadding)
 
 /// 风格
 typedef NS_ENUM(NSInteger, SWLayoutStyle) {
@@ -53,11 +71,26 @@ typedef NS_ENUM(NSInteger, SWLayoutStyle) {
     SWLayoutStyleDetail,       ///< 详情页
 };
 
+/// 卡片类型
+typedef NS_ENUM(NSInteger, SWLayoutCardType) {
+    SWLayoutCardTypeNone = 0, ///< 无内容
+    SWLayoutCardTypeImage,  ///< 图片
+    SWLayoutCardTypeAudio,   /// 音频
+    SWLayoutCardTypeVideo,    ///< 视频
+    SWLayoutCardTypeMusic,  ///< 音乐
+    SWLayoutCardTypeQuestion,    ///< 问卷
+};
+
 @class SWTimeLineItem;
 @interface SWTimeLineLayout : NSObject
-
+/** 数据源 */
 @property (nonatomic, strong) SWTimeLineItem *item;
 @property (nonatomic, assign) SWLayoutStyle style;
+@property (nonatomic, assign) SWLayoutCardType cardType;
+
+@property (nonatomic, assign) CGFloat cardHeight;
+@property (nonatomic, assign) CGFloat cardPicCount;
+@property (nonatomic, assign) CGSize cardPickSize;
 
 @property (nonatomic, strong) NSAttributedString *attributedTitle;
 @property (nonatomic, strong) NSAttributedString *attributedContent;

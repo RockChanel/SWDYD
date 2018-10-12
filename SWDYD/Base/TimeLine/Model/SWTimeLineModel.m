@@ -9,6 +9,26 @@
 #import "SWTimeLineModel.h"
 #import "SWMedalModel.h"
 
+@implementation SWTimeLineMusic
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+    NSNumber *duration = dic[@"musicDuration"];
+    if ([duration isKindOfClass:[NSNumber class]]) _musicDuration = [duration integerValue];
+    NSNumber *size = dic[@"musicSize"];
+    if ([size isKindOfClass:[NSNumber class]]) _musicSize = [size integerValue];
+    NSNumber *canDownload = dic[@"musicCanDownload"];
+    if ([canDownload isKindOfClass:[NSNumber class]]) _musicCanDownload = [canDownload boolValue];
+    return YES;
+}
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"musicSingers": [NSString class]};
+}
+@end
+
+@implementation SWTimeLineVideo
+
+@end
+
 @implementation SWTimeLineAuthor
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"woreList": [SWMedal class]};
@@ -26,6 +46,10 @@
     NSNumber *likeCount = dic[@"postLikeCount"];
     if ([likeCount isKindOfClass:[NSNumber class]]) _postLikeCount = [likeCount integerValue];
     return YES;
+}
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"postCoverImageList": [NSString class]};
 }
 @end
 

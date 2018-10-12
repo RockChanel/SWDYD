@@ -9,6 +9,7 @@
 #import "SWTimeLineCell.h"
 #import "SWTimeLineActionView.h"
 #import "SWTimeLineProfileView.h"
+#import "SWTimeLineCardView.h"
 #import "SWTimeLineModel.h"
 #import "SWTimeLineLayout.h"
 
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) YYLabel *contentLab;
 @property (nonatomic, strong) SWTimeLineActionView *actionView;
 @property (nonatomic, strong) SWTimeLineProfileView *profileView;
+@property (nonatomic, strong) SWTimeLineCardView *cardView;
 @end
 @implementation SWTimeLineCell
 
@@ -26,6 +28,11 @@
     self.contentLab.attributedText = _layout.attributedContent;
     self.profileView.layout = _layout;
     self.actionView.layout = _layout;
+    self.cardView.layout = _layout;
+    
+    [self.cardView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(layout.cardHeight));
+    }];
 }
 
 - (void)setup {
@@ -54,10 +61,17 @@
         make.top.equalTo(self.titleLab.mas_bottom).offset(kSWTimeLineContentPaddingTop);
     }];
     
+    [self.cardView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(@0);
+        make.top.equalTo(self.contentLab.mas_bottom).offset(kSWTimeLineCardPaddingTop);
+        make.height.equalTo(@0);
+    }];
+    
     [self.actionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentLab.mas_bottom);
-        make.left.right.bottom.equalTo(@0);
+        make.top.equalTo(self.cardView.mas_bottom).offset(kSWTimeLineActionPaddingTop);
+        make.left.right.equalTo(@0);
         make.height.equalTo(@(kSWTimeLineActionHeight));
+        make.bottom.equalTo(@0);
     }];
 }
 
@@ -91,6 +105,14 @@
         [self.contentView addSubview:_profileView];
     }
     return _profileView;
+}
+
+- (SWTimeLineCardView *)cardView {
+    if (!_cardView) {
+        _cardView = [[SWTimeLineCardView alloc]init];
+        [self.contentView addSubview:_cardView];
+    }
+    return _cardView;
 }
 
 - (void)awakeFromNib {

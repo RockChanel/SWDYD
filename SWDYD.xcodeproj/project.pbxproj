@@ -29,7 +29,6 @@
 		E81A2690216DD53C007CB8C4 /* SWTimeLineActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */; };
 		E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */; };
 		E81A2698216DE5C1007CB8C4 /* SWTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */; };
-		E83E54A8216EDEFA00FE80E6 /* SWTimeLineContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E54A7216EDEFA00FE80E6 /* SWTimeLineContentView.m */; };
 		E83E5538216EEC1300FE80E6 /* emoji_0fffc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AD216EEC1300FE80E6 /* emoji_0fffc@2x.png */; };
 		E83E5539216EEC1300FE80E6 /* emoji_0fffe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AE216EEC1300FE80E6 /* emoji_0fffe@2x.png */; };
 		E83E553A216EEC1300FE80E6 /* emoji_0ffff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AF216EEC1300FE80E6 /* emoji_0ffff@2x.png */; };
@@ -198,6 +197,7 @@
 		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
 		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
 		E8CD8C3C217049FF0065941A /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD8C3B217049FF0065941A /* NSDate+Ext.m */; };
+		E8CD8C3F217051E70065941A /* SWTimeLineCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD8C3E217051E70065941A /* SWTimeLineCardView.m */; };
 		E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */; };
 		E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC6A215DB78600C41A28 /* SWFollowViewController.m */; };
 		E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC73215DC57A00C41A28 /* SWFollowHeaderView.m */; };
@@ -295,8 +295,6 @@
 		E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineProfileView.m; sourceTree = "<group>"; };
 		E81A2696216DE5C1007CB8C4 /* SWTimeLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineModel.h; sourceTree = "<group>"; };
 		E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineModel.m; sourceTree = "<group>"; };
-		E83E54A6216EDEFA00FE80E6 /* SWTimeLineContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineContentView.h; sourceTree = "<group>"; };
-		E83E54A7216EDEFA00FE80E6 /* SWTimeLineContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineContentView.m; sourceTree = "<group>"; };
 		E83E54AD216EEC1300FE80E6 /* emoji_0fffc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0fffc@2x.png"; sourceTree = "<group>"; };
 		E83E54AE216EEC1300FE80E6 /* emoji_0fffe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0fffe@2x.png"; sourceTree = "<group>"; };
 		E83E54AF216EEC1300FE80E6 /* emoji_0ffff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0ffff@2x.png"; sourceTree = "<group>"; };
@@ -495,6 +493,8 @@
 		E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
 		E8CD8C3A217049FF0065941A /* NSDate+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
 		E8CD8C3B217049FF0065941A /* NSDate+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ext.m"; sourceTree = "<group>"; };
+		E8CD8C3D217051E70065941A /* SWTimeLineCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineCardView.h; sourceTree = "<group>"; };
+		E8CD8C3E217051E70065941A /* SWTimeLineCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineCardView.m; sourceTree = "<group>"; };
 		E8CDDC66215DB69900C41A28 /* SWCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController.h; sourceTree = "<group>"; };
 		E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController.m; sourceTree = "<group>"; };
 		E8CDDC69215DB78600C41A28 /* SWFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowViewController.h; sourceTree = "<group>"; };
@@ -771,8 +771,8 @@
 				E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */,
 				E81A2691216DD89D007CB8C4 /* SWTimeLineProfileView.h */,
 				E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */,
-				E83E54A6216EDEFA00FE80E6 /* SWTimeLineContentView.h */,
-				E83E54A7216EDEFA00FE80E6 /* SWTimeLineContentView.m */,
+				E8CD8C3D217051E70065941A /* SWTimeLineCardView.h */,
+				E8CD8C3E217051E70065941A /* SWTimeLineCardView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1815,7 +1815,6 @@
 				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,
 				E87022C02160CD930001D55C /* SWMeHeaderView.m in Sources */,
 				E8D19113216CA37900CB6A04 /* TAPageControl.m in Sources */,
-				E83E54A8216EDEFA00FE80E6 /* SWTimeLineContentView.m in Sources */,
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
 				E87022D42160D3B10001D55C /* SWInputModel.m in Sources */,
@@ -1839,6 +1838,7 @@
 				E8CDDC8F215E096700C41A28 /* SWMeViewController.m in Sources */,
 				E8D190D5216C39AE00CB6A04 /* SWSettingModel.m in Sources */,
 				E8CDDC7A215DD7D700C41A28 /* SWFollowUserCell.m in Sources */,
+				E8CD8C3F217051E70065941A /* SWTimeLineCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
