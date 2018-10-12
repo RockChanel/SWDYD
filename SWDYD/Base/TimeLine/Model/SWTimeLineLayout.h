@@ -18,6 +18,10 @@ static CGFloat const kSWTimeLineProfileHeight = 40;
 static CGFloat const kSWTimeLineNameHeight = 22;
 /** 昵称和头像间距 */
 static CGFloat const kSWTimeLineNamePaddingLeft = 10;
+static CGFloat const kSWTimeLineLevelWidth = 16;
+
+static CGFloat const kSWTimeLineMedalPaddingLeft = 5;
+static CGFloat const kSWTimeLineMedalWidth = 20;
 /** 分享按钮宽高 */
 static CGFloat const kSWTimeLineShareWidth = 20;
 /** 个人资料和顶部留白间距 */
@@ -34,9 +38,9 @@ static CGFloat const kSWTimeLineActionImageWidth = 20;
 static CGFloat const kSWTimeLineActionImagePaddingRight = 8;
 
 /** 标题字体 */
-static CGFloat const kSWTimeLineTitleFontSize = 15;
+static CGFloat const kSWTimeLineTitleFontSize = 16;
 /** 文本字体 */
-static CGFloat const kSWTimeLineContentFontSize = 13;
+static CGFloat const kSWTimeLineContentFontSize = 14;
 
 /** 标题颜色 */
 #define kSWTimeLineTitleColor [UIColor sw_black]

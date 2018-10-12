@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class SWMedal;
+
+@interface SWTimeLineAuthor : SWUserModel
+@property (nonatomic, strong) NSArray<SWMedal *> *woreList;
+@end
+
 @interface SWTimeLineItem : NSObject
-/** 发布者等级 */
-@property (nonatomic, assign) NSInteger postAuthorLevel;
 /** 发布内容 */
 @property (nonatomic, copy) NSString *postContent;
 /** 收藏数 */
@@ -21,11 +25,15 @@
 @property (nonatomic, assign) NSInteger postCommentCount;
 /** 喜欢数 */
 @property (nonatomic, assign) NSInteger postLikeCount;
-/** 发布者昵称 */
-@property (nonatomic, copy) NSString *postAuthorName;
 /** 发布标题 */
 @property (nonatomic, copy) NSString *postTitle;
-@property (nonatomic, copy) NSString *postAuthorAvatar;
+/** 发布者 */
+@property (nonatomic, strong) SWTimeLineAuthor *postAuthor;
+/** 图片数组 */
+@property (nonatomic, strong) NSArray *postImageList;
+@property (nonatomic, strong) NSArray *postCoverImageList;
+@property (nonatomic, copy) NSString *postLatestUpdateTime;
+
 @end
 
 @interface SWTimeLineModel : NSObject

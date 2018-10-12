@@ -21,4 +21,17 @@
  */
 + (SWEmoticon *)emoticon:(NSString *)emoticonStr;
 
+/**
+ UTC时区时间转换系统时间
+
+ @param dateStr UTC时区时间
+ @return 系统时间
+ */
++ (NSDate *)date:(NSString *)dateStr;
+
+/** 时间转换显示 */
++ (NSString *)shortDateDesc:(NSDate *)date;
+
++ (NSString *)shortedNumberDesc:(NSInteger)number;
+
 @end

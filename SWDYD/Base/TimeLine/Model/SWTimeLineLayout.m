@@ -26,6 +26,7 @@
 - (void)layout {
     [self layoutTitle];
     [self layoutContent];
+    [self layoutMainContent];
 }
 
 - (void)layoutTitle {
@@ -36,6 +37,10 @@
 - (void)layoutContent {
     NSMutableAttributedString *tempContent = [self text:_item.postContent fontSize:kSWTimeLineContentFontSize textColor:kSWTimeLineContentColor];
     _attributedContent = tempContent;
+}
+
+- (void)layoutMainContent {
+    
 }
 
 - (NSMutableAttributedString *)text:(NSString *)text

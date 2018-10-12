@@ -197,6 +197,7 @@
 		E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A7215CCA2700B7BB75 /* SWModel.m */; };
 		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
 		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
+		E8CD8C3C217049FF0065941A /* NSDate+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD8C3B217049FF0065941A /* NSDate+Ext.m */; };
 		E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */; };
 		E8CDDC6B215DB78600C41A28 /* SWFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC6A215DB78600C41A28 /* SWFollowViewController.m */; };
 		E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDDC73215DC57A00C41A28 /* SWFollowHeaderView.m */; };
@@ -492,6 +493,8 @@
 		E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWFollowModel.m; sourceTree = "<group>"; };
 		E8CA69B8215CDAE700B7BB75 /* SWCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewCell.h; sourceTree = "<group>"; };
 		E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewCell.m; sourceTree = "<group>"; };
+		E8CD8C3A217049FF0065941A /* NSDate+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Ext.h"; sourceTree = "<group>"; };
+		E8CD8C3B217049FF0065941A /* NSDate+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Ext.m"; sourceTree = "<group>"; };
 		E8CDDC66215DB69900C41A28 /* SWCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController.h; sourceTree = "<group>"; };
 		E8CDDC67215DB69900C41A28 /* SWCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController.m; sourceTree = "<group>"; };
 		E8CDDC69215DB78600C41A28 /* SWFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowViewController.h; sourceTree = "<group>"; };
@@ -1386,6 +1389,8 @@
 				E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */,
 				E84650CB216B2EE100B7BB72 /* UIColor+Ext.h */,
 				E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */,
+				E8CD8C3A217049FF0065941A /* NSDate+Ext.h */,
+				E8CD8C3B217049FF0065941A /* NSDate+Ext.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1779,6 +1784,7 @@
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
 				2EDD392521648E9600F0BE8E /* WMStickyPageController.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
+				E8CD8C3C217049FF0065941A /* NSDate+Ext.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
 				E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */,
 				2EDD392421648E9600F0BE8E /* WMMagicScrollView.m in Sources */,

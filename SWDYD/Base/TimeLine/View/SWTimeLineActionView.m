@@ -9,6 +9,7 @@
 #import "SWTimeLineActionView.h"
 #import "SWTimeLineLayout.h"
 #import "SWTimeLineModel.h"
+#import "SWTimeLineHelper.h"
 
 @interface SWTimeLineActionView()
 
@@ -37,9 +38,9 @@
 
 - (void)setLayout:(SWTimeLineLayout *)layout {
     _layout = layout;
-    self.collectLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postCollectCount];
-    self.commentLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postCommentCount];
-    self.likeLab.text = [NSString stringWithFormat:@"%ld", (long)_layout.item.postLikeCount];
+    self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postCollectCount];
+    self.commentLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postCommentCount];
+    self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postLikeCount];
 }
 
 - (void)setup {

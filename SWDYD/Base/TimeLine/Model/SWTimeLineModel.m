@@ -7,11 +7,16 @@
 //
 
 #import "SWTimeLineModel.h"
+#import "SWMedalModel.h"
+
+@implementation SWTimeLineAuthor
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"woreList": [SWMedal class]};
+}
+@end
 
 @implementation SWTimeLineItem
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
-    NSNumber *authorLevel = dic[@"postAuthorLevel"];
-    if ([authorLevel isKindOfClass:[NSNumber class]]) _postAuthorLevel = [authorLevel integerValue];
     NSNumber *collectCount = dic[@"postCollectCount"];
     if ([collectCount isKindOfClass:[NSNumber class]]) _postCollectCount = [collectCount integerValue];
     NSNumber *shareCount = dic[@"postShareCount"];

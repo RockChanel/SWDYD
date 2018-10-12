@@ -34,7 +34,7 @@
         self.sessionManager.requestSerializer= [AFHTTPRequestSerializer serializer];
         
         [self.sessionManager.requestSerializer setValue:@"1511ae9c947386af25b2d6" forHTTPHeaderField:@"deviceid"];
-        [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1539142966|10:session_id|24:ZDdlMjM1YzBiNzc5NDdjMA==|8e91f2f3dddc709935b5b9fa14deab9ca1887755dbad4b8a75743d488424e682\"; token_id=\"2|1:0|10:1539142966|8:token_id|44:aTF1bW9oNWo0OGFkdnhuOWZyazIwZ3N6YzdxbHc2cHQ=|8bc6de5f1f9592c74191aa8921108149732e17480638b9b8d12b4dd031def410\"" forHTTPHeaderField:@"cookie"];
+        [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1539258893|10:session_id|24:YTBmNDRhMzRkZTg5NDgxNQ==|344e2650f747632f7bb103f96bd25603c7449dc0ea5aeb8c224acfe8705d04d9\"; token_id=\"2|1:0|10:1539258912|8:token_id|44:aTFxd3VvN3ljNXg2ZDNrYTlwcmhtemZnamVsYnZudDQ=|163ea633d1aedef5d179417d069d411968866d41b6a16cc925c4d178554e1963\"" forHTTPHeaderField:@"cookie"];
         
         // 证书配置
         NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"mfp" ofType:@"cer"];
