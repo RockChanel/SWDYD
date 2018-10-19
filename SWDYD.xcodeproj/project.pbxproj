@@ -29,6 +29,9 @@
 		E81A2690216DD53C007CB8C4 /* SWTimeLineActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */; };
 		E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */; };
 		E81A2698216DE5C1007CB8C4 /* SWTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */; };
+		E83A6E1D21780FD70019C65F /* SWTimeLineMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E1C21780FD70019C65F /* SWTimeLineMusicView.m */; };
+		E83A6E2021781F2B0019C65F /* SWZoneSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E1F21781F2B0019C65F /* SWZoneSubViewController.m */; };
+		E83A6E23217826580019C65F /* SWTopTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E22217826580019C65F /* SWTopTimeLineCell.m */; };
 		E83E5538216EEC1300FE80E6 /* emoji_0fffc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AD216EEC1300FE80E6 /* emoji_0fffc@2x.png */; };
 		E83E5539216EEC1300FE80E6 /* emoji_0fffe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AE216EEC1300FE80E6 /* emoji_0fffe@2x.png */; };
 		E83E553A216EEC1300FE80E6 /* emoji_0ffff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83E54AF216EEC1300FE80E6 /* emoji_0ffff@2x.png */; };
@@ -168,6 +171,10 @@
 		E83E55C0216EEC1300FE80E6 /* emotionDefault.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83E5535216EEC1300FE80E6 /* emotionDefault.plist */; };
 		E83E55C1216EEC1300FE80E6 /* emotionLxh.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83E5537216EEC1300FE80E6 /* emotionLxh.plist */; };
 		E83E55C4216EF7FF00FE80E6 /* SWTimeLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E55C3216EF7FF00FE80E6 /* SWTimeLineLayout.m */; };
+		E83E65F521796BCE0032C919 /* pullDownRefresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E83E65F421796BCE0032C919 /* pullDownRefresh.gif */; };
+		E83E65F821797A030032C919 /* SWRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E65F721797A030032C919 /* SWRefreshGifHeader.m */; };
+		E83E65FC2179A5A10032C919 /* new_loading_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = E83E65FB2179A5A00032C919 /* new_loading_icon.gif */; };
+		E83E66052179ABB80032C919 /* SWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E66042179ABB80032C919 /* SWMessageViewController.m */; };
 		E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */; };
 		E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */; };
 		E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CF216B394B00B7BB72 /* SWUserModel.m */; };
@@ -295,6 +302,12 @@
 		E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineProfileView.m; sourceTree = "<group>"; };
 		E81A2696216DE5C1007CB8C4 /* SWTimeLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineModel.h; sourceTree = "<group>"; };
 		E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineModel.m; sourceTree = "<group>"; };
+		E83A6E1B21780FD70019C65F /* SWTimeLineMusicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineMusicView.h; sourceTree = "<group>"; };
+		E83A6E1C21780FD70019C65F /* SWTimeLineMusicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineMusicView.m; sourceTree = "<group>"; };
+		E83A6E1E21781F2B0019C65F /* SWZoneSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWZoneSubViewController.h; sourceTree = "<group>"; };
+		E83A6E1F21781F2B0019C65F /* SWZoneSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWZoneSubViewController.m; sourceTree = "<group>"; };
+		E83A6E21217826580019C65F /* SWTopTimeLineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTopTimeLineCell.h; sourceTree = "<group>"; };
+		E83A6E22217826580019C65F /* SWTopTimeLineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTopTimeLineCell.m; sourceTree = "<group>"; };
 		E83E54AD216EEC1300FE80E6 /* emoji_0fffc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0fffc@2x.png"; sourceTree = "<group>"; };
 		E83E54AE216EEC1300FE80E6 /* emoji_0fffe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0fffe@2x.png"; sourceTree = "<group>"; };
 		E83E54AF216EEC1300FE80E6 /* emoji_0ffff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_0ffff@2x.png"; sourceTree = "<group>"; };
@@ -435,6 +448,12 @@
 		E83E5537216EEC1300FE80E6 /* emotionLxh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotionLxh.plist; sourceTree = "<group>"; };
 		E83E55C2216EF7FF00FE80E6 /* SWTimeLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineLayout.h; sourceTree = "<group>"; };
 		E83E55C3216EF7FF00FE80E6 /* SWTimeLineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineLayout.m; sourceTree = "<group>"; };
+		E83E65F421796BCE0032C919 /* pullDownRefresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pullDownRefresh.gif; sourceTree = "<group>"; };
+		E83E65F621797A030032C919 /* SWRefreshGifHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRefreshGifHeader.h; sourceTree = "<group>"; };
+		E83E65F721797A030032C919 /* SWRefreshGifHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRefreshGifHeader.m; sourceTree = "<group>"; };
+		E83E65FB2179A5A00032C919 /* new_loading_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = new_loading_icon.gif; sourceTree = "<group>"; };
+		E83E66032179ABB80032C919 /* SWMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMessageViewController.h; sourceTree = "<group>"; };
+		E83E66042179ABB80032C919 /* SWMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMessageViewController.m; sourceTree = "<group>"; };
 		E84650C8216B2ECF00B7BB72 /* NSString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
 		E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		E84650CB216B2EE100B7BB72 /* UIColor+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
@@ -615,6 +634,8 @@
 			children = (
 				2EDD392621648EB700F0BE8E /* SWZoneHomeViewController.h */,
 				2EDD392721648EB700F0BE8E /* SWZoneHomeViewController.m */,
+				E83A6E1E21781F2B0019C65F /* SWZoneSubViewController.h */,
+				E83A6E1F21781F2B0019C65F /* SWZoneSubViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -765,6 +786,8 @@
 		E81A2694216DDC7C007CB8C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E83A6E21217826580019C65F /* SWTopTimeLineCell.h */,
+				E83A6E22217826580019C65F /* SWTopTimeLineCell.m */,
 				E81A268A216DCEF7007CB8C4 /* SWTimeLineCell.h */,
 				E81A268B216DCEF7007CB8C4 /* SWTimeLineCell.m */,
 				E81A268E216DD53C007CB8C4 /* SWTimeLineActionView.h */,
@@ -773,6 +796,8 @@
 				E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */,
 				E8CD8C3D217051E70065941A /* SWTimeLineCardView.h */,
 				E8CD8C3E217051E70065941A /* SWTimeLineCardView.m */,
+				E83A6E1B21780FD70019C65F /* SWTimeLineMusicView.h */,
+				E83A6E1C21780FD70019C65F /* SWTimeLineMusicView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -951,6 +976,31 @@
 			path = lxh;
 			sourceTree = "<group>";
 		};
+		E83E65FD2179AB640032C919 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				E83E65FE2179AB780032C919 /* Main */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		E83E65FE2179AB780032C919 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E83E65FF2179AB880032C919 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E83E65FF2179AB880032C919 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E83E66032179ABB80032C919 /* SWMessageViewController.h */,
+				E83E66042179ABB80032C919 /* SWMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E85A86B1215F285C002A6A67 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1022,6 +1072,8 @@
 			children = (
 				E83E54AB216EEC1300FE80E6 /* EmotionIcons */,
 				E8CA6982215CA53800B7BB75 /* mfp.cer */,
+				E83E65FB2179A5A00032C919 /* new_loading_icon.gif */,
+				E83E65F421796BCE0032C919 /* pullDownRefresh.gif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1376,6 +1428,8 @@
 				E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */,
 				E81A2687216D943E007CB8C4 /* SWProgressHUD.h */,
 				E81A2688216D943E007CB8C4 /* SWProgressHUD.m */,
+				E83E65F621797A030032C919 /* SWRefreshGifHeader.h */,
+				E83E65F721797A030032C919 /* SWRefreshGifHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1398,6 +1452,7 @@
 		E8E3ACFF215B8CA70066F4D0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				E83E65FD2179AB640032C919 /* Message */,
 				E8CDDC8A215E092A00C41A28 /* Me */,
 				E8E3AD00215B8CA70066F4D0 /* Home */,
 				2E9BE79421621FE900839B0E /* Community */,
@@ -1557,10 +1612,12 @@
 				E83E5594216EEC1300FE80E6 /* emoji_1f616@2x.png in Resources */,
 				E83E559F216EEC1300FE80E6 /* emoji_1f628@2x.png in Resources */,
 				E83E5546216EEC1300FE80E6 /* emoji_1f35e@2x.png in Resources */,
+				E83E65FC2179A5A10032C919 /* new_loading_icon.gif in Resources */,
 				E83E5547216EEC1300FE80E6 /* emoji_1f35f@2x.png in Resources */,
 				E83E557D216EEC1300FE80E6 /* emoji_1f4a3@2x.png in Resources */,
 				E83E5560216EEC1300FE80E6 /* emoji_1f436@2x.png in Resources */,
 				E83E556F216EEC1300FE80E6 /* emoji_1f459@2x.png in Resources */,
+				E83E65F521796BCE0032C919 /* pullDownRefresh.gif in Resources */,
 				E83E5586216EEC1300FE80E6 /* emoji_1f601@2x.png in Resources */,
 				E83E55AA216EEC1300FE80E6 /* emoji_1f6ac@2x.png in Resources */,
 				E83E558C216EEC1300FE80E6 /* emoji_1f60b@2x.png in Resources */,
@@ -1766,6 +1823,8 @@
 			files = (
 				E8E3ACF8215B8C8D0066F4D0 /* SWViewController.m in Sources */,
 				E81A2689216D943E007CB8C4 /* SWProgressHUD.m in Sources */,
+				E83E66052179ABB80032C919 /* SWMessageViewController.m in Sources */,
+				E83E65F821797A030032C919 /* SWRefreshGifHeader.m in Sources */,
 				E87022CF2160D3750001D55C /* SWLoginViewController.m in Sources */,
 				E8D190D9216C416B00CB6A04 /* SWSettingListCell.m in Sources */,
 				E8D19122216CAB5100CB6A04 /* SWRecommandBannerView.m in Sources */,
@@ -1774,6 +1833,7 @@
 				2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
+				E83A6E23217826580019C65F /* SWTopTimeLineCell.m in Sources */,
 				E8D1911F216CAAFD00CB6A04 /* SWRecommandModel.m in Sources */,
 				2EDD392B2164900300F0BE8E /* SWZoneHomeHeaderView.m in Sources */,
 				2E9BE7B42162534600839B0E /* SWHotZoneModel.m in Sources */,
@@ -1800,6 +1860,7 @@
 				2E9BE7A92162229300839B0E /* SWMineViewController.m in Sources */,
 				E87022B421609BF90001D55C /* SWMedalModel.m in Sources */,
 				E8D19114216CA37900CB6A04 /* SDCollectionViewCell.m in Sources */,
+				E83A6E2021781F2B0019C65F /* SWZoneSubViewController.m in Sources */,
 				E8CA6980215CA17700B7BB75 /* SWNetWorkApi.m in Sources */,
 				E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */,
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
@@ -1809,6 +1870,7 @@
 				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
+				E83A6E1D21780FD70019C65F /* SWTimeLineMusicView.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
 				E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */,
 				E81A268C216DCEF7007CB8C4 /* SWTimeLineCell.m in Sources */,

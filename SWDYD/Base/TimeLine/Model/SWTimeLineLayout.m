@@ -40,8 +40,6 @@
 }
 
 - (void)layoutCard {
-    _cardPicCount = 0;
-    
     if (_item.postVideo) {
         _cardHeight = kSWTimeLineCardVideoHeight;
         _cardType = SWLayoutCardTypeVideo;
@@ -57,20 +55,20 @@
         }
     }
     else if (_item.postCoverImageList && _item.postCoverImageList.count > 0) {
-        _cardType = SWLayoutCardTypeImage;
+        _cardType = SWLayoutCardTypePic;
         NSArray *coverList = _item.postCoverImageList;
         if (coverList.count == 1) {
-            _cardHeight = kSWTimeLineCardOneImageHeight;
-            _cardPicCount = 1;
+            _cardHeight = kSWTimeLineCardMaxPicHeight;
+            _picCount = 1;
         }else if (coverList.count == 2) {
-            _cardHeight = kSWTimeLineCardTwoImageHeight;
-            _cardPicCount = 2;
+            _cardHeight = kSWTimeLineCardPicHeight;
+            _picCount = 2;
         }else {
-            _cardHeight = kSWTimeLineCardThreeImageHeight;
-            _cardPicCount = 3;
+            _cardHeight = kSWTimeLineCardMinPicHeight;
+            _picCount = kSWMaxPicCount;
         }
-        CGFloat picWidth = (kSWCellContentWidth - (_cardPicCount-1)*kSWTimeLineImageMargin)/_cardPicCount;
-        _cardPickSize = CGSizeMake(picWidth, _cardHeight);
+        CGFloat picWidth = (kSWContentWidth - (_picCount-1)*kSWTimeLinePicMargin)/_picCount;
+        _picSize = CGSizeMake(picWidth, _cardHeight);
     }
     else {
         _cardHeight = 0;

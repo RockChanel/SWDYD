@@ -8,9 +8,15 @@
 
 #import "SWZoneHomeModel.h"
 
+@implementation SWZoneHomeCategory
+
+@end
+
 @implementation SWZoneHomeHeaderModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"subAreaPostCategories": [NSString class]};
+    return @{@"subAreaPostCategories": [NSString class],
+             @"subAreaPostCateId": [NSString class],
+             @"subAreaCategoryInfoList": [SWZoneHomeCategory class]};
 }
 @end
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SWTableViewController : UITableViewController
-/** 当前加载页数 */
+/** 当前加载页数 初始值为1 */
 @property (nonatomic, assign) NSInteger page;
 /** 每页加载数量 */
 @property (nonatomic, assign) NSInteger perPage;
@@ -30,6 +30,8 @@
 - (void)headerRefresh;
 /** 上拉加载 */
 - (void)footerRefresh;
+
+- (void)loadData:(BOOL)isRefresh;
 /**
  结束刷新/加载
  

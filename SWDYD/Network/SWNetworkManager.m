@@ -34,7 +34,8 @@
         self.sessionManager.requestSerializer= [AFHTTPRequestSerializer serializer];
         
         [self.sessionManager.requestSerializer setValue:@"1511ae9c947386af25b2d6" forHTTPHeaderField:@"deviceid"];
-        [self.sessionManager.requestSerializer setValue:@"session_id=\"2|1:0|10:1539258893|10:session_id|24:YTBmNDRhMzRkZTg5NDgxNQ==|344e2650f747632f7bb103f96bd25603c7449dc0ea5aeb8c224acfe8705d04d9\"; token_id=\"2|1:0|10:1539258912|8:token_id|44:aTFxd3VvN3ljNXg2ZDNrYTlwcmhtemZnamVsYnZudDQ=|163ea633d1aedef5d179417d069d411968866d41b6a16cc925c4d178554e1963\"" forHTTPHeaderField:@"cookie"];
+        [self.sessionManager.requestSerializer setValue:[SWClient shareClient].token.value forHTTPHeaderField:kSWTokenKey];
+        [self.sessionManager.requestSerializer setValue:[SWClient shareClient].session.value forHTTPHeaderField:kSWSessionKey];
         
         // 证书配置
         NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"mfp" ofType:@"cer"];

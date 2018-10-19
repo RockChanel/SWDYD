@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.3)
@@ -23,6 +24,9 @@ PODS:
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
+  - SDWebImage/GIF (4.4.1):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - WMPageController (2.4.0)
   - YYModel (1.0.4)
   - YYText (1.0.7)
@@ -34,6 +38,7 @@ DEPENDENCIES:
   - MJRefresh
   - RTRootNavigationController
   - SDWebImage (~> 4.0)
+  - SDWebImage/GIF
   - WMPageController (= 2.4.0)
   - YYModel (~> 1.0)
   - YYText
@@ -41,6 +46,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FLAnimatedImage
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -52,6 +58,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
@@ -61,6 +68,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 0ea6440d053f600699b667e0251a03db31fb53b5
+PODFILE CHECKSUM: 6ef8ab1ace92801bf976967ef1f356dcabbf4608
 
 COCOAPODS: 1.5.3

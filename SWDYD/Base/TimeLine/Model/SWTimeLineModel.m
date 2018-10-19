@@ -49,13 +49,15 @@
 }
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"postCoverImageList": [NSString class]};
+    return @{@"postCoverImageList": [NSString class],
+             @"postHonour": [NSString class]};
 }
 @end
 
 @implementation SWTimeLineModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"postList": [SWTimeLineItem class]};
+    return @{@"postList": [SWTimeLineItem class],
+             @"topPostList": [SWTimeLineItem class]};
 }
 @end
 

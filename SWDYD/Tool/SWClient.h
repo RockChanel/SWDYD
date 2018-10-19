@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class SWEmoticonGroup;
+@class SWEmoticonGroup, SWCookieModel;
 @interface SWClient : NSObject
 /** 是否自动登录 */
 @property (nonatomic, assign) BOOL isAutoLogin;
+/** cookie */
+@property (nonatomic, strong) SWCookieModel *token;
+/** session */
+@property (nonatomic, strong) SWCookieModel *session;
 
 /** 表情集合 防止频繁读取，临时放入客户端单例 */
 @property (nonatomic, strong) SWEmoticonGroup *emoticonGroup;

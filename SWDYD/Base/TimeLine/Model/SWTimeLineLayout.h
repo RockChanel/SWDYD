@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSInteger const kSWMaxPicCount = 3;
+
 /** 顶部留白 */
 static CGFloat const kSWTimeLineTopMargin = 7;
 /** 左右内边距 */
@@ -37,12 +39,12 @@ static CGFloat const kSWTimeLineCardAudioHeight = 70;
 /** 音月卡片高度 */
 static CGFloat const kSWTimeLineCardMusicHeight = 90;
 /** 一张图片卡片高度 */
-static CGFloat const kSWTimeLineCardOneImageHeight = 190;
+static CGFloat const kSWTimeLineCardMaxPicHeight = 190;
 /** 两张图片卡片高度 */
-static CGFloat const kSWTimeLineCardTwoImageHeight = 175;
+static CGFloat const kSWTimeLineCardPicHeight = 175;
 /** 三张图片卡片高度 */
-static CGFloat const kSWTimeLineCardThreeImageHeight = 115;
-static CGFloat const kSWTimeLineImageMargin = 5;
+static CGFloat const kSWTimeLineCardMinPicHeight = 115;
+static CGFloat const kSWTimeLinePicMargin = 5;
 
 /** 工具栏和选项卡间距 */
 static CGFloat const kSWTimeLineActionPaddingTop = 7;
@@ -62,8 +64,8 @@ static CGFloat const kSWTimeLineContentFontSize = 14;
 #define kSWTimeLineTitleColor [UIColor sw_black]
 /** 文本颜色 */
 #define kSWTimeLineContentColor [UIColor sw_darkGray]
-/// cell 内容宽度
-#define kSWCellContentWidth (SWScreenWidth - 2 * kSWTimeLinePadding)
+/// 卡片宽度
+#define kSWContentWidth (SWScreenWidth - 2 * kSWTimeLinePadding)
 
 /// 风格
 typedef NS_ENUM(NSInteger, SWLayoutStyle) {
@@ -74,7 +76,7 @@ typedef NS_ENUM(NSInteger, SWLayoutStyle) {
 /// 卡片类型
 typedef NS_ENUM(NSInteger, SWLayoutCardType) {
     SWLayoutCardTypeNone = 0, ///< 无内容
-    SWLayoutCardTypeImage,  ///< 图片
+    SWLayoutCardTypePic,  ///< 图片
     SWLayoutCardTypeAudio,   /// 音频
     SWLayoutCardTypeVideo,    ///< 视频
     SWLayoutCardTypeMusic,  ///< 音乐
@@ -89,8 +91,8 @@ typedef NS_ENUM(NSInteger, SWLayoutCardType) {
 @property (nonatomic, assign) SWLayoutCardType cardType;
 
 @property (nonatomic, assign) CGFloat cardHeight;
-@property (nonatomic, assign) CGFloat cardPicCount;
-@property (nonatomic, assign) CGSize cardPickSize;
+@property (nonatomic, assign) CGFloat picCount;
+@property (nonatomic, assign) CGSize picSize;
 
 @property (nonatomic, strong) NSAttributedString *attributedTitle;
 @property (nonatomic, strong) NSAttributedString *attributedContent;

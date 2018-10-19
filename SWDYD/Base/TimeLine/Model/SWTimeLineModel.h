@@ -52,10 +52,13 @@
 @property (nonatomic, strong) SWTimeLineVideo *postVideo;
 /** 音乐 */
 @property (nonatomic, strong) SWTimeLineMusic *postMusic;
+/** 置顶 | 精华 */
+@property (nonatomic, strong) NSArray<NSString *> *postHonour;
 @end
 
 @interface SWTimeLineModel : NSObject
 @property (nonatomic, strong) NSArray<SWTimeLineItem *> *postList;
+@property (nonatomic, strong) NSArray<SWTimeLineItem *> *topPostList;
 @end
 
 @interface SWEmoticon : NSObject

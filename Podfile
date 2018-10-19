@@ -8,6 +8,7 @@ target 'SWDYD' do
   # Pods for SWDYD
   pod 'Masonry', '~> 1.0'
   pod 'SDWebImage', '~> 4.0'
+  pod 'SDWebImage/GIF'
   pod 'YYModel', '~> 1.0'
   pod 'WMPageController', '2.4.0' 
   pod 'AFNetworking', '~> 3.0'

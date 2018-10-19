@@ -9,10 +9,11 @@
 #import "SWZoneHomeViewController.h"
 #import "SWZoneHomeHeaderView.h"
 #import "SWZoneHomeModel.h"
-#import "SWMineViewController.h"
+#import "SWZoneSubViewController.h"
 
 @interface SWZoneHomeViewController ()
 @property (nonatomic, strong) NSArray *topics;
+@property (nonatomic, strong) NSArray<SWZoneHomeCategory *> *topicList;
 @property (nonatomic, strong) SWZoneHomeHeaderView *headerView;
 @property (nonatomic, assign) CGFloat headerHeight;
 @end
@@ -53,6 +54,7 @@ static CGFloat const SWMenuViewHeight = 44.0;
         self.title = headerModel.subAreaName;
         self.headerView.model = headerModel;
         self.topics = headerModel.subAreaPostCategories;
+        self.topicList = headerModel.subAreaCategoryInfoList;
         [self reloadData];
     } failure:nil];
 }
@@ -114,8 +116,10 @@ static CGFloat const SWMenuViewHeight = 44.0;
 }
 
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    SWMineViewController *subVC = [[SWMineViewController alloc]initWithCollectionViewLayout:flowLayout];
+    SWZoneSubViewController *subVC = [[SWZoneSubViewController alloc]initWithStyle:UITableViewStylePlain];
+    if (index < self.topicList.count) {
+        subVC.category = self.topicList[index];
+    }
     return subVC;
 }
 
@@ -142,6 +146,13 @@ static CGFloat const SWMenuViewHeight = 44.0;
         _topics = [NSArray array];
     }
     return _topics;
+}
+
+- (NSArray *)topicList {
+    if (!_topicList) {
+        _topicList = [NSArray array];
+    }
+    return _topicList;
 }
 
 - (void)didReceiveMemoryWarning {

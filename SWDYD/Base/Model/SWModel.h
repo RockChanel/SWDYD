@@ -14,3 +14,9 @@
 @property (nonatomic, copy) NSString *apiVersion;
 @property (nonatomic, copy) NSString *message;
 @end
+
+@interface SWCookieModel : NSObject <NSCoding>
+@property (nonatomic, copy) NSString *value;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *path;
+@end

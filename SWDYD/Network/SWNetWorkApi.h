@@ -16,9 +16,14 @@ static NSString * const kSWImageBaseURL = @"https://image.diyidan.net";
 static NSString * const kSWAppChannel = @"ios";
 static NSString * const kSWIsUpgrade = @"true";
 static NSString * const kSWVersionName = @"20180921";
+static NSString * const kSWTokenKey = @"token_id";
+static NSString * const kSWSessionKey = @"session_id";
 
 #pragma mark -- ResponseCode
 static NSInteger const kSWResponseCodeSuccess = 200;
+
+#pragma mark --
+static NSString * const kSWApiKey = @"v0.2/upyun/key";
 
 #pragma mark -- 首页
 /** 关注列表 */
@@ -34,6 +39,7 @@ static NSString * const kSWApiRecommandPostList = @"v0.2/posts4";
 /** 热区 */
 static NSString * const kSWApiCommunityHotZone = @"v0.2/area";
 static NSString * const kSWApiHotZoneHead = @"v0.2/area/head";
+static NSString * const kSWApiHotZoneDetail = @"v0.2/area/detail_new";
 
 #pragma mark -- 我
 /** 主页 */

@@ -8,11 +8,16 @@
 
 #import "SWClient.h"
 #import "SWTimeLineModel.h"
+#import "SWModel.h"
 
 @implementation SWClient
 @synthesize isAutoLogin = _isAutoLogin;
+@synthesize token = _token;
+@synthesize session = _session;
 
 static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
+static NSString * const SWLocalTokenKey = @"SWLocalTokenKey";
+static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
 
 + (instancetype)shareClient {
     static SWClient *_client = nil;
@@ -43,6 +48,18 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
     
     [[SWNetworkManager shareManager] requestWithMessage:@"正在登录" onView:nil method:SWHttpMethodPost api:kSWApiLogin parameters:params success:^(SWJsonModel * _Nullable json) {
         if (json.code == kSWResponseCodeSuccess) {
+            NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kSWBaseURL, kSWApiLogin]]];
+            [cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                SWCookieModel *token = [[SWCookieModel alloc]init];
+                token.name = obj.name;
+                token.value = obj.value;
+                if ([obj.name isEqualToString:kSWTokenKey]) {
+                    self.token = token;
+                }
+                else if ([obj.name isEqualToString:kSWSessionKey]) {
+                    self.session = token;
+                }
+            }];
             NSArray *userList = json.data[@"userList"];
             if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
                 SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];
@@ -62,6 +79,8 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
         if (json.code == kSWResponseCodeSuccess) {
             [[SWUserManager shareManager] setUser:nil];
             self.isAutoLogin = NO;
+            self.token = nil;
+            self.session = nil;
             [[NSNotificationCenter defaultCenter] postNotificationName:kSWNotificationLoginStateChange object:[NSNumber numberWithBool:NO]];
         }
     } failure:nil];
@@ -78,6 +97,34 @@ static NSString * const SWLocalIsAutoLoginKey = @"SWLocalIsAutoLoginKey";
 /** 读取自动登录状态 */
 - (BOOL)isAutoLogin {
     return [[NSUserDefaults standardUserDefaults] boolForKey:SWLocalIsAutoLoginKey];
+}
+
+- (void)setToken:(SWCookieModel *)token {
+    _token = token;
+    NSData *encodeData = [NSKeyedArchiver archivedDataWithRootObject:token];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:encodeData forKey:SWLocalTokenKey];
+    [userDefaults synchronize];
+}
+
+- (SWCookieModel *)token {
+    NSData *encodeObject = [[NSUserDefaults standardUserDefaults] objectForKey:SWLocalTokenKey];
+    SWCookieModel *tempToken = [NSKeyedUnarchiver unarchiveObjectWithData:encodeObject];
+    return tempToken;
+}
+
+- (void)setSession:(SWCookieModel *)session {
+    _session = session;
+    NSData *encodeData = [NSKeyedArchiver archivedDataWithRootObject:session];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:encodeData forKey:SWLocalSessionKey];
+    [userDefaults synchronize];
+}
+
+- (SWCookieModel *)session {
+    NSData *encodeObject = [[NSUserDefaults standardUserDefaults] objectForKey:SWLocalSessionKey];
+    SWCookieModel *tempSession = [NSKeyedUnarchiver unarchiveObjectWithData:encodeObject];
+    return tempSession;
 }
 
 /** 读取表情 */

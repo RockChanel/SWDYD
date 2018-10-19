@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@interface SWZoneHomeCategory : NSObject
+@property (nonatomic, copy) NSString *categoryName;
+@property (nonatomic, copy) NSString *categoryId;
+@end
+
 @interface SWZoneHomeHeaderModel : NSObject
 @property (nonatomic, copy) NSString *subAreaName;
 @property (nonatomic, copy) NSString *subAreaUserCountName;
@@ -15,6 +20,8 @@
 @property (nonatomic, copy) NSString *subAreaHeadImage;
 @property (nonatomic, copy) NSString *subAreaImage;
 @property (nonatomic, strong) NSArray<NSString *> *subAreaPostCategories;
+@property (nonatomic, strong) NSArray<NSString *> *subAreaPostCateId;
+@property (nonatomic, strong) NSArray<SWZoneHomeCategory *> *subAreaCategoryInfoList;
 @end
 
 @interface SWZoneHomeModel : NSObject

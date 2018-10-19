@@ -7,6 +7,7 @@
 //
 
 #import "SWTableViewController.h"
+#import "SWRefreshGifHeader.h"
 
 @interface SWTableViewController ()
 
@@ -27,7 +28,7 @@
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader {
     _showRefreshHeader = showRefreshHeader;
     if (_showRefreshHeader) {
-        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
+        self.tableView.mj_header = [SWRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
     }
     else {
         self.tableView.mj_header = nil;
@@ -37,7 +38,7 @@
 - (void)setShowRefreshFooter:(BOOL)showRefreshFooter {
     _showRefreshFooter = showRefreshFooter;
     if (_showRefreshFooter) {
-        self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefresh)];
+        self.tableView.mj_footer = [MJRefreshAutoFooter  footerWithRefreshingTarget:self refreshingAction:@selector(footerRefresh)];
     }
     else {
         self.tableView.mj_footer = nil;
@@ -56,10 +57,14 @@
 }
 
 - (void)headerRefresh {
-    
+    [self loadData:YES];
 }
 
 - (void)footerRefresh {
+    [self loadData:NO];
+}
+
+- (void)loadData:(BOOL)isRefresh {
     
 }
 

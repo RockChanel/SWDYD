@@ -17,3 +17,13 @@
 }
 
 @end
+
+@implementation SWCookieModel
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [self yy_modelEncodeWithCoder:aCoder];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [self yy_modelInitWithCoder:aDecoder];
+}
+@end

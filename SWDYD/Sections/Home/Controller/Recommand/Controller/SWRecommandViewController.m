@@ -37,22 +37,7 @@ static NSString *cellId = @"cellId";
     [self loadBanner];
 }
 
--(NSString *)getLocalDateFormateUTCDate:(NSString *)utcDate
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //输入格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
-    NSTimeZone *localTimeZone = [NSTimeZone localTimeZone];
-    [dateFormatter setTimeZone:localTimeZone];
-    
-    NSDate *dateFormatted = [dateFormatter dateFromString:utcDate];
-    //输出格式
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *dateString = [dateFormatter stringFromDate:dateFormatted];
-    return dateString;
-}
-
-- (void)headerRefresh {
+- (void)loadData:(BOOL)isRefresh {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
     params[@"isUpgrade"] = kSWIsUpgrade;
@@ -62,20 +47,22 @@ static NSString *cellId = @"cellId";
     params[@"queryType"] = @"mainPage";
     
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiRecommandPostList parameters:params success:^(SWJsonModel * _Nullable json) {
-        [self.datas removeAllObjects];
+        if (isRefresh) {
+            self.page = 1;
+            [self.layouts removeAllObjects];
+        }
+        else {
+            self.page += 1;
+        }
         SWTimeLineModel *list = [SWTimeLineModel yy_modelWithJSON:json.data];
         [list.postList enumerateObjectsUsingBlock:^(SWTimeLineItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             SWTimeLineLayout *layout = [[SWTimeLineLayout alloc]initWithItem:obj style:SWLayoutStyleTimeline];
             [self.layouts addObject:layout];
         }];
-        [self endRefreshHeader:YES reload:YES];
+        [self endRefreshHeader:isRefresh reload:YES];
     } failure:^(NSError * _Nonnull error) {
-        [self endRefreshHeader:YES reload:NO];
+        [self endRefreshHeader:isRefresh reload:NO];
     }];
-}
-
-- (void)footerRefresh {
-    [self endRefreshHeader:NO reload:NO];
 }
 
 - (void)loadBanner {
@@ -108,7 +95,7 @@ static NSString *cellId = @"cellId";
     return _banner;
 }
 
-- (NSMutableArray *)datas {
+- (NSMutableArray *)layouts {
     if (!_layouts) {
         _layouts = [NSMutableArray array];
     }

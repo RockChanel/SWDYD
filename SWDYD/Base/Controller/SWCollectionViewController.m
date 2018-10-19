@@ -7,6 +7,7 @@
 //
 
 #import "SWCollectionViewController.h"
+#import "SWRefreshGifHeader.h"
 
 @interface SWCollectionViewController ()
 
@@ -30,7 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader {
     _showRefreshHeader = showRefreshHeader;
     if (_showRefreshHeader) {
-        self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
+        self.collectionView.mj_header = [SWRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
     }
     else {
         self.collectionView.mj_header = nil;

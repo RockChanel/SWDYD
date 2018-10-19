@@ -11,6 +11,7 @@
 #import "SWHomeViewController.h"
 #import "SWMeViewController.h"
 #import "SWCommunityViewController.h"
+#import "SWMessageViewController.h"
 
 @interface SWTabBarController ()
 
@@ -31,12 +32,16 @@
     SWCommunityViewController *communityVC = [[SWCommunityViewController alloc]init];
     SWNavigationController *communityNav = [[SWNavigationController alloc]initWithRootViewController:communityVC];
     
+    SWMessageViewController *messageVC = [[SWMessageViewController alloc]initWithStyle:UITableViewStylePlain];
+    SWNavigationController *messageNav = [[SWNavigationController alloc]initWithRootViewController:messageVC];
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     SWMeViewController *meVC = [[SWMeViewController alloc]initWithCollectionViewLayout:flowLayout];
     SWNavigationController *meNav = [[SWNavigationController alloc]initWithRootViewController:meVC];
     
     [self addChildVC:homeNav title:@"首页" image:@"home_tabbar_35x35_" selectedImage:@"home_tabbar_red_35x35_"];
     [self addChildVC:communityNav title:@"版区" image:@"community_tabbar_35x35_" selectedImage:@"community_tabbar_red_35x35_"];
+    [self addChildVC:messageNav title:@"消息" image:@"message_tabbar_35x35_" selectedImage:@"message_tabbar_select_35x35_"];
     [self addChildVC:meNav title:@"我" image:@"me_tabbar_35x35_" selectedImage:@"me_tabbar_red_35x35_"];
 }
 
