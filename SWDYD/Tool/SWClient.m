@@ -49,17 +49,8 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     [[SWNetworkManager shareManager] requestWithMessage:@"正在登录" onView:nil method:SWHttpMethodPost api:kSWApiLogin parameters:params success:^(SWJsonModel * _Nullable json) {
         if (json.code == kSWResponseCodeSuccess) {
             NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kSWBaseURL, kSWApiLogin]]];
-            [cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                SWCookieModel *token = [[SWCookieModel alloc]init];
-                token.name = obj.name;
-                token.value = obj.value;
-                if ([obj.name isEqualToString:kSWTokenKey]) {
-                    self.token = token;
-                }
-                else if ([obj.name isEqualToString:kSWSessionKey]) {
-                    self.session = token;
-                }
-            }];
+            [self saveCookies:cookies];
+            
             NSArray *userList = json.data[@"userList"];
             if ([userList isKindOfClass:[NSArray class]] && userList.count > 0) {
                 SWUserModel *user = [SWUserModel yy_modelWithJSON:userList[0]];
@@ -79,11 +70,30 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
         if (json.code == kSWResponseCodeSuccess) {
             [[SWUserManager shareManager] setUser:nil];
             self.isAutoLogin = NO;
-            self.token = nil;
-            self.session = nil;
+            [self clearCookies];
             [[NSNotificationCenter defaultCenter] postNotificationName:kSWNotificationLoginStateChange object:[NSNumber numberWithBool:NO]];
         }
     } failure:nil];
+}
+
+- (void)saveCookies:(NSArray<NSHTTPCookie *> *)cookies {
+    if (!cookies || cookies.count == 0) return;
+    for (NSHTTPCookie *cookie in cookies) {
+        SWCookieModel *token = [[SWCookieModel alloc]init];
+        token.name = cookie.name;
+        token.value = cookie.value;
+        if ([cookie.name isEqualToString:kSWTokenKey]) {
+            self.token = token;
+        }
+        else if ([cookie.name isEqualToString:kSWSessionKey]) {
+            self.session = token;
+        }
+    }
+}
+
+- (void)clearCookies {
+    self.token = nil;
+    self.session = nil;
 }
 
 #pragma mark -- getter & setter
