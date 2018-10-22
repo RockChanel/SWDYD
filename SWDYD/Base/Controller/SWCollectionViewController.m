@@ -60,10 +60,14 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)headerRefresh {
-    
+    [self loadData:YES];
 }
 
 - (void)footerRefresh {
+    [self loadData:NO];
+}
+
+- (void)loadData:(BOOL)isRefresh {
     
 }
 

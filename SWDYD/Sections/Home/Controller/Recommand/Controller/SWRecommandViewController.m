@@ -38,6 +38,13 @@ static NSString *cellId = @"cellId";
 }
 
 - (void)loadData:(BOOL)isRefresh {
+    if (isRefresh) {
+        self.page = 1;
+        [self.layouts removeAllObjects];
+    }
+    else {
+        self.page += 1;
+    }
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
     params[@"isUpgrade"] = kSWIsUpgrade;
@@ -47,13 +54,6 @@ static NSString *cellId = @"cellId";
     params[@"queryType"] = @"mainPage";
     
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiRecommandPostList parameters:params success:^(SWJsonModel * _Nullable json) {
-        if (isRefresh) {
-            self.page = 1;
-            [self.layouts removeAllObjects];
-        }
-        else {
-            self.page += 1;
-        }
         SWTimeLineModel *list = [SWTimeLineModel yy_modelWithJSON:json.data];
         [list.postList enumerateObjectsUsingBlock:^(SWTimeLineItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             SWTimeLineLayout *layout = [[SWTimeLineLayout alloc]initWithItem:obj style:SWLayoutStyleTimeline];

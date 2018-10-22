@@ -12,6 +12,7 @@
 
 /** 整数转换成万，保留一位小数 */
 + (NSString *)convertIntegerNumber:(NSInteger)num;
+/** 获取主window */
 + (UIWindow *)mainWindow;
 
 @end

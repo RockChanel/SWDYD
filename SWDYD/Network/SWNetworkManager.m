@@ -60,6 +60,11 @@
         case SWHttpMethodGet:
         {
             [self.sessionManager GET:api parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                if (message) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [SWProgressHUD sw_hideForView:view];
+                    });
+                }
                 id json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 SWJsonModel *jsonModel = [SWJsonModel yy_modelWithJSON:json];
                 if (success) {

@@ -8,7 +8,7 @@
 
 #import "SWHomeViewController.h"
 #import "SWFollowViewController.h"
-#import "SWVideoViewController.h"
+#import "SWVideoListViewController.h"
 #import "SWRecommandViewController.h"
 
 @interface SWHomeViewController ()
@@ -69,7 +69,8 @@
     else if (1 == index) {
         return [[SWRecommandViewController alloc]initWithStyle:UITableViewStyleGrouped];
     }
-    return [[SWVideoViewController alloc]init];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    return [[SWVideoListViewController alloc]initWithCollectionViewLayout:flowLayout];
 }
 
 - (CGRect)pageController:(WMPageController *)pageController preferredFrameForMenuView:(WMMenuView *)menuView {

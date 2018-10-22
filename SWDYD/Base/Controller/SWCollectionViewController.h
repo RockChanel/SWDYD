@@ -30,6 +30,8 @@
 - (void)headerRefresh;
 /** 上拉加载 */
 - (void)footerRefresh;
+
+- (void)loadData:(BOOL)isRefresh;
 /**
  结束刷新/加载
 

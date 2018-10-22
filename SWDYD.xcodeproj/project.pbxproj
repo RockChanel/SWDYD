@@ -178,6 +178,9 @@
 		E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */; };
 		E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */; };
 		E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CF216B394B00B7BB72 /* SWUserModel.m */; };
+		E85176DE217D81F3004942C3 /* SWVideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E85176DD217D81F3004942C3 /* SWVideoListCell.m */; };
+		E85176E1217D9D56004942C3 /* SWVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85176E0217D9D56004942C3 /* SWVideoListViewController.m */; };
+		E85176E4217DA38B004942C3 /* SWVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E85176E3217DA38B004942C3 /* SWVideoListModel.m */; };
 		E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AC215F0E84002A6A67 /* SWNavigationController.m */; };
 		E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86AF215F1D04002A6A67 /* UIViewController+Ext.m */; };
 		E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A86B3215F287A002A6A67 /* SWMeCell.m */; };
@@ -199,7 +202,6 @@
 		E8CA6983215CA53800B7BB75 /* mfp.cer in Resources */ = {isa = PBXBuildFile; fileRef = E8CA6982215CA53800B7BB75 /* mfp.cer */; };
 		E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */; };
 		E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */; };
-		E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */; };
 		E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69A7215CCA2700B7BB75 /* SWModel.m */; };
 		E8CA69B3215CCC1600B7BB75 /* SWFollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B2215CCC1600B7BB75 /* SWFollowModel.m */; };
 		E8CA69BA215CDAE700B7BB75 /* SWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA69B9215CDAE700B7BB75 /* SWCollectionViewCell.m */; };
@@ -460,6 +462,12 @@
 		E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
 		E84650CE216B394B00B7BB72 /* SWUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUserModel.h; sourceTree = "<group>"; };
 		E84650CF216B394B00B7BB72 /* SWUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUserModel.m; sourceTree = "<group>"; };
+		E85176DC217D81F3004942C3 /* SWVideoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWVideoListCell.h; sourceTree = "<group>"; };
+		E85176DD217D81F3004942C3 /* SWVideoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWVideoListCell.m; sourceTree = "<group>"; };
+		E85176DF217D9D56004942C3 /* SWVideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWVideoListViewController.h; sourceTree = "<group>"; };
+		E85176E0217D9D56004942C3 /* SWVideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWVideoListViewController.m; sourceTree = "<group>"; };
+		E85176E2217DA38B004942C3 /* SWVideoListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWVideoListModel.h; sourceTree = "<group>"; };
+		E85176E3217DA38B004942C3 /* SWVideoListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWVideoListModel.m; sourceTree = "<group>"; };
 		E85A86AB215F0E84002A6A67 /* SWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
 		E85A86AC215F0E84002A6A67 /* SWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
 		E85A86AE215F1D04002A6A67 /* UIViewController+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Ext.h"; sourceTree = "<group>"; };
@@ -502,8 +510,6 @@
 		E8CA698E215CC4B100B7BB75 /* AppDelegate+Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Login.m"; sourceTree = "<group>"; };
 		E8CA6996215CC66100B7BB75 /* SWRecommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRecommandViewController.h; sourceTree = "<group>"; };
 		E8CA6997215CC66100B7BB75 /* SWRecommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRecommandViewController.m; sourceTree = "<group>"; };
-		E8CA699A215CC66700B7BB75 /* SWVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWVideoViewController.h; sourceTree = "<group>"; };
-		E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWVideoViewController.m; sourceTree = "<group>"; };
 		E8CA69A6215CCA2700B7BB75 /* SWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
 		E8CA69A7215CCA2700B7BB75 /* SWModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
 		E8CA69B1215CCC1600B7BB75 /* SWFollowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWFollowModel.h; sourceTree = "<group>"; };
@@ -1001,6 +1007,33 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E85176D9217D81C5004942C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E85176E2217DA38B004942C3 /* SWVideoListModel.h */,
+				E85176E3217DA38B004942C3 /* SWVideoListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E85176DA217D81C6004942C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E85176DC217D81F3004942C3 /* SWVideoListCell.h */,
+				E85176DD217D81F3004942C3 /* SWVideoListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E85176DB217D81C6004942C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E85176DF217D9D56004942C3 /* SWVideoListViewController.h */,
+				E85176E0217D9D56004942C3 /* SWVideoListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E85A86B1215F285C002A6A67 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1143,8 +1176,9 @@
 		E8CA6999215CC66700B7BB75 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				E8CA699A215CC66700B7BB75 /* SWVideoViewController.h */,
-				E8CA699B215CC66700B7BB75 /* SWVideoViewController.m */,
+				E85176DB217D81C6004942C3 /* Controller */,
+				E85176D9217D81C5004942C3 /* Model */,
+				E85176DA217D81C6004942C3 /* View */,
 			);
 			name = Video;
 			path = Controller/Video;
@@ -1830,6 +1864,8 @@
 				E8D19122216CAB5100CB6A04 /* SWRecommandBannerView.m in Sources */,
 				E87022BA2160A8B50001D55C /* SWMedalCell.m in Sources */,
 				2E9BE7AC216250C300839B0E /* SWHotSubViewController.m in Sources */,
+				E85176E4217DA38B004942C3 /* SWVideoListModel.m in Sources */,
+				E85176E1217D9D56004942C3 /* SWVideoListViewController.m in Sources */,
 				2E9BE7A62162227500839B0E /* SWHotZoneViewController.m in Sources */,
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
@@ -1844,6 +1880,7 @@
 				E8CDDC7D215DD7EC00C41A28 /* SWFollowAreaCell.m in Sources */,
 				2EDD392521648E9600F0BE8E /* WMStickyPageController.m in Sources */,
 				E8CDDC74215DC57A00C41A28 /* SWFollowHeaderView.m in Sources */,
+				E85176DE217D81F3004942C3 /* SWVideoListCell.m in Sources */,
 				E8CD8C3C217049FF0065941A /* NSDate+Ext.m in Sources */,
 				E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */,
 				E85A86AD215F0E84002A6A67 /* SWNavigationController.m in Sources */,
@@ -1867,7 +1904,6 @@
 				E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */,
 				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
-				E8CA699C215CC66700B7BB75 /* SWVideoViewController.m in Sources */,
 				E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E83A6E1D21780FD70019C65F /* SWTimeLineMusicView.m in Sources */,

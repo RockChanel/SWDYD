@@ -34,6 +34,7 @@ static NSString * const kSWApiFollowRecommend = @"/v0.2/main/recommend";
 static NSString * const kSWApiRecommandBanner = @"v0.2/promotion/index";
 /** 推荐列表 */
 static NSString * const kSWApiRecommandPostList = @"v0.2/posts4";
+static NSString * const kSWApiShortvideoList = @"v0.2/posts/shortvideo";
 
 #pragma mark -- 版区
 /** 热区 */
