@@ -12,6 +12,8 @@
 @interface SWZoneHomeHeaderView()
 @property (nonatomic, strong) UIImageView *bgImage;
 @property (nonatomic, strong) UIImageView *headerImage;
+@property (nonatomic, strong) UILabel *memberLab;
+@property (nonatomic, strong) UILabel *postLab;
 @end
 
 @implementation SWZoneHomeHeaderView
@@ -26,8 +28,10 @@
 
 - (void)setModel:(SWZoneHomeHeaderModel *)model {
     _model = model;
-    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaHeadImage] placeholderImage:[UIImage imageNamed:kSWLoadeedImage]];
-    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:model.subAreaImage] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
+    [self.bgImage sd_setImageWithURL:[NSURL URLWithString:_model.subAreaHeadImage] placeholderImage:[UIImage imageNamed:kSWLoadeedImage]];
+    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:_model.subAreaImage] placeholderImage:[UIImage imageNamed:kSWUserAvatar]];
+    self.memberLab.text = [NSString stringWithFormat:@"%@：%@", _model.subAreaUserCountName, _model.subAreaUserCount];
+    self.postLab.text = [NSString stringWithFormat:@"%@：%@", _model.subAreaPostCountName, _model.subAreaPostCount];
 }
 
 - (void)setup {
@@ -48,7 +52,16 @@
         make.centerX.equalTo(@0);
     }];
     self.headerImage.layer.cornerRadius = 35;
-    self.headerImage.backgroundColor = [UIColor sw_red];
+    
+    [self.memberLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.mas_centerX).offset(-20);
+        make.top.equalTo(self.headerImage.mas_bottom).offset(15);
+    }];
+    
+    [self.postLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mas_centerX).offset(20);
+        make.top.equalTo(self.headerImage.mas_bottom).offset(15);
+    }];
 }
 
 - (UIImageView *)bgImage {
@@ -72,5 +85,25 @@
     return _headerImage;
 }
 
+- (UILabel *)memberLab {
+    if (!_memberLab) {
+        _memberLab = [[UILabel alloc]init];
+        _memberLab.textColor = [UIColor whiteColor];
+        _memberLab.textAlignment = NSTextAlignmentRight;
+        _memberLab.font = SWFont(13);
+        [self addSubview:_memberLab];
+    }
+    return _memberLab;
+}
+
+- (UILabel *)postLab {
+    if (!_postLab) {
+        _postLab = [[UILabel alloc]init];
+        _postLab.textColor = [UIColor whiteColor];
+        _postLab.font = SWFont(13);
+        [self addSubview:_postLab];
+    }
+    return _postLab;
+}
 
 @end

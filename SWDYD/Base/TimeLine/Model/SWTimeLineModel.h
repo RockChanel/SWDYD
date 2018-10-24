@@ -30,6 +30,7 @@
 @end
 
 @interface SWTimeLineItem : NSObject
+@property (nonatomic, copy) NSString *postId;
 /** 发布内容 */
 @property (nonatomic, copy) NSString *postContent;
 /** 收藏数 */
@@ -54,6 +55,9 @@
 @property (nonatomic, strong) SWTimeLineMusic *postMusic;
 /** 置顶 | 精华 */
 @property (nonatomic, strong) NSArray<NSString *> *postHonour;
+/** 是否收藏 */
+@property (nonatomic, assign) BOOL postIsCollect;
+@property (nonatomic, assign) BOOL postIsLike;
 @end
 
 @interface SWTimeLineModel : NSObject

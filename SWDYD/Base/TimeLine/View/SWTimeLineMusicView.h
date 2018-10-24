@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SWTimeLineMusic;
 @interface SWTimeLineMusicView : UIView
-
+@property (nonatomic, strong) SWTimeLineMusic *music;
 @end

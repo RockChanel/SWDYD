@@ -10,6 +10,7 @@
 #import "SWTimeLineLayout.h"
 #import "SWTimeLineModel.h"
 #import "SWTimeLineHelper.h"
+#import "SWTimeLineCell.h"
 
 @interface SWTimeLineActionView()
 
@@ -28,6 +29,12 @@
 @end
 @implementation SWTimeLineActionView
 
+static NSString * const collectNormal = @"star_collect_gray";
+static NSString * const collectLight = @"star_collect_yellow";
+
+static NSString * const likeNormal = @"candy_like_gray";
+static NSString * const likeLight = @"candy_like_red";
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -41,6 +48,120 @@
     self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postCollectCount];
     self.commentLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postCommentCount];
     self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:_layout.item.postLikeCount];
+    self.collectIcon.image = [UIImage imageNamed:_layout.item.postIsCollect ? collectLight:collectNormal];
+    self.likeIcon.image = [UIImage imageNamed:_layout.item.postIsLike ? likeLight:likeNormal];
+}
+
+- (void)collectAction {
+    if ([self.cell.delegate respondsToSelector:@selector(cellDidClickCollect:)]) {
+        [self.cell.delegate cellDidClickCollect:self.cell];
+    }
+    else {
+        if (_layout.item.postIsCollect) {
+            [self collectDelete];
+        }
+        else {
+            [self collectAdd];
+        }
+    }
+}
+
+- (void)collectAdd {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
+    params[@"albumIds"] = kSWAlbumId;
+    params[@"postId"] = _layout.item.postId;
+    params[@"type"] = @"205";
+    
+    [[SWNetworkManager shareManager]requestWithMethod:SWHttpMethodPut api:kSWApiPostAlbum parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
+            [SWProgressHUD sw_showTip:@"收藏成功＼（＾▽＾）／"];
+            self.layout.item.postIsCollect = YES;
+            self.layout.item.postCollectCount ++;
+            self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postCollectCount];
+            [self updateCollectWithAnimation];
+        }
+    } failure:nil];
+}
+
+- (void)collectDelete {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
+    params[@"postId"] = _layout.item.postId;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodDelete api:kSWApiPostCollect parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
+            self.layout.item.postIsCollect = NO;
+            self.layout.item.postCollectCount --;
+            self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postCollectCount];
+            [self updateCollectWithAnimation];
+        }
+    } failure:nil];
+}
+
+- (void)updateCollectWithAnimation {
+    self.collectIcon.image = [UIImage imageNamed:_layout.item.postIsCollect ? collectLight:collectNormal];
+}
+
+- (void)likeAction {
+    if ([self.cell.delegate respondsToSelector:@selector(cellDidClickLike:)]) {
+        [self.cell.delegate cellDidClickLike:self.cell];
+    }
+    else {
+        if (_layout.item.postIsLike) {
+            [self likeDelete];
+        }
+        else {
+            [self likeAdd];
+        }
+    }
+}
+
+- (void)likeAdd {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
+    params[@"postId"] = _layout.item.postId;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodPost api:kSWApiPostLike parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
+            [SWProgressHUD sw_showTip:@"多送糖，宜脱单"];
+            self.layout.item.postIsLike = YES;
+            self.layout.item.postLikeCount ++;
+            self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postLikeCount];
+            [self updateLikeWithAnimation];
+        }
+    } failure:nil];
+}
+
+- (void)likeDelete {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
+    params[@"postId"] = _layout.item.postId;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodDelete api:kSWApiPostLike parameters:params success:^(SWJsonModel * _Nullable json) {
+        if (json.code == kSWResponseCodeSuccess) {
+            self.layout.item.postIsLike = NO;
+            self.layout.item.postLikeCount --;
+            self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postLikeCount];
+            [self updateLikeWithAnimation];
+        }
+    } failure:nil];
+}
+
+- (void)updateLikeWithAnimation {
+    self.likeIcon.image = [UIImage imageNamed:_layout.item.postIsLike ? likeLight:likeNormal];
+}
+
+- (void)commentAction {
+    
 }
 
 - (void)setup {
@@ -148,18 +269,6 @@
     }];
 }
 
-- (void)collectAction {
-    
-}
-
-- (void)likeAction {
-    
-}
-
-- (void)commentAction {
-    
-}
-
 - (UILabel *)likeLab {
     if (!_likeLab) {
         _likeLab = [[UILabel alloc]init];
@@ -182,7 +291,6 @@
 - (UIImageView *)likeIcon {
     if (!_likeIcon) {
         _likeIcon = [[UIImageView alloc]init];
-        _likeIcon.image = [UIImage imageNamed:@"candy_like_gray"];
     }
     return _likeIcon;
 }
@@ -237,7 +345,6 @@
 - (UIImageView *)collectIcon {
     if (!_collectIcon) {
         _collectIcon = [[UIImageView alloc]init];
-        _collectIcon.image = [UIImage imageNamed:@"star_collect_gray"];
     }
     return _collectIcon;
 }

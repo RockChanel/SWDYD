@@ -8,7 +8,15 @@
 
 #import "SWTableViewCell.h"
 
-@class SWTimeLineLayout;
+@class SWTimeLineLayout, SWTimeLineCell;
+
+@protocol SWTimeLineCellDelegate <NSObject>
+@optional
+- (void)cellDidClickCollect:(SWTimeLineCell *)cell;
+- (void)cellDidClickLike:(SWTimeLineCell *)cell;
+@end
+
 @interface SWTimeLineCell : SWTableViewCell
 @property (nonatomic, strong) SWTimeLineLayout *layout;
+@property (nonatomic, assign) id<SWTimeLineCellDelegate> delegate;
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define kSWVersionName [SWClient shareClient].versionName
+#define kSWAlbumId [SWClient shareClient].albumId
+
 /** BaseURL */
 static NSString * const kSWBaseURL = @"https://api.diyidan.net";
 /** BaseImageURL */
@@ -15,7 +18,7 @@ static NSString * const kSWImageBaseURL = @"https://image.diyidan.net";
 
 static NSString * const kSWAppChannel = @"ios";
 static NSString * const kSWIsUpgrade = @"true";
-static NSString * const kSWVersionName = @"20180921";
+
 static NSString * const kSWTokenKey = @"token_id";
 static NSString * const kSWSessionKey = @"session_id";
 
@@ -35,6 +38,9 @@ static NSString * const kSWApiRecommandBanner = @"v0.2/promotion/index";
 /** 推荐列表 */
 static NSString * const kSWApiRecommandPostList = @"v0.2/posts4";
 static NSString * const kSWApiShortvideoList = @"v0.2/posts/shortvideo";
+static NSString * const kSWApiPostAlbum = @"v0.2/user/post/album";
+static NSString * const kSWApiPostCollect = @"v0.2/posts/collect";
+static NSString * const kSWApiPostLike = @"v0.2/likes/posts";
 
 #pragma mark -- 版区
 /** 热区 */

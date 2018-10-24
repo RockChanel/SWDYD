@@ -73,6 +73,7 @@
         make.height.equalTo(@(kSWTimeLineActionHeight));
         make.bottom.equalTo(@0);
     }];
+    self.actionView.cell = self;
 }
 
 - (YYLabel *)titleLab {

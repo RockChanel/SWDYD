@@ -36,7 +36,7 @@ static CGFloat const kSWTimeLineCardPaddingTop = 12;
 static CGFloat const kSWTimeLineCardVideoHeight = 200;
 /** 音频卡片高度 */
 static CGFloat const kSWTimeLineCardAudioHeight = 70;
-/** 音月卡片高度 */
+/** 音乐卡片高度 */
 static CGFloat const kSWTimeLineCardMusicHeight = 90;
 /** 一张图片卡片高度 */
 static CGFloat const kSWTimeLineCardMaxPicHeight = 190;

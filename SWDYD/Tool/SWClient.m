@@ -34,6 +34,8 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     self = [super init];
     if (self) {
         _emoticonGroup = [self sw_emoticonGroupFromPlist];
+        _versionName = @"20180921";
+        _albumId = @"14905495";
     }
     return self;
 }

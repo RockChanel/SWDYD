@@ -22,6 +22,7 @@
 #import "SWProgressHUD.h"
 #import "SWUserManager.h"
 #import "SWUserModel.h"
+#import "UIImage+Ext.h"
 
 #import <YYModel.h>
 #import <Masonry.h>

@@ -39,7 +39,10 @@
         }
             break;
         default:
+        {
             [self hidePics];
+            self.musicView.hidden = YES;
+        }
             break;
     }
 }
@@ -47,11 +50,12 @@
 - (void)layoutMusic {
     [self hidePics];
     self.musicView.hidden = NO;
+    self.musicView.music = _layout.item.postMusic;
 }
 
 - (void)layoutPics {
     self.musicView.hidden = YES;
-    
+
     for (int i = 0; i < kSWMaxPicCount; i++) {
         UIImageView *tempImage = _picViews[i];
         if (i >= _layout.picCount) {
@@ -83,9 +87,14 @@
     }
     _picViews = picViews;
     
-    self.musicView = [[SWTimeLineMusicView alloc]initWithFrame:CGRectMake(0, 0, self.mj_w, self.mj_h)];
+    self.musicView = [[SWTimeLineMusicView alloc]init];
     self.musicView.hidden = YES;
     [self addSubview:_musicView];
+    [self.musicView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.equalTo(@0);
+        make.left.equalTo(@(kSWTimeLinePadding));
+        make.right.equalTo(@(-kSWTimeLinePadding));
+    }];
 }
 
 @end

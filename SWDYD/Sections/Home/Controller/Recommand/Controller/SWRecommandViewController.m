@@ -13,7 +13,7 @@
 #import "SWTimeLineModel.h"
 #import "SWTimeLineLayout.h"
 
-@interface SWRecommandViewController ()
+@interface SWRecommandViewController ()<SWTimeLineCellDelegate>
 @property (nonatomic, strong) NSMutableArray *layouts;
 @property (nonatomic, strong) SWRecommandBannerView *banner;
 @end
@@ -28,7 +28,6 @@ static NSString *cellId = @"cellId";
     self.tableView.estimatedRowHeight = 100;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableHeaderView = self.banner;
-    [self.tableView registerClass:[SWTimeLineCell class] forCellReuseIdentifier:cellId];
     
     self.showRefreshHeader = YES;
     self.showRefreshFooter = YES;
@@ -83,7 +82,11 @@ static NSString *cellId = @"cellId";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SWTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    SWTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[SWTimeLineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell.delegate = self;
+    }
     cell.layout = self.layouts[indexPath.row];
     return cell;
 }

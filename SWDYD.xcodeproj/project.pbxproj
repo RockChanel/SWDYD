@@ -195,6 +195,7 @@
 		E87022D42160D3B10001D55C /* SWInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E87022D32160D3B10001D55C /* SWInputModel.m */; };
 		E8724008216F2E2C00545291 /* SWTimeLineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8724007216F2E2C00545291 /* SWTimeLineHelper.m */; };
 		E8781BCA216058F300C73B2D /* SWUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8781BC9216058F300C73B2D /* SWUserManager.m */; };
+		E88BB46B218059B200073A10 /* UIImage+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E88BB46A218059B200073A10 /* UIImage+Ext.m */; };
 		E8CA6967215C765600B7BB75 /* SWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6966215C765600B7BB75 /* SWConst.m */; };
 		E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6969215C7D3600B7BB75 /* SWTableViewController.m */; };
 		E8CA697A215C8AF800B7BB75 /* SWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CA6979215C8AF800B7BB75 /* SWNetworkManager.m */; };
@@ -496,6 +497,8 @@
 		E8724007216F2E2C00545291 /* SWTimeLineHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineHelper.m; sourceTree = "<group>"; };
 		E8781BC8216058F300C73B2D /* SWUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUserManager.h; sourceTree = "<group>"; };
 		E8781BC9216058F300C73B2D /* SWUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUserManager.m; sourceTree = "<group>"; };
+		E88BB469218059B200073A10 /* UIImage+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Ext.h"; sourceTree = "<group>"; };
+		E88BB46A218059B200073A10 /* UIImage+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Ext.m"; sourceTree = "<group>"; };
 		E8CA6964215C762F00B7BB75 /* SWMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMacro.h; sourceTree = "<group>"; };
 		E8CA6965215C765600B7BB75 /* SWConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConst.h; sourceTree = "<group>"; };
 		E8CA6966215C765600B7BB75 /* SWConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWConst.m; sourceTree = "<group>"; };
@@ -1479,6 +1482,8 @@
 				E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */,
 				E8CD8C3A217049FF0065941A /* NSDate+Ext.h */,
 				E8CD8C3B217049FF0065941A /* NSDate+Ext.m */,
+				E88BB469218059B200073A10 /* UIImage+Ext.h */,
+				E88BB46A218059B200073A10 /* UIImage+Ext.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1916,6 +1921,7 @@
 				E8CDDC94215E28B100C41A28 /* SWSettingViewController.m in Sources */,
 				E8E3ACF7215B8C8D0066F4D0 /* SWTabBarController.m in Sources */,
 				E87022D42160D3B10001D55C /* SWInputModel.m in Sources */,
+				E88BB46B218059B200073A10 /* UIImage+Ext.m in Sources */,
 				E85A86B0215F1D04002A6A67 /* UIViewController+Ext.m in Sources */,
 				E8CA69A8215CCA2700B7BB75 /* SWModel.m in Sources */,
 				E8CA6998215CC66100B7BB75 /* SWRecommandViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "SWVideoListCell.h"
 #import "SWVideoListModel.h"
+#import "SWTimeLineHelper.h"
 
 @interface SWVideoListCell()
 @property (nonatomic, strong) UIImageView *coverImage;
@@ -20,7 +21,7 @@
     _video = video;
     [self.coverImage sd_setImageWithURL:[NSURL URLWithString:_video.postCoverImageList.firstObject] placeholderImage:[UIImage imageNamed:kSWLoadeedImage]];
     self.titleLab.text = _video.postTitle;
-    self.playCountLab.text = [SWDYDTool convertIntegerNumber:_video.postReadCount];
+    self.playCountLab.text = [SWTimeLineHelper shortedNumberDesc:_video.postReadCount];
 }
 
 - (void)setup {

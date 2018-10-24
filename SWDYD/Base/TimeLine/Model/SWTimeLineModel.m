@@ -45,6 +45,10 @@
     if ([commentCount isKindOfClass:[NSNumber class]]) _postCommentCount = [commentCount integerValue];
     NSNumber *likeCount = dic[@"postLikeCount"];
     if ([likeCount isKindOfClass:[NSNumber class]]) _postLikeCount = [likeCount integerValue];
+    NSNumber *isCollect = dic[@"postIsUserCollectIt"];
+    if ([isCollect isKindOfClass:[NSNumber class]]) _postIsCollect = [isCollect boolValue];
+    NSNumber *isLike = dic[@"postIsUserLikeIt"];
+    if ([isLike isKindOfClass:[NSNumber class]]) _postIsLike = [isLike boolValue];
     return YES;
 }
 

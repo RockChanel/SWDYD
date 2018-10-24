@@ -46,12 +46,12 @@
     }
     else if (_item.postMusic) {
         if ([_item.postMusic.musicType isEqualToString:@"voice"]) {
-            _cardHeight = kSWTimeLineCardMusicHeight;
-            _cardType = SWLayoutCardTypeMusic;
-        }
-        else {
             _cardHeight = kSWTimeLineCardAudioHeight;
             _cardType = SWLayoutCardTypeAudio;
+        }
+        else {
+            _cardHeight = kSWTimeLineCardMusicHeight;
+            _cardType = SWLayoutCardTypeMusic;
         }
     }
     else if (_item.postCoverImageList && _item.postCoverImageList.count > 0) {

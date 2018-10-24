@@ -19,6 +19,8 @@
 @property (nonatomic, copy) NSString *subAreaPostCountName;
 @property (nonatomic, copy) NSString *subAreaHeadImage;
 @property (nonatomic, copy) NSString *subAreaImage;
+@property (nonatomic, copy) NSString *subAreaUserCount;
+@property (nonatomic, copy) NSString *subAreaPostCount;
 @property (nonatomic, strong) NSArray<NSString *> *subAreaPostCategories;
 @property (nonatomic, strong) NSArray<NSString *> *subAreaPostCateId;
 @property (nonatomic, strong) NSArray<SWZoneHomeCategory *> *subAreaCategoryInfoList;
