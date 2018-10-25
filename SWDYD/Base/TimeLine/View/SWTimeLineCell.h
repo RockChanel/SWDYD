@@ -10,10 +10,15 @@
 
 @class SWTimeLineLayout, SWTimeLineCell;
 
+/** cell代理事件 */
 @protocol SWTimeLineCellDelegate <NSObject>
 @optional
+/** 点击收藏 */
 - (void)cellDidClickCollect:(SWTimeLineCell *)cell;
+/** 点击送糖 */
 - (void)cellDidClickLike:(SWTimeLineCell *)cell;
+/** 点击评论 */
+- (void)cellDidClickComment:(SWTimeLineCell *)cell;
 @end
 
 @interface SWTimeLineCell : SWTableViewCell

@@ -27,6 +27,16 @@
     }];
     self.bgImage.layer.cornerRadius = 8.0;
 
+    UIView *blurView = [[UIView alloc]init];
+    blurView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    [self.contentView addSubview:blurView];
+    [self.contentView addSubview:self.titleLab];
+    
+    [blurView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(@0);
+        make.top.equalTo(self.titleLab).offset(-10);
+    }];
+    
     [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.contentView.mas_bottom).offset(-8);
         make.left.right.equalTo(@0);
@@ -49,7 +59,6 @@
         _titleLab.font = SWBoldFont(15);
         _titleLab.textColor = [UIColor whiteColor];
         _titleLab.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:_titleLab];
     }
     return _titleLab;
 }

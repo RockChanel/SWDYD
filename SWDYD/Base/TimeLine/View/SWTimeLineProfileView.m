@@ -13,10 +13,15 @@
 #import "SWTimeLineHelper.h"
 
 @interface SWTimeLineProfileView()
+/** 头像 */
 @property (nonatomic, strong) UIImageView *avatarImage;
+/** 昵称 */
 @property (nonatomic, strong) UILabel *nickNameLab;
+/** 日期时间 */
 @property (nonatomic, strong) UILabel *dateLab;
+/** 分享按钮 */
 @property (nonatomic, strong) UIButton *shareBtn;
+/** 等级图标 */
 @property (nonatomic, strong) UIImageView *levelImage;
 @property (nonatomic, strong) UIView *medalContainer;
 @end

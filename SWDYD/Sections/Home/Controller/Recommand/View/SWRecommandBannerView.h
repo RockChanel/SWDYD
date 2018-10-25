@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class SWRecommandBannerList;
+@class SWRecommandBannerList, SWRecommandBanner;
+
+@interface SWBottomBannerView : UIView
+@property (nonatomic, strong) SWRecommandBanner *banner;
+@end
+
 @interface SWRecommandBannerView : UIView
 @property (nonatomic, strong) SWRecommandBannerList *list;
 @end

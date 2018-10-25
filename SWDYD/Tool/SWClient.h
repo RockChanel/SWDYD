@@ -19,7 +19,7 @@
 
 /** 版本 */
 @property (nonatomic, copy) NSString *versionName;
-@property (nonatomic, copy) NSString *albumId;
+@property (nonatomic, copy) NSArray *albumId;
 
 /** 表情集合 防止频繁读取，临时放入客户端单例 */
 @property (nonatomic, strong) SWEmoticonGroup *emoticonGroup;
@@ -38,5 +38,7 @@
  退出登录
  */
 - (void)sw_logout;
+
+- (void)sw_loadAlbums;
 
 @end

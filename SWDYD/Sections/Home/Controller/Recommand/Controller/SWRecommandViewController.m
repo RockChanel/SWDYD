@@ -24,8 +24,9 @@ static NSString *cellId = @"cellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView.estimatedRowHeight = 100;
+
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.tableHeaderView = self.banner;
     
@@ -93,7 +94,7 @@ static NSString *cellId = @"cellId";
 
 - (SWRecommandBannerView *)banner {
     if (!_banner) {
-        _banner = [[SWRecommandBannerView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, 160)];
+        _banner = [[SWRecommandBannerView alloc]initWithFrame:CGRectMake(0, 0, self.view.mj_w, 235)];
     }
     return _banner;
 }

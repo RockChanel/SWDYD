@@ -14,10 +14,15 @@
 #import "SWTimeLineLayout.h"
 
 @interface SWTimeLineCell()
+/** 标题 */
 @property (nonatomic, strong) YYLabel *titleLab;
+/** 详情 */
 @property (nonatomic, strong) YYLabel *contentLab;
+/** 底部工具栏 */
 @property (nonatomic, strong) SWTimeLineActionView *actionView;
+/** 用户信息 */
 @property (nonatomic, strong) SWTimeLineProfileView *profileView;
+/** 卡片 */
 @property (nonatomic, strong) SWTimeLineCardView *cardView;
 @end
 @implementation SWTimeLineCell
@@ -64,7 +69,6 @@
     [self.cardView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(@0);
         make.top.equalTo(self.contentLab.mas_bottom).offset(kSWTimeLineCardPaddingTop);
-        make.height.equalTo(@0);
     }];
     
     [self.actionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -78,7 +82,7 @@
 
 - (YYLabel *)titleLab {
     if (!_titleLab) {
-        _titleLab = [YYLabel new];
+        _titleLab = [[YYLabel alloc]init];
         [self.contentView addSubview:_titleLab];
     }
     return _titleLab;
@@ -86,7 +90,7 @@
 
 - (YYLabel *)contentLab {
     if (!_contentLab) {
-        _contentLab = [YYLabel new];
+        _contentLab = [[YYLabel alloc]init];
         [self.contentView addSubview:_contentLab];
     }
     return _contentLab;

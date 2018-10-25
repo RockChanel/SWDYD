@@ -21,6 +21,10 @@
  */
 + (SWEmoticon *)emoticon:(NSString *)emoticonStr;
 
++ (NSMutableAttributedString *)text:(NSString *)text
+                           fontSize:(CGFloat)fontSize
+                          textColor:(UIColor *)textColor;
+
 /**
  UTC时区时间转换系统时间
 

@@ -29,6 +29,9 @@
 		E81A2690216DD53C007CB8C4 /* SWTimeLineActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A268F216DD53C007CB8C4 /* SWTimeLineActionView.m */; };
 		E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */; };
 		E81A2698216DE5C1007CB8C4 /* SWTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */; };
+		E82452ED2181A557007A91F8 /* SWHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82452EC2181A557007A91F8 /* SWHistoryViewController.m */; };
+		E82452F02181A5BE007A91F8 /* SWHistoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E82452EF2181A5BE007A91F8 /* SWHistoryListCell.m */; };
+		E82452F52181C559007A91F8 /* SWAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E82452F42181C559007A91F8 /* SWAlbumModel.m */; };
 		E83A6E1D21780FD70019C65F /* SWTimeLineMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E1C21780FD70019C65F /* SWTimeLineMusicView.m */; };
 		E83A6E2021781F2B0019C65F /* SWZoneSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E1F21781F2B0019C65F /* SWZoneSubViewController.m */; };
 		E83A6E23217826580019C65F /* SWTopTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A6E22217826580019C65F /* SWTopTimeLineCell.m */; };
@@ -305,6 +308,12 @@
 		E81A2692216DD89D007CB8C4 /* SWTimeLineProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineProfileView.m; sourceTree = "<group>"; };
 		E81A2696216DE5C1007CB8C4 /* SWTimeLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineModel.h; sourceTree = "<group>"; };
 		E81A2697216DE5C1007CB8C4 /* SWTimeLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineModel.m; sourceTree = "<group>"; };
+		E82452EB2181A557007A91F8 /* SWHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHistoryViewController.h; sourceTree = "<group>"; };
+		E82452EC2181A557007A91F8 /* SWHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHistoryViewController.m; sourceTree = "<group>"; };
+		E82452EE2181A5BE007A91F8 /* SWHistoryListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHistoryListCell.h; sourceTree = "<group>"; };
+		E82452EF2181A5BE007A91F8 /* SWHistoryListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHistoryListCell.m; sourceTree = "<group>"; };
+		E82452F32181C559007A91F8 /* SWAlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlbumModel.h; sourceTree = "<group>"; };
+		E82452F42181C559007A91F8 /* SWAlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlbumModel.m; sourceTree = "<group>"; };
 		E83A6E1B21780FD70019C65F /* SWTimeLineMusicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeLineMusicView.h; sourceTree = "<group>"; };
 		E83A6E1C21780FD70019C65F /* SWTimeLineMusicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeLineMusicView.m; sourceTree = "<group>"; };
 		E83A6E1E21781F2B0019C65F /* SWZoneSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWZoneSubViewController.h; sourceTree = "<group>"; };
@@ -824,6 +833,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E82452F12181C53B007A91F8 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				E82452F22181C547007A91F8 /* Model */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		E82452F22181C547007A91F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E82452F32181C559007A91F8 /* SWAlbumModel.h */,
+				E82452F42181C559007A91F8 /* SWAlbumModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E83E54AB216EEC1300FE80E6 /* EmotionIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1076,8 @@
 				2E63CA15215FC1D2005BDF92 /* SWMedalHeaderView.m */,
 				E87022B52160A2370001D55C /* SWMedalSectionHeader.h */,
 				E87022B62160A2370001D55C /* SWMedalSectionHeader.m */,
+				E82452EE2181A5BE007A91F8 /* SWHistoryListCell.h */,
+				E82452EF2181A5BE007A91F8 /* SWHistoryListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1223,6 +1251,7 @@
 		E8CDDC8A215E092A00C41A28 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				E82452F12181C53B007A91F8 /* Album */,
 				E8CDDC90215E288700C41A28 /* Setting */,
 				E8CDDC8B215E093500C41A28 /* Main */,
 			);
@@ -1246,6 +1275,8 @@
 				E8CDDC8E215E096700C41A28 /* SWMeViewController.m */,
 				E85A86B9215F6E75002A6A67 /* SWMyMedalViewController.h */,
 				E85A86BA215F6E75002A6A67 /* SWMyMedalViewController.m */,
+				E82452EB2181A557007A91F8 /* SWHistoryViewController.h */,
+				E82452EC2181A557007A91F8 /* SWHistoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1875,6 +1906,8 @@
 				E8CA698F215CC4B100B7BB75 /* AppDelegate+Login.m in Sources */,
 				E85A86BB215F6E75002A6A67 /* SWMyMedalViewController.m in Sources */,
 				E83A6E23217826580019C65F /* SWTopTimeLineCell.m in Sources */,
+				E82452ED2181A557007A91F8 /* SWHistoryViewController.m in Sources */,
+				E82452F02181A5BE007A91F8 /* SWHistoryListCell.m in Sources */,
 				E8D1911F216CAAFD00CB6A04 /* SWRecommandModel.m in Sources */,
 				2EDD392B2164900300F0BE8E /* SWZoneHomeHeaderView.m in Sources */,
 				2E9BE7B42162534600839B0E /* SWHotZoneModel.m in Sources */,
@@ -1895,6 +1928,7 @@
 				E8D19115216CA37900CB6A04 /* SDCycleScrollView.m in Sources */,
 				E8CA696A215C7D3600B7BB75 /* SWTableViewController.m in Sources */,
 				E85A86B4215F287A002A6A67 /* SWMeCell.m in Sources */,
+				E82452F52181C559007A91F8 /* SWAlbumModel.m in Sources */,
 				E83E55C4216EF7FF00FE80E6 /* SWTimeLineLayout.m in Sources */,
 				E8CDDC68215DB69900C41A28 /* SWCollectionViewController.m in Sources */,
 				2EDD392821648EB700F0BE8E /* SWZoneHomeViewController.m in Sources */,

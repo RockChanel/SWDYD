@@ -78,6 +78,18 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     } failure:nil];
 }
 
+- (void)sw_loadAlbums {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"type"] = @"100";
+    params[@"appChannel"] = kSWAppChannel;
+    params[@"isUpgrade"] = kSWIsUpgrade;
+    params[@"versionName"] = kSWVersionName;
+    
+    [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiPostAlbum parameters:params success:^(SWJsonModel * _Nullable json) {
+        
+    } failure:nil];
+}
+
 - (void)saveCookies:(NSArray<NSHTTPCookie *> *)cookies {
     if (!cookies || cookies.count == 0) return;
     for (NSHTTPCookie *cookie in cookies) {

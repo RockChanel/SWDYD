@@ -13,27 +13,29 @@
 #import "SWTimeLineCell.h"
 
 @interface SWTimeLineActionView()
-
+/** 收藏按钮 */
 @property (nonatomic, strong) UIButton *collectBtn;
+/** 收藏图标 */
 @property (nonatomic, strong) UIImageView *collectIcon;
 @property (nonatomic, strong) UILabel *collectLab;
-
+/** 送糖按钮 */
 @property (nonatomic, strong) UIButton *likeBtn;
+/** 送糖图标 */
 @property (nonatomic, strong) UIImageView *likeIcon;
 @property (nonatomic, strong) UILabel *likeLab;
-
+/** 评论按钮 */
 @property (nonatomic, strong) UIButton *commentBtn;
+/** 评论图标 */
 @property (nonatomic, strong) UIImageView *commentIcon;
 @property (nonatomic, strong) UILabel *commentLab;
 
 @end
 @implementation SWTimeLineActionView
 
-static NSString * const collectNormal = @"star_collect_gray";
-static NSString * const collectLight = @"star_collect_yellow";
-
-static NSString * const likeNormal = @"candy_like_gray";
-static NSString * const likeLight = @"candy_like_red";
+static NSString * const collectNormal = @"star_collect_gray";   // 未收藏
+static NSString * const collectLight = @"star_collect_yellow";  // 已收藏
+static NSString * const likeNormal = @"candy_like_gray";    // 未送糖
+static NSString * const likeLight = @"candy_like_red";      // 已送糖
 
 - (instancetype)init {
     self = [super init];
@@ -52,6 +54,7 @@ static NSString * const likeLight = @"candy_like_red";
     self.likeIcon.image = [UIImage imageNamed:_layout.item.postIsLike ? likeLight:likeNormal];
 }
 
+#pragma mark -- 收藏按钮点击事件
 - (void)collectAction {
     if ([self.cell.delegate respondsToSelector:@selector(cellDidClickCollect:)]) {
         [self.cell.delegate cellDidClickCollect:self.cell];
@@ -66,6 +69,7 @@ static NSString * const likeLight = @"candy_like_red";
     }
 }
 
+#pragma mark -- 添加收藏
 - (void)collectAdd {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
@@ -81,11 +85,13 @@ static NSString * const likeLight = @"candy_like_red";
             self.layout.item.postIsCollect = YES;
             self.layout.item.postCollectCount ++;
             self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postCollectCount];
-            [self updateCollectWithAnimation];
+            self.collectIcon.image = [UIImage imageNamed:collectLight];
+            [self updateAnimationWithIcon:self.collectIcon];
         }
     } failure:nil];
 }
 
+#pragma mark -- 取消收藏
 - (void)collectDelete {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
@@ -98,15 +104,12 @@ static NSString * const likeLight = @"candy_like_red";
             self.layout.item.postIsCollect = NO;
             self.layout.item.postCollectCount --;
             self.collectLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postCollectCount];
-            [self updateCollectWithAnimation];
+            self.collectIcon.image = [UIImage imageNamed:collectNormal];
         }
     } failure:nil];
 }
 
-- (void)updateCollectWithAnimation {
-    self.collectIcon.image = [UIImage imageNamed:_layout.item.postIsCollect ? collectLight:collectNormal];
-}
-
+#pragma mark -- 送糖按钮点击事件
 - (void)likeAction {
     if ([self.cell.delegate respondsToSelector:@selector(cellDidClickLike:)]) {
         [self.cell.delegate cellDidClickLike:self.cell];
@@ -121,6 +124,7 @@ static NSString * const likeLight = @"candy_like_red";
     }
 }
 
+#pragma mark -- 添加送糖
 - (void)likeAdd {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
@@ -134,11 +138,13 @@ static NSString * const likeLight = @"candy_like_red";
             self.layout.item.postIsLike = YES;
             self.layout.item.postLikeCount ++;
             self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postLikeCount];
-            [self updateLikeWithAnimation];
+            self.likeIcon.image = [UIImage imageNamed:likeLight];
+            [self updateAnimationWithIcon:self.likeIcon];
         }
     } failure:nil];
 }
 
+#pragma mark -- 取消送糖
 - (void)likeDelete {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
@@ -151,17 +157,28 @@ static NSString * const likeLight = @"candy_like_red";
             self.layout.item.postIsLike = NO;
             self.layout.item.postLikeCount --;
             self.likeLab.text = [SWTimeLineHelper shortedNumberDesc:self.layout.item.postLikeCount];
-            [self updateLikeWithAnimation];
+            self.likeIcon.image = [UIImage imageNamed:likeNormal];
         }
     } failure:nil];
 }
 
-- (void)updateLikeWithAnimation {
-    self.likeIcon.image = [UIImage imageNamed:_layout.item.postIsLike ? likeLight:likeNormal];
+- (void)updateAnimationWithIcon:(UIImageView *)icon {
+    // 抖动动画
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animation];
+    keyAnimation.keyPath = @"transform.rotation";
+    keyAnimation.values = @[@(-10 / 180.0 * M_PI),@(10 /180.0 * M_PI),@(-10/ 180.0 * M_PI),@(0 /180.0 * M_PI)];
+    keyAnimation.removedOnCompletion = NO;
+    keyAnimation.fillMode = kCAFillModeForwards;
+    keyAnimation.duration = 0.2;
+    keyAnimation.repeatCount = 4;
+    [icon.layer addAnimation:keyAnimation forKey:@"kSWRotationAnimationKey"];
 }
 
+#pragma mark -- 评论按钮点击事件
 - (void)commentAction {
-    
+    if ([self.cell.delegate respondsToSelector:@selector(cellDidClickComment:)]) {
+        [self.cell.delegate cellDidClickComment:self.cell];
+    }
 }
 
 - (void)setup {

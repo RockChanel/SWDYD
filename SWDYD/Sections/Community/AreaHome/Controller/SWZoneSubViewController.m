@@ -31,7 +31,8 @@ static NSString *topCellId = @"topCellId";
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
-    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100.0f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[SWTimeLineCell class] forCellReuseIdentifier:cellId];
     [self.tableView registerClass:[SWTopTimeLineCell class] forCellReuseIdentifier:topCellId];
