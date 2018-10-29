@@ -13,6 +13,7 @@
 #import "SWMyMedalViewController.h"
 #import "UIViewController+Ext.h"
 #import "SWMeHeaderView.h"
+#import "SWAlbumViewController.h"
 
 @interface SWMeViewController ()<UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSArray<SWMeModel *> *datas;
@@ -124,6 +125,11 @@ static NSString * const cellId = @"cellId";
         {
             UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
             tempVC =  [[SWMyMedalViewController alloc]initWithCollectionViewLayout:flowLayout];
+        }
+            break;
+        case 2:
+        {
+            tempVC = [[SWAlbumViewController alloc]initWithStyle:UITableViewStylePlain];
         }
             break;
         default:

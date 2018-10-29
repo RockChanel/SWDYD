@@ -9,6 +9,7 @@
 #import "SWClient.h"
 #import "SWTimeLineModel.h"
 #import "SWModel.h"
+#import "SWAlbumModel.h"
 
 @implementation SWClient
 @synthesize isAutoLogin = _isAutoLogin;
@@ -35,7 +36,6 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     if (self) {
         _emoticonGroup = [self sw_emoticonGroupFromPlist];
         _versionName = @"20180921";
-        _albumId = @"14905495";
     }
     return self;
 }
@@ -78,7 +78,7 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     } failure:nil];
 }
 
-- (void)sw_loadAlbums {
+- (void)sw_loadAlbumsWithSuccess:(void (^)(SWAlbumListModel * _Nullable albumList))success failure:(void (^)(NSError * _Nonnull error))failure {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"type"] = @"100";
     params[@"appChannel"] = kSWAppChannel;
@@ -86,8 +86,15 @@ static NSString * const SWLocalSessionKey = @"SWLocalSessionKey";
     params[@"versionName"] = kSWVersionName;
     
     [[SWNetworkManager shareManager] requestWithMethod:SWHttpMethodGet api:kSWApiPostAlbum parameters:params success:^(SWJsonModel * _Nullable json) {
-        
-    } failure:nil];
+        SWAlbumListModel *list = [SWAlbumListModel yy_modelWithJSON:json.data];
+        if (success) {
+            success(list);
+        }
+    } failure:^(NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
 - (void)saveCookies:(NSArray<NSHTTPCookie *> *)cookies {

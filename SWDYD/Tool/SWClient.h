@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class SWEmoticonGroup, SWCookieModel;
+@class SWEmoticonGroup, SWCookieModel, SWAlbumListModel;
 @interface SWClient : NSObject
 /** 是否自动登录 */
 @property (nonatomic, assign) BOOL isAutoLogin;
@@ -19,7 +19,6 @@
 
 /** 版本 */
 @property (nonatomic, copy) NSString *versionName;
-@property (nonatomic, copy) NSArray *albumId;
 
 /** 表情集合 防止频繁读取，临时放入客户端单例 */
 @property (nonatomic, strong) SWEmoticonGroup *emoticonGroup;
@@ -39,6 +38,6 @@
  */
 - (void)sw_logout;
 
-- (void)sw_loadAlbums;
+- (void)sw_loadAlbumsWithSuccess:(void (^)(SWAlbumListModel * _Nullable albumList))success failure:(void (^)(NSError * _Nonnull error))failure;
 
 @end

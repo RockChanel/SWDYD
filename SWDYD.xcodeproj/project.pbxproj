@@ -178,6 +178,8 @@
 		E83E65F821797A030032C919 /* SWRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E65F721797A030032C919 /* SWRefreshGifHeader.m */; };
 		E83E65FC2179A5A10032C919 /* new_loading_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = E83E65FB2179A5A00032C919 /* new_loading_icon.gif */; };
 		E83E66052179ABB80032C919 /* SWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E66042179ABB80032C919 /* SWMessageViewController.m */; };
+		E842154D2182EC6D003AA1D6 /* SWAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E842154C2182EC6D003AA1D6 /* SWAlbumViewController.m */; };
+		E84215502182FC2A003AA1D6 /* SWAlbumListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E842154F2182FC2A003AA1D6 /* SWAlbumListCell.m */; };
 		E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */; };
 		E84650CD216B2EE100B7BB72 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CC216B2EE100B7BB72 /* UIColor+Ext.m */; };
 		E84650D0216B394B00B7BB72 /* SWUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E84650CF216B394B00B7BB72 /* SWUserModel.m */; };
@@ -466,6 +468,10 @@
 		E83E65FB2179A5A00032C919 /* new_loading_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = new_loading_icon.gif; sourceTree = "<group>"; };
 		E83E66032179ABB80032C919 /* SWMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMessageViewController.h; sourceTree = "<group>"; };
 		E83E66042179ABB80032C919 /* SWMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWMessageViewController.m; sourceTree = "<group>"; };
+		E842154B2182EC6D003AA1D6 /* SWAlbumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlbumViewController.h; sourceTree = "<group>"; };
+		E842154C2182EC6D003AA1D6 /* SWAlbumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlbumViewController.m; sourceTree = "<group>"; };
+		E842154E2182FC2A003AA1D6 /* SWAlbumListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlbumListCell.h; sourceTree = "<group>"; };
+		E842154F2182FC2A003AA1D6 /* SWAlbumListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlbumListCell.m; sourceTree = "<group>"; };
 		E84650C8216B2ECF00B7BB72 /* NSString+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
 		E84650C9216B2ECF00B7BB72 /* NSString+Ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
 		E84650CB216B2EE100B7BB72 /* UIColor+Ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
@@ -836,6 +842,8 @@
 		E82452F12181C53B007A91F8 /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				E842154A2182EC2D003AA1D6 /* Controller */,
+				E84215492182EC2D003AA1D6 /* View */,
 				E82452F22181C547007A91F8 /* Model */,
 			);
 			path = Album;
@@ -1032,6 +1040,24 @@
 			children = (
 				E83E66032179ABB80032C919 /* SWMessageViewController.h */,
 				E83E66042179ABB80032C919 /* SWMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E84215492182EC2D003AA1D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E842154E2182FC2A003AA1D6 /* SWAlbumListCell.h */,
+				E842154F2182FC2A003AA1D6 /* SWAlbumListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E842154A2182EC2D003AA1D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E842154B2182EC6D003AA1D6 /* SWAlbumViewController.h */,
+				E842154C2182EC6D003AA1D6 /* SWAlbumViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1942,11 +1968,13 @@
 				E8CDDC80215DF6BD00C41A28 /* SWDYDTool.m in Sources */,
 				E81A2693216DD89D007CB8C4 /* SWTimeLineProfileView.m in Sources */,
 				2E9BE79F2162210100839B0E /* SWHomeViewController.m in Sources */,
+				E84215502182FC2A003AA1D6 /* SWAlbumListCell.m in Sources */,
 				E8CA6967215C765600B7BB75 /* SWConst.m in Sources */,
 				E81A2686216D8F5A007CB8C4 /* SWWebViewController.m in Sources */,
 				E85A86B8215F2AB5002A6A67 /* SWMeModel.m in Sources */,
 				E83A6E1D21780FD70019C65F /* SWTimeLineMusicView.m in Sources */,
 				E84650CA216B2ECF00B7BB72 /* NSString+Ext.m in Sources */,
+				E842154D2182EC6D003AA1D6 /* SWAlbumViewController.m in Sources */,
 				E8D19116216CA37900CB6A04 /* UIView+SDExtension.m in Sources */,
 				E81A268C216DCEF7007CB8C4 /* SWTimeLineCell.m in Sources */,
 				E8D190DD216C8A4900CB6A04 /* SWZoneHomeModel.m in Sources */,

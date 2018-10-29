@@ -11,6 +11,7 @@
 #import "SWTimeLineModel.h"
 #import "SWTimeLineHelper.h"
 #import "SWTimeLineCell.h"
+#import "SWAlbumModel.h"
 
 @interface SWTimeLineActionView()
 /** 收藏按钮 */
@@ -64,18 +65,27 @@ static NSString * const likeLight = @"candy_like_red";      // 已送糖
             [self collectDelete];
         }
         else {
-            [self collectAdd];
+            [[SWClient shareClient] sw_loadAlbumsWithSuccess:^(SWAlbumListModel * _Nullable albumList) {
+                if (albumList.userPostAlbumList && albumList.userPostAlbumList.count > 0) {
+                    if (albumList.userPostAlbumList.count == 1) {
+                        [self collectAddWithAlbumId:albumList.userPostAlbumList.firstObject.albumId];
+                    }
+                    else {
+                        [self collectAddWithAlbumId:albumList.userPostAlbumList.firstObject.albumId];
+                    }
+                }
+            } failure:nil];
         }
     }
 }
 
 #pragma mark -- 添加收藏
-- (void)collectAdd {
+- (void)collectAddWithAlbumId:(NSString *)albumId {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"appChannel"] = kSWAppChannel;
     params[@"isUpgrade"] = kSWIsUpgrade;
     params[@"versionName"] = kSWVersionName;
-    params[@"albumIds"] = kSWAlbumId;
+    params[@"albumIds"] = albumId;
     params[@"postId"] = _layout.item.postId;
     params[@"type"] = @"205";
     
